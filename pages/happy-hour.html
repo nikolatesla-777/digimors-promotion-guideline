@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBet - Happy Hour Bonuses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="happyhour">
+    <div class="header">
+        <div class="header-inner">
+            <div>
+                <a href="../index.html" class="logo">NexBet</a>
+                <div class="header-subtitle" data-i18n="siteSubtitle">Comprehensive Bonuses & Promotions Guide</div>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" data-lang="he" onclick="setLanguage('he')">HE</button>
+            </div>
+        </div>
+    </div>
+    <nav class="navigation">
+        <ul class="nav-links">
+            <li><a href="sports.html" data-i18n="sportsBonuses">Sports Bonuses</a></li>
+            <li><a href="slots.html" data-i18n="slotBonuses">Slot Bonuses</a></li>
+            <li><a href="casino.html" data-i18n="casinoBonuses">Live Casino Bonuses</a></li>
+            <li><a href="happy-hour.html" class="active" data-i18n="happyHour">Happy Hour</a></li>
+            <li><a href="promotions.html" data-i18n="generalPromotions">General Promotions</a></li>
+            <li><a href="system.html" data-i18n="systemPromotions">System Promotions</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <a href="../index.html" class="back-btn" data-i18n="backToHome">&larr; Back to All Categories</a>
+        <div class="page-header">
+            <h1 data-i18n="happyHour">Happy Hour</h1>
+            <p>2 Bonuses</p>
+            <div class="happy-hour-badge inactive">
+                <span>&#9200;</span>
+                <span data-i18n="happyHourInactive">Currently Inactive</span>
+            </div>
+        </div>
+        <div style="background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.3);border-radius:10px;padding:20px;margin-bottom:30px;text-align:center;">
+            <p data-i18n="happyHourNote" style="color:#ff6b6b;font-weight:700;">Happy Hour bonuses are available during specific time periods only. Check the schedule for active hours.</p>
+        </div>
+        <div id="bonus-container" class="bonus-list"></div>
+    </div>
+    <div class="footer">
+        <p data-i18n="footer">&copy; 2026 NexBet - All Rights Reserved</p>
+    </div>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

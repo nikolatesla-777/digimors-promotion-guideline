@@ -1,0 +1,618 @@
+/* ========================================
+   Digimors Promotion Guideline - Styles
+   ======================================== */
+
+/* Reset & Base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --accent: #d4af37;
+    --accent-light: #f4d03f;
+    --text-primary: #ffffff;
+    --text-secondary: #e0e0e0;
+    --text-muted: #b0b0b0;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-hover: rgba(212, 175, 55, 0.1);
+    --border-sports: #d4af37;
+    --border-slots: #9b59b6;
+    --border-casino: #e74c3c;
+    --border-happyhour: #ff6b6b;
+    --border-promotions: #4a9eff;
+    --border-system: #2ecc71;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    line-height: 1.8;
+    min-height: 100vh;
+}
+
+/* RTL Support */
+[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+/* ========== HEADER ========== */
+.header {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    padding: 25px 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--bg-primary);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.header-subtitle {
+    font-size: 1rem;
+    color: var(--bg-primary);
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.lang-switcher {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn {
+    padding: 8px 16px;
+    border: 2px solid var(--bg-primary);
+    background: transparent;
+    color: var(--bg-primary);
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.lang-btn:hover,
+.lang-btn.active {
+    background: var(--bg-primary);
+    color: var(--accent);
+}
+
+/* ========== NAVIGATION ========== */
+.navigation {
+    background: rgba(26, 26, 46, 0.95);
+    padding: 15px 20px;
+    position: sticky;
+    top: 85px;
+    z-index: 999;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: var(--accent);
+    text-decoration: none;
+    padding: 8px 18px;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-weight: 700;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+/* ========== CONTAINER ========== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* ========== STATS BANNER ========== */
+.stats-banner {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.stats-banner h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    color: var(--bg-primary);
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.stat-box {
+    background: rgba(26, 26, 46, 0.9);
+    padding: 20px 15px;
+    border-radius: 10px;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+/* ========== CATEGORY CARDS (Landing Page) ========== */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.category-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 30px;
+    border-left: 5px solid var(--accent);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.category-card:hover {
+    background: var(--card-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.category-card.sports { border-left-color: var(--border-sports); }
+.category-card.slots { border-left-color: var(--border-slots); }
+.category-card.casino { border-left-color: var(--border-casino); }
+.category-card.happy-hour { border-left-color: var(--border-happyhour); }
+.category-card.promotions { border-left-color: var(--border-promotions); }
+.category-card.system { border-left-color: var(--border-system); }
+
+.category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+.category-card .bonus-count {
+    font-size: 0.95rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.category-card .bonus-preview {
+    list-style: none;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.category-card .bonus-preview li {
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.category-card .bonus-preview li:last-child {
+    border-bottom: none;
+}
+
+.category-card .view-all {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--accent);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* ========== DETAIL PAGE SECTIONS ========== */
+.page-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* ========== BONUS CARDS ========== */
+.bonus-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bonus-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.bonus-card:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+.bonus-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.bonus-card-header:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.bonus-card-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.bonus-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.bonus-card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.bonus-card-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.badge-new { background: #27ae60; color: #fff; }
+.badge-vip { background: #9b59b6; color: #fff; }
+.badge-hot { background: #e74c3c; color: #fff; }
+.badge-popular { background: #3498db; color: #fff; }
+
+.bonus-toggle {
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+}
+
+[dir="rtl"] .bonus-toggle {
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.bonus-card.open .bonus-toggle {
+    transform: rotate(180deg);
+}
+
+/* Bonus Detail Content */
+.bonus-card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.bonus-card.open .bonus-card-body {
+    max-height: 2000px;
+}
+
+.bonus-detail {
+    padding: 0 25px 25px;
+}
+
+.bonus-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.bonus-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bonus-info-item {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid var(--accent);
+}
+
+[dir="rtl"] .bonus-info-item {
+    border-left: none;
+    border-right: 3px solid var(--accent);
+}
+
+.bonus-info-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.bonus-info-value {
+    font-size: 1.05rem;
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+/* Example Calculation */
+.bonus-example {
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.bonus-example h4 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.bonus-example p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+/* Rules List */
+.bonus-rules {
+    margin-top: 15px;
+}
+
+.bonus-rules h4 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+}
+
+.bonus-rules ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bonus-rules li {
+    padding: 6px 0 6px 20px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+[dir="rtl"] .bonus-rules li {
+    padding: 6px 20px 6px 0;
+}
+
+.bonus-rules li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+[dir="rtl"] .bonus-rules li::before {
+    left: auto;
+    right: 0;
+}
+
+/* ========== HAPPY HOUR SPECIAL ========== */
+.happy-hour-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.happy-hour-badge.active {
+    background: rgba(39, 174, 96, 0.2);
+    color: #27ae60;
+    border: 1px solid #27ae60;
+}
+
+.happy-hour-badge.inactive {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    transition: opacity 0.3s;
+}
+
+.back-btn:hover {
+    opacity: 0.8;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: rgba(26, 26, 46, 0.9);
+    padding: 30px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.footer p {
+    color: #808080;
+    font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navigation {
+        top: 120px;
+    }
+
+    .nav-links {
+        gap: 8px;
+    }
+
+    .nav-links a {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+
+    .stats-banner {
+        padding: 25px 15px;
+    }
+
+    .stats-banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .bonus-card-header {
+        padding: 15px;
+    }
+
+    .bonus-card-title {
+        font-size: 1rem;
+    }
+
+    .bonus-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .bonus-detail {
+        padding: 0 15px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .category-card {
+        padding: 20px;
+    }
+}

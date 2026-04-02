@@ -1,0 +1,3336 @@
+{
+  "sports": {
+    "id": "sports",
+    "icon": "&#9917;",
+    "color": "#d4af37",
+    "bonuses": [
+      {
+        "id": "sport-1",
+        "name": {
+          "en": "First Sports Deposit Bonus - 30%",
+          "he": "בונוס הפקדה ראשונה בספורט - 30%"
+        },
+        "badge": "new",
+        "description": {
+          "en": "New members receive a 30% bonus on their first sports deposit.",
+          "he": "חברים חדשים מקבלים בונוס 30% על ההפקדה הראשונה שלהם בספורט."
+        },
+        "details": {
+          "rate": {
+            "en": "30%",
+            "he": "30%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "1,000 ₪",
+            "he": "1,000 ₪"
+          },
+          "wagering": {
+            "en": "x5 turnover on minimum odds of 1.80",
+            "he": "x5 מחזור על אודס מינימום 1.80"
+          },
+          "validity": {
+            "en": "30 days from activation",
+            "he": "30 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה)"
+          }
+        },
+        "example": {
+          "en": "Deposit 500 ₪ → Receive 150 ₪ bonus → Play with 650 ₪ total. Wagering: 650 × 5 = 3,250 ₪ in bets required.",
+          "he": "הפקדה 500 ₪ → קבלת 150 ₪ בונוס → שחק עם 650 ₪ סה\"כ. מחזור: 650 × 5 = 3,250 ₪ בהימורים נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Only one first deposit bonus per customer",
+            "Minimum odds 1.80 for wagering",
+            "Bonus must be wagered within 30 days",
+            "Cannot be combined with other deposit bonuses",
+            "Withdrawal available after wagering completion"
+          ],
+          "he": [
+            "בונוס הפקדה ראשונה אחד בלבד ללקוח",
+            "אודס מינימום 1.80 למחזור",
+            "יש לסיים את המחזור תוך 30 ימים",
+            "לא ניתן לשלב עם בונוסי הפקדה אחרים",
+            "משיכה זמינה לאחר השלמת המחזור"
+          ]
+        }
+      },
+      {
+        "id": "sport-2",
+        "name": {
+          "en": "Second Sports Deposit Bonus - 20%",
+          "he": "בונוס הפקדה שנייה בספורט - 20%"
+        },
+        "badge": null,
+        "description": {
+          "en": "Get a 20% bonus on your second sports deposit.",
+          "he": "קבל בונוס 20% על ההפקדה השנייה שלך בספורט."
+        },
+        "details": {
+          "rate": {
+            "en": "20%",
+            "he": "20%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "500 ₪",
+            "he": "500 ₪"
+          },
+          "wagering": {
+            "en": "x5 turnover on minimum odds of 1.80",
+            "he": "x5 מחזור על אודס מינימום 1.80"
+          },
+          "validity": {
+            "en": "30 days from activation",
+            "he": "30 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "Members making their second deposit",
+            "he": "חברים המבצעים הפקדה שנייה"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → Receive 200 ₪ bonus → Play with 1,200 ₪ total.",
+          "he": "הפקדה 1,000 ₪ → קבלת 200 ₪ בונוס → שחק עם 1,200 ₪ סה\"כ."
+        },
+        "rules": {
+          "en": [
+            "Available after first deposit bonus is used",
+            "Minimum odds 1.80 for wagering",
+            "30-day validity period",
+            "Cannot be combined with other bonuses"
+          ],
+          "he": [
+            "זמין לאחר שימוש בבונוס הפקדה ראשונה",
+            "אודס מינימום 1.80 למחזור",
+            "תקופת תוקף 30 ימים",
+            "לא ניתן לשלב עם בונוסים אחרים"
+          ]
+        }
+      },
+      {
+        "id": "sport-3",
+        "name": {
+          "en": "Third Sports Deposit Bonus - 10%",
+          "he": "בונוס הפקדה שלישית בספורט - 10%"
+        },
+        "badge": null,
+        "description": {
+          "en": "Receive a 10% bonus on your third sports deposit.",
+          "he": "קבל בונוס 10% על ההפקדה השלישית שלך בספורט."
+        },
+        "details": {
+          "rate": {
+            "en": "10%",
+            "he": "10%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "300 ₪",
+            "he": "300 ₪"
+          },
+          "wagering": {
+            "en": "x5 turnover on minimum odds of 1.80",
+            "he": "x5 מחזור על אודס מינימום 1.80"
+          },
+          "validity": {
+            "en": "30 days from activation",
+            "he": "30 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "Members making their third deposit",
+            "he": "חברים המבצעים הפקדה שלישית"
+          }
+        },
+        "example": {
+          "en": "Deposit 2,000 ₪ → Receive 200 ₪ bonus → Play with 2,200 ₪ total.",
+          "he": "הפקדה 2,000 ₪ → קבלת 200 ₪ בונוס → שחק עם 2,200 ₪ סה\"כ."
+        },
+        "rules": {
+          "en": [
+            "Available after second deposit bonus is used",
+            "Minimum odds 1.80",
+            "30-day validity",
+            "Cannot be combined with other bonuses"
+          ],
+          "he": [
+            "זמין לאחר שימוש בבונוס הפקדה שנייה",
+            "אודס מינימום 1.80",
+            "תוקף 30 ימים",
+            "לא ניתן לשלב עם בונוסים אחרים"
+          ]
+        }
+      },
+      {
+        "id": "sport-4",
+        "name": {
+          "en": "Recurring Sports Deposit Bonus up to 20%",
+          "he": "בונוס הפקדה חוזר בספורט עד 20%"
+        },
+        "badge": "popular",
+        "description": {
+          "en": "Ongoing deposit bonus for active members through incentive and media predictions.",
+          "he": "בונוס הפקדה שוטף לחברים פעילים דרך תמריצים ותחזיות מדיה."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 20%",
+            "he": "עד 20%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "Varies by level",
+            "he": "משתנה לפי רמה"
+          },
+          "wagering": {
+            "en": "x5 turnover on minimum odds of 1.80",
+            "he": "x5 מחזור על אודס מינימום 1.80"
+          },
+          "validity": {
+            "en": "7 days from activation",
+            "he": "7 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "Active members",
+            "he": "חברים פעילים"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ with 15% bonus → Receive 150 ₪ → Total 1,150 ₪.",
+          "he": "הפקדה 1,000 ₪ עם בונוס 15% → קבלת 150 ₪ → סה\"כ 1,150 ₪."
+        },
+        "rules": {
+          "en": [
+            "Bonus percentage based on activity level",
+            "Available through incentive promotions and media",
+            "7-day validity period",
+            "Standard wagering requirements apply"
+          ],
+          "he": [
+            "אחוז הבונוס מבוסס על רמת פעילות",
+            "זמין דרך מבצעי תמריץ ומדיה",
+            "תקופת תוקף 7 ימים",
+            "תנאי מחזור סטנדרטיים חלים"
+          ]
+        }
+      },
+      {
+        "id": "sport-5",
+        "name": {
+          "en": "VIP Sports Bonus (No Wagering)",
+          "he": "בונוס ספורט VIP (ללא דרישות מחזור)"
+        },
+        "badge": "vip",
+        "description": {
+          "en": "Exclusive bonus for VIP members with no wagering requirements.",
+          "he": "בונוס בלעדי לחברי VIP ללא דרישות מחזור."
+        },
+        "details": {
+          "rate": {
+            "en": "Varies (VIP tier based)",
+            "he": "משתנה (מבוסס דרגת VIP)"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Based on VIP level",
+            "he": "בהתאם לרמת VIP"
+          },
+          "wagering": {
+            "en": "No wagering requirements",
+            "he": "ללא דרישות מחזור"
+          },
+          "validity": {
+            "en": "As specified per offer",
+            "he": "כמפורט בהצעה"
+          },
+          "eligibility": {
+            "en": "VIP members only",
+            "he": "חברי VIP בלבד"
+          }
+        },
+        "example": {
+          "en": "VIP member receives bonus → Can withdraw immediately without wagering.",
+          "he": "חבר VIP מקבל בונוס → ניתן למשוך מיידית ללא מחזור."
+        },
+        "rules": {
+          "en": [
+            "Exclusive to VIP members",
+            "No wagering requirements",
+            "Bonus amount based on VIP tier",
+            "Subject to VIP terms and conditions"
+          ],
+          "he": [
+            "בלעדי לחברי VIP",
+            "ללא דרישות מחזור",
+            "סכום הבונוס מבוסס על דרגת VIP",
+            "בכפוף לתנאי VIP"
+          ]
+        }
+      },
+      {
+        "id": "sport-6",
+        "name": {
+          "en": "Cashback Bonus for Selected Game",
+          "he": "בונוס קאשבק למשחק נבחר"
+        },
+        "badge": null,
+        "description": {
+          "en": "Get cashback on losses for specifically selected games.",
+          "he": "קבל קאשבק על הפסדים למשחקים נבחרים ספציפית."
+        },
+        "details": {
+          "rate": {
+            "en": "Varies per game",
+            "he": "משתנה לפי משחק"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "As specified per offer",
+            "he": "כמפורט בהצעה"
+          },
+          "wagering": {
+            "en": "x1 turnover",
+            "he": "x1 מחזור"
+          },
+          "validity": {
+            "en": "Game-specific",
+            "he": "ספציפי למשחק"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "Selected game: Team A vs Team B, 10% cashback. Lose 500 ₪ → Receive 50 ₪ back.",
+          "he": "משחק נבחר: קבוצה א' נגד קבוצה ב', 10% קאשבק. הפסד 500 ₪ → קבלת 50 ₪ בחזרה."
+        },
+        "rules": {
+          "en": [
+            "Applies to pre-selected games only",
+            "Cashback credited after game ends",
+            "Minimum loss amount may apply",
+            "Check promotions page for eligible games"
+          ],
+          "he": [
+            "חל על משחקים שנבחרו מראש בלבד",
+            "קאשבק מזוכה לאחר סיום המשחק",
+            "עשוי לחול סכום הפסד מינימלי",
+            "בדוק את דף המבצעים למשחקים מזכים"
+          ]
+        }
+      },
+      {
+        "id": "sport-7",
+        "name": {
+          "en": "Weekly Loss Bonus Every Thursday - up to 10%",
+          "he": "בונוס הפסד שבועי כל יום חמישי - עד 10%"
+        },
+        "badge": null,
+        "description": {
+          "en": "General members receive up to 10% back on weekly losses every Thursday.",
+          "he": "חברים כלליים מקבלים עד 10% בחזרה על הפסדים שבועיים כל יום חמישי."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 10%",
+            "he": "עד 10%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Based on weekly losses",
+            "he": "מבוסס על הפסדים שבועיים"
+          },
+          "wagering": {
+            "en": "x3 turnover",
+            "he": "x3 מחזור"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "Weekly loss: 2,000 ₪ → 10% cashback = 200 ₪ bonus credited on Thursday.",
+          "he": "הפסד שבועי: 2,000 ₪ → 10% קאשבק = 200 ₪ בונוס מזוכה ביום חמישי."
+        },
+        "rules": {
+          "en": [
+            "Calculated on net weekly losses (Mon-Sun)",
+            "Credited every Thursday",
+            "x3 wagering requirement",
+            "Percentage based on loss amount tier"
+          ],
+          "he": [
+            "מחושב על הפסדים שבועיים נטו (שני-ראשון)",
+            "מזוכה כל יום חמישי",
+            "דרישת מחזור x3",
+            "אחוז מבוסס על רמת סכום ההפסד"
+          ]
+        }
+      },
+      {
+        "id": "sport-8",
+        "name": {
+          "en": "Weekly Loss Bonus Thursday VIP - up to 25%",
+          "he": "בונוס הפסד שבועי חמישי VIP - עד 25%"
+        },
+        "badge": "vip",
+        "description": {
+          "en": "VIP customers receive up to 25% back on weekly losses every Thursday.",
+          "he": "לקוחות VIP מקבלים עד 25% בחזרה על הפסדים שבועיים כל יום חמישי."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 25%",
+            "he": "עד 25%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Based on VIP tier and losses",
+            "he": "מבוסס על דרגת VIP והפסדים"
+          },
+          "wagering": {
+            "en": "x1 turnover",
+            "he": "x1 מחזור"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "VIP members only",
+            "he": "חברי VIP בלבד"
+          }
+        },
+        "example": {
+          "en": "VIP weekly loss: 10,000 ₪ → 25% = 2,500 ₪ bonus on Thursday.",
+          "he": "הפסד שבועי VIP: 10,000 ₪ → 25% = 2,500 ₪ בונוס ביום חמישי."
+        },
+        "rules": {
+          "en": [
+            "Exclusive to VIP members",
+            "Higher percentage than general weekly loss bonus",
+            "x1 wagering requirement",
+            "Credited every Thursday"
+          ],
+          "he": [
+            "בלעדי לחברי VIP",
+            "אחוז גבוה יותר מבונוס הפסד שבועי כללי",
+            "דרישת מחזור x1",
+            "מזוכה כל יום חמישי"
+          ]
+        }
+      },
+      {
+        "id": "sport-9",
+        "name": {
+          "en": "Free Bet 30% from Daily Deposit",
+          "he": "הימור חינם 30% מהפקדה יומית"
+        },
+        "badge": "hot",
+        "description": {
+          "en": "Get a 30% free bet from your daily deposit amount (1,000₪ - 10,000₪).",
+          "he": "קבל הימור חינם 30% מסכום ההפקדה היומית שלך (1,000₪ - 10,000₪)."
+        },
+        "details": {
+          "rate": {
+            "en": "30%",
+            "he": "30%"
+          },
+          "minDeposit": {
+            "en": "1,000 ₪ per day",
+            "he": "1,000 ₪ ליום"
+          },
+          "maxBonus": {
+            "en": "3,000 ₪ (30% of 10,000₪)",
+            "he": "3,000 ₪ (30% מ-10,000₪)"
+          },
+          "wagering": {
+            "en": "Free bet - stake not returned",
+            "he": "הימור חינם - ההימור לא מוחזר"
+          },
+          "validity": {
+            "en": "24 hours",
+            "he": "24 שעות"
+          },
+          "eligibility": {
+            "en": "All members depositing 1,000₪+ daily",
+            "he": "כל החברים המפקידים 1,000₪+ ביום"
+          }
+        },
+        "example": {
+          "en": "Deposit 5,000 ₪ today → Receive 1,500 ₪ free bet. Win 3,000 ₪ → Receive 3,000 ₪ (stake not returned).",
+          "he": "הפקדה 5,000 ₪ היום → קבלת 1,500 ₪ הימור חינם. זכייה 3,000 ₪ → קבלת 3,000 ₪ (ההימור לא מוחזר)."
+        },
+        "rules": {
+          "en": [
+            "Minimum daily deposit: 1,000 ₪",
+            "Maximum deposit counted: 10,000 ₪",
+            "Free bet stake not included in returns",
+            "Must be used within 24 hours",
+            "One free bet per day"
+          ],
+          "he": [
+            "הפקדה יומית מינימלית: 1,000 ₪",
+            "הפקדה מקסימלית שנספרת: 10,000 ₪",
+            "סכום ההימור החינם לא כלול בהחזרים",
+            "יש להשתמש תוך 24 שעות",
+            "הימור חינם אחד ליום"
+          ]
+        }
+      },
+      {
+        "id": "sport-10",
+        "name": {
+          "en": "Bet & Get",
+          "he": "הימר וקבל"
+        },
+        "badge": null,
+        "description": {
+          "en": "Place qualifying bets and receive bonus rewards.",
+          "he": "בצע הימורים מזכים וקבל פרסי בונוס."
+        },
+        "details": {
+          "rate": {
+            "en": "Varies per promotion",
+            "he": "משתנה לפי מבצע"
+          },
+          "minDeposit": {
+            "en": "As specified",
+            "he": "כמפורט"
+          },
+          "maxBonus": {
+            "en": "As specified per offer",
+            "he": "כמפורט בהצעה"
+          },
+          "wagering": {
+            "en": "Varies",
+            "he": "משתנה"
+          },
+          "validity": {
+            "en": "Per promotion period",
+            "he": "לפי תקופת המבצע"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "Bet 200 ₪ on selected match → Get 50 ₪ free bet regardless of result.",
+          "he": "הימר 200 ₪ על משחק נבחר → קבל 50 ₪ הימור חינם ללא קשר לתוצאה."
+        },
+        "rules": {
+          "en": [
+            "Qualifying bet amount and odds specified per offer",
+            "Reward credited after qualifying bet settles",
+            "Check promotions for current Bet & Get offers",
+            "Standard terms apply"
+          ],
+          "he": [
+            "סכום ההימור המזכה והאודס מפורטים בכל הצעה",
+            "הפרס מזוכה לאחר שההימור המזכה נקבע",
+            "בדוק מבצעים להצעות הימר וקבל נוכחיות",
+            "תנאים סטנדרטיים חלים"
+          ]
+        }
+      },
+      {
+        "id": "sport-11",
+        "name": {
+          "en": "Insurance on First Bet",
+          "he": "ביטוח על ההימור הראשון"
+        },
+        "badge": "new",
+        "description": {
+          "en": "Your first bet is insured - get your stake back if it loses.",
+          "he": "ההימור הראשון שלך מבוטח - קבל את ההימור בחזרה אם הוא מפסיד."
+        },
+        "details": {
+          "rate": {
+            "en": "100% of first bet",
+            "he": "100% מההימור הראשון"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "As specified",
+            "he": "כמפורט"
+          },
+          "wagering": {
+            "en": "x3 turnover on refunded amount",
+            "he": "x3 מחזור על הסכום המוחזר"
+          },
+          "validity": {
+            "en": "First bet only",
+            "he": "הימור ראשון בלבד"
+          },
+          "eligibility": {
+            "en": "New members (first bet)",
+            "he": "חברים חדשים (הימור ראשון)"
+          }
+        },
+        "example": {
+          "en": "First bet 300 ₪ and it loses → Receive 300 ₪ back as bonus. Wagering: 300 × 3 = 900 ₪.",
+          "he": "הימור ראשון 300 ₪ והוא מפסיד → קבלת 300 ₪ בחזרה כבונוס. מחזור: 300 × 3 = 900 ₪."
+        },
+        "rules": {
+          "en": [
+            "Applies to first ever bet only",
+            "Refund credited as bonus funds",
+            "x3 wagering on refunded amount",
+            "Minimum odds may apply"
+          ],
+          "he": [
+            "חל על ההימור הראשון בלבד",
+            "ההחזר מזוכה ככספי בונוס",
+            "x3 מחזור על הסכום המוחזר",
+            "עשוי לחול אודס מינימום"
+          ]
+        }
+      }
+    ]
+  },
+  "slots": {
+    "id": "slots",
+    "icon": "&#127920;",
+    "color": "#9b59b6",
+    "bonuses": [
+      {
+        "id": "slots-1",
+        "name": {
+          "en": "First Live Casino Deposit Bonus 20%",
+          "he": "בונוס הפקדה ראשונה בקזינו חי 20%"
+        },
+        "badge": "new",
+        "description": {
+          "en": "New members receive a 20% bonus on their first live casino deposit.",
+          "he": "חברים חדשים מקבלים בונוס 20% על ההפקדה הראשונה שלהם בקזינו חי."
+        },
+        "details": {
+          "rate": {
+            "en": "20%",
+            "he": "20%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "1,000 ₪",
+            "he": "1,000 ₪"
+          },
+          "wagering": {
+            "en": "x30 turnover on slots",
+            "he": "x30 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה)"
+          }
+        },
+        "example": {
+          "en": "Deposit 500 ₪ → Receive 100 ₪ bonus → Play with 600 ₪ total. Wagering: 100 × 30 = 3,000 ₪ in slot bets required.",
+          "he": "הפקדה 500 ₪ → קבלת 100 ₪ בונוס → שחק עם 600 ₪ סה\"כ. מחזור: 100 × 30 = 3,000 ₪ בהימורי סלוטים נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Only one first deposit bonus per customer",
+            "Applies to live casino games only",
+            "Bonus must be wagered within 14 days",
+            "Cannot be combined with other deposit bonuses",
+            "Withdrawal available after wagering completion"
+          ],
+          "he": [
+            "בונוס הפקדה ראשונה אחד בלבד ללקוח",
+            "חל על משחקי קזינו חי בלבד",
+            "יש לסיים את המחזור תוך 14 ימים",
+            "לא ניתן לשלב עם בונוסי הפקדה אחרים",
+            "משיכה זמינה לאחר השלמת המחזור"
+          ]
+        }
+      },
+      {
+        "id": "slots-2",
+        "name": {
+          "en": "Second Live Casino Deposit Bonus 15%",
+          "he": "בונוס הפקדה שנייה בקזינו חי 15%"
+        },
+        "badge": null,
+        "description": {
+          "en": "Get a 15% bonus on your second live casino deposit.",
+          "he": "קבל בונוס 15% על ההפקדה השנייה שלך בקזינו חי."
+        },
+        "details": {
+          "rate": {
+            "en": "15%",
+            "he": "15%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "750 ₪",
+            "he": "750 ₪"
+          },
+          "wagering": {
+            "en": "x30 turnover on slots",
+            "he": "x30 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "Members making their second deposit",
+            "he": "חברים המבצעים הפקדה שנייה"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → Receive 150 ₪ bonus → Play with 1,150 ₪ total. Wagering: 150 × 30 = 4,500 ₪ required.",
+          "he": "הפקדה 1,000 ₪ → קבלת 150 ₪ בונוס → שחק עם 1,150 ₪ סה\"כ. מחזור: 150 × 30 = 4,500 ₪ נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Available after first deposit bonus is used",
+            "x30 wagering requirement on slots",
+            "14-day validity period",
+            "Cannot be combined with other bonuses"
+          ],
+          "he": [
+            "זמין לאחר שימוש בבונוס הפקדה ראשונה",
+            "דרישת מחזור x30 על סלוטים",
+            "תקופת תוקף 14 ימים",
+            "לא ניתן לשלב עם בונוסים אחרים"
+          ]
+        }
+      },
+      {
+        "id": "slots-3",
+        "name": {
+          "en": "Free Spins Bonus (First Deposit Only)",
+          "he": "בונוס ספינים חינם (הפקדה ראשונה בלבד)"
+        },
+        "badge": "popular",
+        "description": {
+          "en": "Receive free spins on selected slot games with your first deposit.",
+          "he": "קבל ספינים חינם על משחקי סלוט נבחרים עם ההפקדה הראשונה שלך."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 100 free spins",
+            "he": "עד 100 ספינים חינם"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "100 free spins (value up to 200 ₪)",
+            "he": "100 ספינים חינם (שווי עד 200 ₪)"
+          },
+          "wagering": {
+            "en": "x25 turnover on winnings from free spins",
+            "he": "x25 מחזור על זכיות מספינים חינם"
+          },
+          "validity": {
+            "en": "7 days from activation",
+            "he": "7 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה)"
+          }
+        },
+        "example": {
+          "en": "Deposit 200 ₪ → Receive 50 free spins on Book of Dead → Win 80 ₪ → Wagering: 80 × 25 = 2,000 ₪ required.",
+          "he": "הפקדה 200 ₪ → קבלת 50 ספינים חינם על Book of Dead → זכייה 80 ₪ → מחזור: 80 × 25 = 2,000 ₪ נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Free spins valid on selected games only",
+            "Winnings from spins subject to x25 wagering",
+            "Must be used within 7 days",
+            "Cannot be combined with other first deposit offers",
+            "Number of spins based on deposit amount"
+          ],
+          "he": [
+            "ספינים חינם תקפים על משחקים נבחרים בלבד",
+            "זכיות מספינים כפופות למחזור x25",
+            "יש להשתמש תוך 7 ימים",
+            "לא ניתן לשלב עם הצעות הפקדה ראשונה אחרות",
+            "מספר הספינים מבוסס על סכום ההפקדה"
+          ]
+        }
+      },
+      {
+        "id": "slots-4",
+        "name": {
+          "en": "20% Deposit Bonus on Slots + 10% Loss Bonus",
+          "he": "בונוס הפקדה 20% על סלוטים + בונוס הפסד 10%"
+        },
+        "badge": "hot",
+        "description": {
+          "en": "Double benefit: 20% bonus on deposit plus 10% back on losses for slot games.",
+          "he": "הטבה כפולה: 20% בונוס על הפקדה ועוד 10% בחזרה על הפסדים במשחקי סלוט."
+        },
+        "details": {
+          "rate": {
+            "en": "20% deposit + 10% loss",
+            "he": "20% הפקדה + 10% הפסד"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "500 ₪ deposit bonus + 200 ₪ loss bonus",
+            "he": "500 ₪ בונוס הפקדה + 200 ₪ בונוס הפסד"
+          },
+          "wagering": {
+            "en": "x25 turnover on deposit bonus, x10 on loss bonus",
+            "he": "x25 מחזור על בונוס הפקדה, x10 על בונוס הפסד"
+          },
+          "validity": {
+            "en": "7 days from activation",
+            "he": "7 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → 200 ₪ deposit bonus. Lose 500 ₪ → 50 ₪ loss bonus. Total bonus: 250 ₪.",
+          "he": "הפקדה 1,000 ₪ → 200 ₪ בונוס הפקדה. הפסד 500 ₪ → 50 ₪ בונוס הפסד. סה\"כ בונוס: 250 ₪."
+        },
+        "rules": {
+          "en": [
+            "Deposit bonus credited immediately",
+            "Loss bonus credited after session ends",
+            "Different wagering for each bonus type",
+            "Valid on slot games only",
+            "Cannot be combined with other deposit bonuses"
+          ],
+          "he": [
+            "בונוס הפקדה מזוכה מיידית",
+            "בונוס הפסד מזוכה לאחר סיום הסשן",
+            "מחזור שונה לכל סוג בונוס",
+            "תקף על משחקי סלוט בלבד",
+            "לא ניתן לשלב עם בונוסי הפקדה אחרים"
+          ]
+        }
+      },
+      {
+        "id": "slots-5",
+        "name": {
+          "en": "Weekly Loss Bonus Every Monday 10% on Slots",
+          "he": "בונוס הפסד שבועי כל יום שני 10% על סלוטים"
+        },
+        "badge": null,
+        "description": {
+          "en": "Get 10% back on your weekly slot losses every Monday.",
+          "he": "קבל 10% בחזרה על הפסדי הסלוטים השבועיים שלך כל יום שני."
+        },
+        "details": {
+          "rate": {
+            "en": "10%",
+            "he": "10%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "500 ₪ per week",
+            "he": "500 ₪ לשבוע"
+          },
+          "wagering": {
+            "en": "x10 turnover on slots",
+            "he": "x10 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All active members with slot losses",
+            "he": "כל החברים הפעילים עם הפסדי סלוטים"
+          }
+        },
+        "example": {
+          "en": "Weekly slot losses: 3,000 ₪ → 10% = 300 ₪ bonus credited on Monday. Wagering: 300 × 10 = 3,000 ₪.",
+          "he": "הפסדי סלוטים שבועיים: 3,000 ₪ → 10% = 300 ₪ בונוס מזוכה ביום שני. מחזור: 300 × 10 = 3,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Calculated on net weekly slot losses (Mon-Sun)",
+            "Credited every Monday",
+            "x10 wagering requirement on slots",
+            "Maximum bonus 500 ₪ per week",
+            "Minimum weekly loss of 200 ₪ required"
+          ],
+          "he": [
+            "מחושב על הפסדי סלוטים שבועיים נטו (שני-ראשון)",
+            "מזוכה כל יום שני",
+            "דרישת מחזור x10 על סלוטים",
+            "בונוס מקסימלי 500 ₪ לשבוע",
+            "נדרש הפסד שבועי מינימלי של 200 ₪"
+          ]
+        }
+      },
+      {
+        "id": "slots-6",
+        "name": {
+          "en": "VIP Weekly Loss Bonus up to 25%",
+          "he": "בונוס הפסד שבועי VIP עד 25%"
+        },
+        "badge": "vip",
+        "description": {
+          "en": "VIP members receive up to 25% back on weekly slot losses.",
+          "he": "חברי VIP מקבלים עד 25% בחזרה על הפסדי סלוטים שבועיים."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 25%",
+            "he": "עד 25%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Based on VIP tier",
+            "he": "בהתאם לדרגת VIP"
+          },
+          "wagering": {
+            "en": "x5 turnover on slots",
+            "he": "x5 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "VIP members only",
+            "he": "חברי VIP בלבד"
+          }
+        },
+        "example": {
+          "en": "VIP weekly slot loss: 10,000 ₪ → 25% = 2,500 ₪ bonus. Wagering: 2,500 × 5 = 12,500 ₪.",
+          "he": "הפסד סלוטים שבועי VIP: 10,000 ₪ → 25% = 2,500 ₪ בונוס. מחזור: 2,500 × 5 = 12,500 ₪."
+        },
+        "rules": {
+          "en": [
+            "Exclusive to VIP members",
+            "Higher percentage based on VIP tier",
+            "x5 wagering requirement (lower than standard)",
+            "Credited weekly",
+            "No maximum bonus cap for top VIP tiers"
+          ],
+          "he": [
+            "בלעדי לחברי VIP",
+            "אחוז גבוה יותר בהתאם לדרגת VIP",
+            "דרישת מחזור x5 (נמוכה מהסטנדרט)",
+            "מזוכה שבועית",
+            "ללא תקרת בונוס לדרגות VIP עליונות"
+          ]
+        }
+      },
+      {
+        "id": "slots-7",
+        "name": {
+          "en": "Daily Free Spins Bonus (Media, VIP, Promotional)",
+          "he": "בונוס ספינים חינם יומי (מדיה, VIP, מבצעים)"
+        },
+        "badge": null,
+        "description": {
+          "en": "Receive daily free spins through media promotions, VIP rewards, or special campaigns.",
+          "he": "קבל ספינים חינם יומיים דרך מבצעי מדיה, פרסי VIP או קמפיינים מיוחדים."
+        },
+        "details": {
+          "rate": {
+            "en": "10-50 free spins daily",
+            "he": "10-50 ספינים חינם ביום"
+          },
+          "minDeposit": {
+            "en": "Varies by promotion",
+            "he": "משתנה לפי מבצע"
+          },
+          "maxBonus": {
+            "en": "50 free spins per day",
+            "he": "50 ספינים חינם ליום"
+          },
+          "wagering": {
+            "en": "x20 turnover on winnings",
+            "he": "x20 מחזור על זכיות"
+          },
+          "validity": {
+            "en": "24 hours from credit",
+            "he": "24 שעות מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "Eligible via media, VIP status, or promotional codes",
+            "he": "זכאות דרך מדיה, סטטוס VIP או קודי מבצע"
+          }
+        },
+        "example": {
+          "en": "Receive 20 free spins via Telegram promo → Win 40 ₪ → Wagering: 40 × 20 = 800 ₪ required.",
+          "he": "קבלת 20 ספינים חינם דרך מבצע טלגרם → זכייה 40 ₪ → מחזור: 40 × 20 = 800 ₪ נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Free spins credited based on promotion type",
+            "Must be used within 24 hours",
+            "Winnings subject to x20 wagering",
+            "Available on selected slot games",
+            "Check daily promotions for current offers"
+          ],
+          "he": [
+            "ספינים חינם מזוכים לפי סוג המבצע",
+            "יש להשתמש תוך 24 שעות",
+            "זכיות כפופות למחזור x20",
+            "זמין על משחקי סלוט נבחרים",
+            "בדוק מבצעים יומיים להצעות נוכחיות"
+          ]
+        }
+      },
+      {
+        "id": "slots-8",
+        "name": {
+          "en": "30% Bonus on Losses After Midnight",
+          "he": "בונוס 30% על הפסדים לאחר חצות"
+        },
+        "badge": null,
+        "description": {
+          "en": "Play slots after midnight and receive 30% back on your losses.",
+          "he": "שחק סלוטים לאחר חצות וקבל 30% בחזרה על ההפסדים שלך."
+        },
+        "details": {
+          "rate": {
+            "en": "30%",
+            "he": "30%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "1,000 ₪ per night",
+            "he": "1,000 ₪ ללילה"
+          },
+          "wagering": {
+            "en": "x15 turnover on slots",
+            "he": "x15 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "24 hours from credit",
+            "he": "24 שעות מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All members playing between 00:00-06:00",
+            "he": "כל החברים המשחקים בין 00:00-06:00"
+          }
+        },
+        "example": {
+          "en": "Play slots 00:00-03:00, lose 2,000 ₪ → Receive 600 ₪ bonus. Wagering: 600 × 15 = 9,000 ₪.",
+          "he": "שחק סלוטים 00:00-03:00, הפסד 2,000 ₪ → קבלת 600 ₪ בונוס. מחזור: 600 × 15 = 9,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Active between 00:00 and 06:00 Israel time",
+            "Calculated on net losses during the time window",
+            "Bonus credited the following morning",
+            "x15 wagering requirement",
+            "Maximum 1,000 ₪ bonus per night"
+          ],
+          "he": [
+            "פעיל בין 00:00 ל-06:00 שעון ישראל",
+            "מחושב על הפסדים נטו בחלון הזמן",
+            "בונוס מזוכה בבוקר שלמחרת",
+            "דרישת מחזור x15",
+            "בונוס מקסימלי 1,000 ₪ ללילה"
+          ]
+        }
+      },
+      {
+        "id": "slots-9",
+        "name": {
+          "en": "Happy Hour Bonus - Free Spins",
+          "he": "בונוס שעת הנאה - ספינים חינם"
+        },
+        "badge": null,
+        "description": {
+          "en": "During designated happy hours, receive bonus free spins on selected slots.",
+          "he": "בשעות שמחה ייעודיות, קבל ספינים חינם בונוס על סלוטים נבחרים."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 30 free spins",
+            "he": "עד 30 ספינים חינם"
+          },
+          "minDeposit": {
+            "en": "100 ₪ during happy hour",
+            "he": "100 ₪ בזמן שעת הנאה"
+          },
+          "maxBonus": {
+            "en": "30 free spins (value up to 60 ₪)",
+            "he": "30 ספינים חינם (שווי עד 60 ₪)"
+          },
+          "wagering": {
+            "en": "x15 turnover on winnings",
+            "he": "x15 מחזור על זכיות"
+          },
+          "validity": {
+            "en": "Valid during happy hour window only",
+            "he": "תקף בחלון שעת ההנאה בלבד"
+          },
+          "eligibility": {
+            "en": "All members depositing during happy hour",
+            "he": "כל החברים המפקידים בזמן שעת ההנאה"
+          }
+        },
+        "example": {
+          "en": "Deposit 200 ₪ during happy hour (18:00-20:00) → Receive 20 free spins → Win 50 ₪ → Wagering: 50 × 15 = 750 ₪.",
+          "he": "הפקדה 200 ₪ בשעת הנאה (18:00-20:00) → קבלת 20 ספינים חינם → זכייה 50 ₪ → מחזור: 50 × 15 = 750 ₪."
+        },
+        "rules": {
+          "en": [
+            "Available only during announced happy hour times",
+            "Check promotions for happy hour schedule",
+            "Free spins on selected games only",
+            "Winnings subject to x15 wagering",
+            "One happy hour bonus per day"
+          ],
+          "he": [
+            "זמין רק בשעות הנאה שפורסמו",
+            "בדוק מבצעים ללוח זמני שעת הנאה",
+            "ספינים חינם על משחקים נבחרים בלבד",
+            "זכיות כפופות למחזור x15",
+            "בונוס שעת הנאה אחד ליום"
+          ]
+        }
+      },
+      {
+        "id": "slots-10",
+        "name": {
+          "en": "First Deposit Bonus 50% Crash Games",
+          "he": "בונוס הפקדה ראשונה 50% משחקי קראש"
+        },
+        "badge": "new",
+        "description": {
+          "en": "New players receive a massive 50% bonus on their first deposit for crash games.",
+          "he": "שחקנים חדשים מקבלים בונוס ענק של 50% על ההפקדה הראשונה שלהם למשחקי קראש."
+        },
+        "details": {
+          "rate": {
+            "en": "50%",
+            "he": "50%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "2,000 ₪",
+            "he": "2,000 ₪"
+          },
+          "wagering": {
+            "en": "x35 turnover on crash games",
+            "he": "x35 מחזור על משחקי קראש"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit for crash games)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה למשחקי קראש)"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → Receive 500 ₪ bonus → Play with 1,500 ₪ total on crash games. Wagering: 500 × 35 = 17,500 ₪.",
+          "he": "הפקדה 1,000 ₪ → קבלת 500 ₪ בונוס → שחק עם 1,500 ₪ סה\"כ במשחקי קראש. מחזור: 500 × 35 = 17,500 ₪."
+        },
+        "rules": {
+          "en": [
+            "Applies to crash games only (Aviator, Spaceman, etc.)",
+            "One first deposit bonus per customer",
+            "x35 wagering on crash games",
+            "Must be wagered within 14 days",
+            "Cannot be combined with other first deposit offers"
+          ],
+          "he": [
+            "חל על משחקי קראש בלבד (Aviator, Spaceman וכו')",
+            "בונוס הפקדה ראשונה אחד ללקוח",
+            "מחזור x35 על משחקי קראש",
+            "יש למחזר תוך 14 ימים",
+            "לא ניתן לשלב עם הצעות הפקדה ראשונה אחרות"
+          ]
+        }
+      }
+    ]
+  },
+  "casino": {
+    "id": "casino",
+    "icon": "&#127183;",
+    "color": "#e74c3c",
+    "bonuses": [
+      {
+        "id": "casino-1",
+        "name": {
+          "en": "First Live Casino Deposit Bonus 20%",
+          "he": "בונוס הפקדה ראשונה בקזינו חי 20%"
+        },
+        "badge": "new",
+        "description": {
+          "en": "New members receive a 20% bonus on their first live casino deposit.",
+          "he": "חברים חדשים מקבלים בונוס 20% על ההפקדה הראשונה שלהם בקזינו חי."
+        },
+        "details": {
+          "rate": {
+            "en": "20%",
+            "he": "20%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "1,000 ₪",
+            "he": "1,000 ₪"
+          },
+          "wagering": {
+            "en": "x30 turnover on slots",
+            "he": "x30 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה)"
+          }
+        },
+        "example": {
+          "en": "Deposit 500 ₪ → Receive 100 ₪ bonus → Play with 600 ₪ total. Wagering: 100 × 30 = 3,000 ₪ in slot bets required.",
+          "he": "הפקדה 500 ₪ → קבלת 100 ₪ בונוס → שחק עם 600 ₪ סה\"כ. מחזור: 100 × 30 = 3,000 ₪ בהימורי סלוטים נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Only one first deposit bonus per customer",
+            "Applies to live casino games only",
+            "Bonus must be wagered within 14 days",
+            "Cannot be combined with other deposit bonuses",
+            "Withdrawal available after wagering completion"
+          ],
+          "he": [
+            "בונוס הפקדה ראשונה אחד בלבד ללקוח",
+            "חל על משחקי קזינו חי בלבד",
+            "יש לסיים את המחזור תוך 14 ימים",
+            "לא ניתן לשלב עם בונוסי הפקדה אחרים",
+            "משיכה זמינה לאחר השלמת המחזור"
+          ]
+        }
+      },
+      {
+        "id": "casino-2",
+        "name": {
+          "en": "Second Live Casino Deposit Bonus 15%",
+          "he": "בונוס הפקדה שנייה בקזינו חי 15%"
+        },
+        "badge": null,
+        "description": {
+          "en": "Get a 15% bonus on your second live casino deposit.",
+          "he": "קבל בונוס 15% על ההפקדה השנייה שלך בקזינו חי."
+        },
+        "details": {
+          "rate": {
+            "en": "15%",
+            "he": "15%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "750 ₪",
+            "he": "750 ₪"
+          },
+          "wagering": {
+            "en": "x30 turnover on slots",
+            "he": "x30 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "Members making their second deposit",
+            "he": "חברים המבצעים הפקדה שנייה"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → Receive 150 ₪ bonus → Play with 1,150 ₪ total. Wagering: 150 × 30 = 4,500 ₪ required.",
+          "he": "הפקדה 1,000 ₪ → קבלת 150 ₪ בונוס → שחק עם 1,150 ₪ סה\"כ. מחזור: 150 × 30 = 4,500 ₪ נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Available after first deposit bonus is used",
+            "x30 wagering requirement on slots",
+            "14-day validity period",
+            "Cannot be combined with other bonuses"
+          ],
+          "he": [
+            "זמין לאחר שימוש בבונוס הפקדה ראשונה",
+            "דרישת מחזור x30 על סלוטים",
+            "תקופת תוקף 14 ימים",
+            "לא ניתן לשלב עם בונוסים אחרים"
+          ]
+        }
+      },
+      {
+        "id": "casino-3",
+        "name": {
+          "en": "Free Spins Bonus (First Deposit Only)",
+          "he": "בונוס ספינים חינם (הפקדה ראשונה בלבד)"
+        },
+        "badge": "popular",
+        "description": {
+          "en": "Receive free spins on selected slot games with your first deposit.",
+          "he": "קבל ספינים חינם על משחקי סלוט נבחרים עם ההפקדה הראשונה שלך."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 100 free spins",
+            "he": "עד 100 ספינים חינם"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "100 free spins (value up to 200 ₪)",
+            "he": "100 ספינים חינם (שווי עד 200 ₪)"
+          },
+          "wagering": {
+            "en": "x25 turnover on winnings from free spins",
+            "he": "x25 מחזור על זכיות מספינים חינם"
+          },
+          "validity": {
+            "en": "7 days from activation",
+            "he": "7 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה)"
+          }
+        },
+        "example": {
+          "en": "Deposit 200 ₪ → Receive 50 free spins on Book of Dead → Win 80 ₪ → Wagering: 80 × 25 = 2,000 ₪ required.",
+          "he": "הפקדה 200 ₪ → קבלת 50 ספינים חינם על Book of Dead → זכייה 80 ₪ → מחזור: 80 × 25 = 2,000 ₪ נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Free spins valid on selected games only",
+            "Winnings from spins subject to x25 wagering",
+            "Must be used within 7 days",
+            "Cannot be combined with other first deposit offers",
+            "Number of spins based on deposit amount"
+          ],
+          "he": [
+            "ספינים חינם תקפים על משחקים נבחרים בלבד",
+            "זכיות מספינים כפופות למחזור x25",
+            "יש להשתמש תוך 7 ימים",
+            "לא ניתן לשלב עם הצעות הפקדה ראשונה אחרות",
+            "מספר הספינים מבוסס על סכום ההפקדה"
+          ]
+        }
+      },
+      {
+        "id": "casino-4",
+        "name": {
+          "en": "20% Deposit Bonus on Slots + 10% Loss Bonus",
+          "he": "בונוס הפקדה 20% על סלוטים + בונוס הפסד 10%"
+        },
+        "badge": "hot",
+        "description": {
+          "en": "Double benefit: 20% bonus on deposit plus 10% back on losses for slot games.",
+          "he": "הטבה כפולה: 20% בונוס על הפקדה ועוד 10% בחזרה על הפסדים במשחקי סלוט."
+        },
+        "details": {
+          "rate": {
+            "en": "20% deposit + 10% loss",
+            "he": "20% הפקדה + 10% הפסד"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "500 ₪ deposit bonus + 200 ₪ loss bonus",
+            "he": "500 ₪ בונוס הפקדה + 200 ₪ בונוס הפסד"
+          },
+          "wagering": {
+            "en": "x25 turnover on deposit bonus, x10 on loss bonus",
+            "he": "x25 מחזור על בונוס הפקדה, x10 על בונוס הפסד"
+          },
+          "validity": {
+            "en": "7 days from activation",
+            "he": "7 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → 200 ₪ deposit bonus. Lose 500 ₪ → 50 ₪ loss bonus. Total bonus: 250 ₪.",
+          "he": "הפקדה 1,000 ₪ → 200 ₪ בונוס הפקדה. הפסד 500 ₪ → 50 ₪ בונוס הפסד. סה\"כ בונוס: 250 ₪."
+        },
+        "rules": {
+          "en": [
+            "Deposit bonus credited immediately",
+            "Loss bonus credited after session ends",
+            "Different wagering for each bonus type",
+            "Valid on slot games only",
+            "Cannot be combined with other deposit bonuses"
+          ],
+          "he": [
+            "בונוס הפקדה מזוכה מיידית",
+            "בונוס הפסד מזוכה לאחר סיום הסשן",
+            "מחזור שונה לכל סוג בונוס",
+            "תקף על משחקי סלוט בלבד",
+            "לא ניתן לשלב עם בונוסי הפקדה אחרים"
+          ]
+        }
+      },
+      {
+        "id": "casino-5",
+        "name": {
+          "en": "Weekly Loss Bonus Every Monday 10% on Slots",
+          "he": "בונוס הפסד שבועי כל יום שני 10% על סלוטים"
+        },
+        "badge": null,
+        "description": {
+          "en": "Get 10% back on your weekly slot losses every Monday.",
+          "he": "קבל 10% בחזרה על הפסדי הסלוטים השבועיים שלך כל יום שני."
+        },
+        "details": {
+          "rate": {
+            "en": "10%",
+            "he": "10%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "500 ₪ per week",
+            "he": "500 ₪ לשבוע"
+          },
+          "wagering": {
+            "en": "x10 turnover on slots",
+            "he": "x10 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All active members with slot losses",
+            "he": "כל החברים הפעילים עם הפסדי סלוטים"
+          }
+        },
+        "example": {
+          "en": "Weekly slot losses: 3,000 ₪ → 10% = 300 ₪ bonus credited on Monday. Wagering: 300 × 10 = 3,000 ₪.",
+          "he": "הפסדי סלוטים שבועיים: 3,000 ₪ → 10% = 300 ₪ בונוס מזוכה ביום שני. מחזור: 300 × 10 = 3,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Calculated on net weekly slot losses (Mon-Sun)",
+            "Credited every Monday",
+            "x10 wagering requirement on slots",
+            "Maximum bonus 500 ₪ per week",
+            "Minimum weekly loss of 200 ₪ required"
+          ],
+          "he": [
+            "מחושב על הפסדי סלוטים שבועיים נטו (שני-ראשון)",
+            "מזוכה כל יום שני",
+            "דרישת מחזור x10 על סלוטים",
+            "בונוס מקסימלי 500 ₪ לשבוע",
+            "נדרש הפסד שבועי מינימלי של 200 ₪"
+          ]
+        }
+      },
+      {
+        "id": "casino-6",
+        "name": {
+          "en": "VIP Weekly Loss Bonus up to 25%",
+          "he": "בונוס הפסד שבועי VIP עד 25%"
+        },
+        "badge": "vip",
+        "description": {
+          "en": "VIP members receive up to 25% back on weekly slot losses.",
+          "he": "חברי VIP מקבלים עד 25% בחזרה על הפסדי סלוטים שבועיים."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 25%",
+            "he": "עד 25%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Based on VIP tier",
+            "he": "בהתאם לדרגת VIP"
+          },
+          "wagering": {
+            "en": "x5 turnover on slots",
+            "he": "x5 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "VIP members only",
+            "he": "חברי VIP בלבד"
+          }
+        },
+        "example": {
+          "en": "VIP weekly slot loss: 10,000 ₪ → 25% = 2,500 ₪ bonus. Wagering: 2,500 × 5 = 12,500 ₪.",
+          "he": "הפסד סלוטים שבועי VIP: 10,000 ₪ → 25% = 2,500 ₪ בונוס. מחזור: 2,500 × 5 = 12,500 ₪."
+        },
+        "rules": {
+          "en": [
+            "Exclusive to VIP members",
+            "Higher percentage based on VIP tier",
+            "x5 wagering requirement (lower than standard)",
+            "Credited weekly",
+            "No maximum bonus cap for top VIP tiers"
+          ],
+          "he": [
+            "בלעדי לחברי VIP",
+            "אחוז גבוה יותר בהתאם לדרגת VIP",
+            "דרישת מחזור x5 (נמוכה מהסטנדרט)",
+            "מזוכה שבועית",
+            "ללא תקרת בונוס לדרגות VIP עליונות"
+          ]
+        }
+      },
+      {
+        "id": "casino-7",
+        "name": {
+          "en": "Daily Free Spins Bonus (Media, VIP, Promotional)",
+          "he": "בונוס ספינים חינם יומי (מדיה, VIP, מבצעים)"
+        },
+        "badge": null,
+        "description": {
+          "en": "Receive daily free spins through media promotions, VIP rewards, or special campaigns.",
+          "he": "קבל ספינים חינם יומיים דרך מבצעי מדיה, פרסי VIP או קמפיינים מיוחדים."
+        },
+        "details": {
+          "rate": {
+            "en": "10-50 free spins daily",
+            "he": "10-50 ספינים חינם ביום"
+          },
+          "minDeposit": {
+            "en": "Varies by promotion",
+            "he": "משתנה לפי מבצע"
+          },
+          "maxBonus": {
+            "en": "50 free spins per day",
+            "he": "50 ספינים חינם ליום"
+          },
+          "wagering": {
+            "en": "x20 turnover on winnings",
+            "he": "x20 מחזור על זכיות"
+          },
+          "validity": {
+            "en": "24 hours from credit",
+            "he": "24 שעות מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "Eligible via media, VIP status, or promotional codes",
+            "he": "זכאות דרך מדיה, סטטוס VIP או קודי מבצע"
+          }
+        },
+        "example": {
+          "en": "Receive 20 free spins via Telegram promo → Win 40 ₪ → Wagering: 40 × 20 = 800 ₪ required.",
+          "he": "קבלת 20 ספינים חינם דרך מבצע טלגרם → זכייה 40 ₪ → מחזור: 40 × 20 = 800 ₪ נדרשים."
+        },
+        "rules": {
+          "en": [
+            "Free spins credited based on promotion type",
+            "Must be used within 24 hours",
+            "Winnings subject to x20 wagering",
+            "Available on selected slot games",
+            "Check daily promotions for current offers"
+          ],
+          "he": [
+            "ספינים חינם מזוכים לפי סוג המבצע",
+            "יש להשתמש תוך 24 שעות",
+            "זכיות כפופות למחזור x20",
+            "זמין על משחקי סלוט נבחרים",
+            "בדוק מבצעים יומיים להצעות נוכחיות"
+          ]
+        }
+      },
+      {
+        "id": "casino-8",
+        "name": {
+          "en": "30% Bonus on Losses After Midnight",
+          "he": "בונוס 30% על הפסדים לאחר חצות"
+        },
+        "badge": null,
+        "description": {
+          "en": "Play slots after midnight and receive 30% back on your losses.",
+          "he": "שחק סלוטים לאחר חצות וקבל 30% בחזרה על ההפסדים שלך."
+        },
+        "details": {
+          "rate": {
+            "en": "30%",
+            "he": "30%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "1,000 ₪ per night",
+            "he": "1,000 ₪ ללילה"
+          },
+          "wagering": {
+            "en": "x15 turnover on slots",
+            "he": "x15 מחזור על סלוטים"
+          },
+          "validity": {
+            "en": "24 hours from credit",
+            "he": "24 שעות מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All members playing between 00:00-06:00",
+            "he": "כל החברים המשחקים בין 00:00-06:00"
+          }
+        },
+        "example": {
+          "en": "Play slots 00:00-03:00, lose 2,000 ₪ → Receive 600 ₪ bonus. Wagering: 600 × 15 = 9,000 ₪.",
+          "he": "שחק סלוטים 00:00-03:00, הפסד 2,000 ₪ → קבלת 600 ₪ בונוס. מחזור: 600 × 15 = 9,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Active between 00:00 and 06:00 Israel time",
+            "Calculated on net losses during the time window",
+            "Bonus credited the following morning",
+            "x15 wagering requirement",
+            "Maximum 1,000 ₪ bonus per night"
+          ],
+          "he": [
+            "פעיל בין 00:00 ל-06:00 שעון ישראל",
+            "מחושב על הפסדים נטו בחלון הזמן",
+            "בונוס מזוכה בבוקר שלמחרת",
+            "דרישת מחזור x15",
+            "בונוס מקסימלי 1,000 ₪ ללילה"
+          ]
+        }
+      },
+      {
+        "id": "casino-9",
+        "name": {
+          "en": "Happy Hour Bonus - Free Spins",
+          "he": "בונוס שעת הנאה - ספינים חינם"
+        },
+        "badge": null,
+        "description": {
+          "en": "During designated happy hours, receive bonus free spins on selected slots.",
+          "he": "בשעות שמחה ייעודיות, קבל ספינים חינם בונוס על סלוטים נבחרים."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 30 free spins",
+            "he": "עד 30 ספינים חינם"
+          },
+          "minDeposit": {
+            "en": "100 ₪ during happy hour",
+            "he": "100 ₪ בזמן שעת הנאה"
+          },
+          "maxBonus": {
+            "en": "30 free spins (value up to 60 ₪)",
+            "he": "30 ספינים חינם (שווי עד 60 ₪)"
+          },
+          "wagering": {
+            "en": "x15 turnover on winnings",
+            "he": "x15 מחזור על זכיות"
+          },
+          "validity": {
+            "en": "Valid during happy hour window only",
+            "he": "תקף בחלון שעת ההנאה בלבד"
+          },
+          "eligibility": {
+            "en": "All members depositing during happy hour",
+            "he": "כל החברים המפקידים בזמן שעת ההנאה"
+          }
+        },
+        "example": {
+          "en": "Deposit 200 ₪ during happy hour (18:00-20:00) → Receive 20 free spins → Win 50 ₪ → Wagering: 50 × 15 = 750 ₪.",
+          "he": "הפקדה 200 ₪ בשעת הנאה (18:00-20:00) → קבלת 20 ספינים חינם → זכייה 50 ₪ → מחזור: 50 × 15 = 750 ₪."
+        },
+        "rules": {
+          "en": [
+            "Available only during announced happy hour times",
+            "Check promotions for happy hour schedule",
+            "Free spins on selected games only",
+            "Winnings subject to x15 wagering",
+            "One happy hour bonus per day"
+          ],
+          "he": [
+            "זמין רק בשעות הנאה שפורסמו",
+            "בדוק מבצעים ללוח זמני שעת הנאה",
+            "ספינים חינם על משחקים נבחרים בלבד",
+            "זכיות כפופות למחזור x15",
+            "בונוס שעת הנאה אחד ליום"
+          ]
+        }
+      },
+      {
+        "id": "casino-10",
+        "name": {
+          "en": "First Deposit Bonus 50% Crash Games",
+          "he": "בונוס הפקדה ראשונה 50% משחקי קראש"
+        },
+        "badge": "new",
+        "description": {
+          "en": "New players receive a massive 50% bonus on their first deposit for crash games.",
+          "he": "שחקנים חדשים מקבלים בונוס ענק של 50% על ההפקדה הראשונה שלהם למשחקי קראש."
+        },
+        "details": {
+          "rate": {
+            "en": "50%",
+            "he": "50%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "2,000 ₪",
+            "he": "2,000 ₪"
+          },
+          "wagering": {
+            "en": "x35 turnover on crash games",
+            "he": "x35 מחזור על משחקי קראש"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "New members only (first deposit for crash games)",
+            "he": "חברים חדשים בלבד (הפקדה ראשונה למשחקי קראש)"
+          }
+        },
+        "example": {
+          "en": "Deposit 1,000 ₪ → Receive 500 ₪ bonus → Play with 1,500 ₪ total on crash games. Wagering: 500 × 35 = 17,500 ₪.",
+          "he": "הפקדה 1,000 ₪ → קבלת 500 ₪ בונוס → שחק עם 1,500 ₪ סה\"כ במשחקי קראש. מחזור: 500 × 35 = 17,500 ₪."
+        },
+        "rules": {
+          "en": [
+            "Applies to crash games only (Aviator, Spaceman, etc.)",
+            "One first deposit bonus per customer",
+            "x35 wagering on crash games",
+            "Must be wagered within 14 days",
+            "Cannot be combined with other first deposit offers"
+          ],
+          "he": [
+            "חל על משחקי קראש בלבד (Aviator, Spaceman וכו')",
+            "בונוס הפקדה ראשונה אחד ללקוח",
+            "מחזור x35 על משחקי קראש",
+            "יש למחזר תוך 14 ימים",
+            "לא ניתן לשלב עם הצעות הפקדה ראשונה אחרות"
+          ]
+        }
+      }
+    ]
+  },
+  "happyhour": {
+    "id": "happyhour",
+    "icon": "&#9200;",
+    "color": "#ff6b6b",
+    "bonuses": [
+      {
+        "id": "happyhour-1",
+        "name": {
+          "en": "Happy Hour Bonus - Free Spins",
+          "he": "בונוס שעת הנאה - ספינים חינם"
+        },
+        "badge": "hot",
+        "note": {
+          "en": "This bonus is time-limited and only active during designated happy hour windows. Not available 24/7.",
+          "he": "בונוס זה מוגבל בזמן ופעיל רק בחלונות שעת הנאה ייעודיים. לא זמין 24/7."
+        },
+        "description": {
+          "en": "Receive bonus free spins on selected slots during happy hour periods.",
+          "he": "קבל ספינים חינם בונוס על סלוטים נבחרים בתקופות שעת הנאה."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 50 free spins",
+            "he": "עד 50 ספינים חינם"
+          },
+          "minDeposit": {
+            "en": "100 ₪ during happy hour",
+            "he": "100 ₪ בזמן שעת הנאה"
+          },
+          "maxBonus": {
+            "en": "50 free spins (value up to 100 ₪)",
+            "he": "50 ספינים חינם (שווי עד 100 ₪)"
+          },
+          "wagering": {
+            "en": "x15 turnover on winnings",
+            "he": "x15 מחזור על זכיות"
+          },
+          "validity": {
+            "en": "Must be used during the happy hour window",
+            "he": "יש להשתמש בחלון שעת ההנאה"
+          },
+          "eligibility": {
+            "en": "All members depositing during happy hour",
+            "he": "כל החברים המפקידים בזמן שעת ההנאה"
+          }
+        },
+        "example": {
+          "en": "Happy hour 18:00-20:00: Deposit 300 ₪ → Receive 30 free spins → Win 75 ₪ → Wagering: 75 × 15 = 1,125 ₪.",
+          "he": "שעת הנאה 18:00-20:00: הפקדה 300 ₪ → קבלת 30 ספינים חינם → זכייה 75 ₪ → מחזור: 75 × 15 = 1,125 ₪."
+        },
+        "rules": {
+          "en": [
+            "Active only during announced happy hour windows (e.g., 18:00-20:00)",
+            "Check Telegram and promotions page for schedule",
+            "Free spins on pre-selected games only",
+            "Winnings subject to x15 wagering",
+            "One happy hour bonus per customer per session"
+          ],
+          "he": [
+            "פעיל רק בחלונות שעת הנאה שפורסמו (למשל 18:00-20:00)",
+            "בדוק בטלגרם ובדף המבצעים את לוח הזמנים",
+            "ספינים חינם על משחקים שנבחרו מראש בלבד",
+            "זכיות כפופות למחזור x15",
+            "בונוס שעת הנאה אחד ללקוח לסשן"
+          ]
+        }
+      },
+      {
+        "id": "happyhour-2",
+        "name": {
+          "en": "30% Bonus on Losses After Midnight",
+          "he": "בונוס 30% על הפסדים לאחר חצות"
+        },
+        "badge": "hot",
+        "note": {
+          "en": "This bonus is time-limited and only active between 00:00-06:00. Not available 24/7.",
+          "he": "בונוס זה מוגבל בזמן ופעיל רק בין 00:00-06:00. לא זמין 24/7."
+        },
+        "description": {
+          "en": "Night owl special: receive 30% back on losses for games played after midnight.",
+          "he": "מבצע ינשופי לילה: קבל 30% בחזרה על הפסדים על משחקים ששוחקו לאחר חצות."
+        },
+        "details": {
+          "rate": {
+            "en": "30%",
+            "he": "30%"
+          },
+          "minDeposit": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "maxBonus": {
+            "en": "1,500 ₪ per night",
+            "he": "1,500 ₪ ללילה"
+          },
+          "wagering": {
+            "en": "x15 turnover",
+            "he": "x15 מחזור"
+          },
+          "validity": {
+            "en": "24 hours from credit (credited next morning)",
+            "he": "24 שעות מרגע הזיכוי (מזוכה בבוקר שלמחרת)"
+          },
+          "eligibility": {
+            "en": "All members playing between 00:00-06:00",
+            "he": "כל החברים המשחקים בין 00:00-06:00"
+          }
+        },
+        "example": {
+          "en": "Play from 01:00-04:00, lose 3,000 ₪ → Receive 900 ₪ bonus next morning. Wagering: 900 × 15 = 13,500 ₪.",
+          "he": "שחק מ-01:00-04:00, הפסד 3,000 ₪ → קבלת 900 ₪ בונוס בבוקר שלמחרת. מחזור: 900 × 15 = 13,500 ₪."
+        },
+        "rules": {
+          "en": [
+            "Active between 00:00 and 06:00 Israel time only",
+            "Net losses during the window are calculated",
+            "Bonus credited the following morning by 10:00",
+            "x15 wagering requirement",
+            "Maximum 1,500 ₪ bonus per night session"
+          ],
+          "he": [
+            "פעיל בין 00:00 ל-06:00 שעון ישראל בלבד",
+            "הפסדים נטו בחלון הזמן מחושבים",
+            "בונוס מזוכה בבוקר שלמחרת עד 10:00",
+            "דרישת מחזור x15",
+            "בונוס מקסימלי 1,500 ₪ לסשן לילי"
+          ]
+        }
+      }
+    ]
+  },
+  "promotions": {
+    "id": "promotions",
+    "icon": "&#127873;",
+    "color": "#4a9eff",
+    "bonuses": [
+      {
+        "id": "promo-1",
+        "name": {
+          "en": "Loyalty Bonus",
+          "he": "בונוס נאמנות"
+        },
+        "badge": "popular",
+        "description": {
+          "en": "Reward for long-term active members based on loyalty points accumulation.",
+          "he": "פרס לחברים פעילים לטווח ארוך המבוסס על צבירת נקודות נאמנות."
+        },
+        "details": {
+          "rate": {
+            "en": "Up to 15% based on loyalty tier",
+            "he": "עד 15% בהתאם לרמת נאמנות"
+          },
+          "minDeposit": {
+            "en": "N/A (based on activity)",
+            "he": "לא רלוונטי (מבוסס על פעילות)"
+          },
+          "maxBonus": {
+            "en": "1,000 ₪ per month",
+            "he": "1,000 ₪ לחודש"
+          },
+          "wagering": {
+            "en": "x5 turnover",
+            "he": "x5 מחזור"
+          },
+          "validity": {
+            "en": "30 days from credit",
+            "he": "30 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "Members active for 3+ months",
+            "he": "חברים פעילים 3+ חודשים"
+          }
+        },
+        "example": {
+          "en": "6 months active, Gold tier → Monthly 10% loyalty bonus on deposits. Deposit 2,000 ₪ → 200 ₪ bonus.",
+          "he": "6 חודשים פעילים, דרגת זהב → בונוס נאמנות חודשי 10% על הפקדות. הפקדה 2,000 ₪ → 200 ₪ בונוס."
+        },
+        "rules": {
+          "en": [
+            "Loyalty tier based on cumulative activity",
+            "Bonus percentage increases with tier",
+            "Credited monthly on the 1st",
+            "x5 wagering requirement",
+            "Tier status reviewed quarterly"
+          ],
+          "he": [
+            "דרגת נאמנות מבוססת על פעילות מצטברת",
+            "אחוז הבונוס עולה עם הדרגה",
+            "מזוכה חודשית ב-1 לחודש",
+            "דרישת מחזור x5",
+            "סטטוס דרגה נבדק רבעונית"
+          ]
+        }
+      },
+      {
+        "id": "promo-2",
+        "name": {
+          "en": "Social Media Sharing Bonus",
+          "he": "בונוס שיתוף ברשתות חברתיות"
+        },
+        "badge": null,
+        "description": {
+          "en": "Share your wins or experience on social media and receive a bonus.",
+          "he": "שתף את הזכיות או החוויה שלך ברשתות חברתיות וקבל בונוס."
+        },
+        "details": {
+          "rate": {
+            "en": "Fixed bonus per share",
+            "he": "בונוס קבוע לשיתוף"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "50 ₪ per share (up to 200 ₪/month)",
+            "he": "50 ₪ לשיתוף (עד 200 ₪ לחודש)"
+          },
+          "wagering": {
+            "en": "x3 turnover",
+            "he": "x3 מחזור"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All active members with verified social accounts",
+            "he": "כל החברים הפעילים עם חשבונות חברתיים מאומתים"
+          }
+        },
+        "example": {
+          "en": "Share a win screenshot on Instagram → Submit to support → Receive 50 ₪ bonus. Wagering: 50 × 3 = 150 ₪.",
+          "he": "שתף צילום מסך זכייה באינסטגרם → שלח לתמיכה → קבל 50 ₪ בונוס. מחזור: 50 × 3 = 150 ₪."
+        },
+        "rules": {
+          "en": [
+            "Must tag official account in post",
+            "Post must remain public for 48 hours",
+            "Screenshot proof required",
+            "Maximum 4 shares per month",
+            "Subject to approval by promotions team"
+          ],
+          "he": [
+            "יש לתייג את החשבון הרשמי בפוסט",
+            "הפוסט חייב להישאר ציבורי 48 שעות",
+            "נדרשת הוכחת צילום מסך",
+            "מקסימום 4 שיתופים לחודש",
+            "בכפוף לאישור צוות המבצעים"
+          ]
+        }
+      },
+      {
+        "id": "promo-3",
+        "name": {
+          "en": "Refer a Friend Bonus",
+          "he": "בונוס הפנה חבר"
+        },
+        "badge": "hot",
+        "description": {
+          "en": "Invite friends to join and receive bonuses when they sign up and deposit.",
+          "he": "הזמן חברים להצטרף וקבל בונוסים כשהם נרשמים ומפקידים."
+        },
+        "details": {
+          "rate": {
+            "en": "100 ₪ per referral + 10% of friend's first deposit",
+            "he": "100 ₪ להפניה + 10% מההפקדה הראשונה של החבר"
+          },
+          "minDeposit": {
+            "en": "Friend must deposit minimum 200 ₪",
+            "he": "החבר חייב להפקיד מינימום 200 ₪"
+          },
+          "maxBonus": {
+            "en": "500 ₪ per referral, unlimited referrals",
+            "he": "500 ₪ להפניה, הפניות ללא הגבלה"
+          },
+          "wagering": {
+            "en": "x5 turnover",
+            "he": "x5 מחזור"
+          },
+          "validity": {
+            "en": "30 days from credit",
+            "he": "30 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "Refer a friend → Friend deposits 1,000 ₪ → You receive 100 ₪ + 100 ₪ (10%) = 200 ₪ total bonus.",
+          "he": "הפנה חבר → החבר מפקיד 1,000 ₪ → אתה מקבל 100 ₪ + 100 ₪ (10%) = 200 ₪ סה\"כ בונוס."
+        },
+        "rules": {
+          "en": [
+            "Referred friend must be a new member",
+            "Friend must make a qualifying deposit of 200 ₪+",
+            "Referral bonus credited after friend's first deposit",
+            "No limit on number of referrals",
+            "Both referrer and friend receive bonuses"
+          ],
+          "he": [
+            "החבר המופנה חייב להיות חבר חדש",
+            "החבר חייב לבצע הפקדה מזכה של 200 ₪+",
+            "בונוס הפניה מזוכה לאחר ההפקדה הראשונה של החבר",
+            "ללא הגבלה על מספר ההפניות",
+            "גם המפנה וגם החבר מקבלים בונוסים"
+          ]
+        }
+      },
+      {
+        "id": "promo-4",
+        "name": {
+          "en": "Birthday Bonus",
+          "he": "בונוס יום הולדת"
+        },
+        "badge": null,
+        "description": {
+          "en": "Celebrate your birthday with a special bonus gift.",
+          "he": "חגוג את יום ההולדת שלך עם מתנת בונוס מיוחדת."
+        },
+        "details": {
+          "rate": {
+            "en": "Fixed birthday gift",
+            "he": "מתנת יום הולדת קבועה"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "200 ₪ bonus + 20 free spins",
+            "he": "200 ₪ בונוס + 20 ספינים חינם"
+          },
+          "wagering": {
+            "en": "x10 turnover",
+            "he": "x10 מחזור"
+          },
+          "validity": {
+            "en": "7 days from birthday",
+            "he": "7 ימים מיום ההולדת"
+          },
+          "eligibility": {
+            "en": "All members with verified date of birth",
+            "he": "כל החברים עם תאריך לידה מאומת"
+          }
+        },
+        "example": {
+          "en": "Birthday arrives → Receive 200 ₪ bonus + 20 free spins automatically. Wagering: 200 × 10 = 2,000 ₪.",
+          "he": "יום הולדת מגיע → קבלת 200 ₪ בונוס + 20 ספינים חינם אוטומטית. מחזור: 200 × 10 = 2,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Credited automatically on your birthday",
+            "Date of birth must be verified in account",
+            "One birthday bonus per year",
+            "Must have been active in the last 30 days",
+            "Free spins on selected games"
+          ],
+          "he": [
+            "מזוכה אוטומטית ביום ההולדת",
+            "תאריך לידה חייב להיות מאומת בחשבון",
+            "בונוס יום הולדת אחד בשנה",
+            "חייב להיות פעיל ב-30 הימים האחרונים",
+            "ספינים חינם על משחקים נבחרים"
+          ]
+        }
+      },
+      {
+        "id": "promo-5",
+        "name": {
+          "en": "Social Media Follow Bonus",
+          "he": "בונוס מעקב ברשתות חברתיות"
+        },
+        "badge": null,
+        "description": {
+          "en": "Follow our official social media accounts and receive a one-time bonus.",
+          "he": "עקוב אחרי חשבונות הרשתות החברתיות הרשמיים שלנו וקבל בונוס חד פעמי."
+        },
+        "details": {
+          "rate": {
+            "en": "Fixed bonus per platform",
+            "he": "בונוס קבוע לפלטפורמה"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "25 ₪ per platform (up to 100 ₪ total)",
+            "he": "25 ₪ לפלטפורמה (עד 100 ₪ סה\"כ)"
+          },
+          "wagering": {
+            "en": "x5 turnover",
+            "he": "x5 מחזור"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All members (one-time per platform)",
+            "he": "כל החברים (פעם אחת לפלטפורמה)"
+          }
+        },
+        "example": {
+          "en": "Follow on Instagram + Telegram + Facebook + Twitter → 25 × 4 = 100 ₪ total bonus.",
+          "he": "עקוב באינסטגרם + טלגרם + פייסבוק + טוויטר → 25 × 4 = 100 ₪ סה\"כ בונוס."
+        },
+        "rules": {
+          "en": [
+            "One bonus per social media platform",
+            "Must verify follow with support team",
+            "Account must remain followed for 30 days",
+            "Available platforms: Instagram, Telegram, Facebook, Twitter",
+            "Bonus credited after verification"
+          ],
+          "he": [
+            "בונוס אחד לפלטפורמת רשת חברתית",
+            "יש לאמת מעקב עם צוות התמיכה",
+            "החשבון חייב להישאר במעקב 30 ימים",
+            "פלטפורמות זמינות: אינסטגרם, טלגרם, פייסבוק, טוויטר",
+            "בונוס מזוכה לאחר אימות"
+          ]
+        }
+      },
+      {
+        "id": "promo-6",
+        "name": {
+          "en": "Crypto Deposit Bonus 20% + 20 Free Spins",
+          "he": "בונוס הפקדת קריפטו 20% + 20 ספינים חינם"
+        },
+        "badge": "new",
+        "description": {
+          "en": "Deposit with cryptocurrency and receive a 20% bonus plus 20 free spins.",
+          "he": "הפקד במטבע קריפטוגרפי וקבל בונוס 20% ועוד 20 ספינים חינם."
+        },
+        "details": {
+          "rate": {
+            "en": "20% + 20 free spins",
+            "he": "20% + 20 ספינים חינם"
+          },
+          "minDeposit": {
+            "en": "200 ₪ equivalent in crypto",
+            "he": "שווי 200 ₪ בקריפטו"
+          },
+          "maxBonus": {
+            "en": "2,000 ₪ + 20 free spins",
+            "he": "2,000 ₪ + 20 ספינים חינם"
+          },
+          "wagering": {
+            "en": "x20 turnover on bonus, x25 on spin winnings",
+            "he": "x20 מחזור על בונוס, x25 על זכיות ספינים"
+          },
+          "validity": {
+            "en": "14 days from activation",
+            "he": "14 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "All members depositing via cryptocurrency",
+            "he": "כל החברים המפקידים באמצעות מטבע קריפטוגרפי"
+          }
+        },
+        "example": {
+          "en": "Deposit 0.01 BTC (≈ 2,000 ₪) → 400 ₪ bonus + 20 free spins. Wagering: 400 × 20 = 8,000 ₪.",
+          "he": "הפקדה 0.01 BTC (≈ 2,000 ₪) → 400 ₪ בונוס + 20 ספינים חינם. מחזור: 400 × 20 = 8,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Supported cryptos: BTC, ETH, USDT, LTC",
+            "Bonus calculated on NIS equivalent at time of deposit",
+            "Free spins on selected slot games",
+            "Cannot be combined with other deposit bonuses",
+            "Crypto deposits processed within 30 minutes"
+          ],
+          "he": [
+            "מטבעות קריפטו נתמכים: BTC, ETH, USDT, LTC",
+            "בונוס מחושב על שווי ₪ בזמן ההפקדה",
+            "ספינים חינם על משחקי סלוט נבחרים",
+            "לא ניתן לשלב עם בונוסי הפקדה אחרים",
+            "הפקדות קריפטו מעובדות תוך 30 דקות"
+          ]
+        }
+      },
+      {
+        "id": "promo-7",
+        "name": {
+          "en": "Investment on Deposit 5 to Host 4 Losses",
+          "he": "השקעה על הפקדה 5 לכיסוי 4 הפסדים"
+        },
+        "badge": null,
+        "description": {
+          "en": "Deposit 5 times and receive insurance covering up to 4 losing sessions.",
+          "he": "הפקד 5 פעמים וקבל ביטוח המכסה עד 4 סשנים מפסידים."
+        },
+        "details": {
+          "rate": {
+            "en": "Coverage for 4 out of 5 deposits",
+            "he": "כיסוי ל-4 מתוך 5 הפקדות"
+          },
+          "minDeposit": {
+            "en": "200 ₪ per deposit",
+            "he": "200 ₪ להפקדה"
+          },
+          "maxBonus": {
+            "en": "Up to 80% of total deposited amount",
+            "he": "עד 80% מסכום ההפקדה הכולל"
+          },
+          "wagering": {
+            "en": "x10 turnover on recovered amount",
+            "he": "x10 מחזור על הסכום המשוחזר"
+          },
+          "validity": {
+            "en": "30 days from first qualifying deposit",
+            "he": "30 ימים מההפקדה המזכה הראשונה"
+          },
+          "eligibility": {
+            "en": "All active members",
+            "he": "כל החברים הפעילים"
+          }
+        },
+        "example": {
+          "en": "5 deposits of 500 ₪ each = 2,500 ₪ total. 4 sessions lost → Recover up to 2,000 ₪ (80%). Wagering: 2,000 × 10 = 20,000 ₪.",
+          "he": "5 הפקדות של 500 ₪ כל אחת = 2,500 ₪ סה\"כ. 4 סשנים הפסידו → שחזור עד 2,000 ₪ (80%). מחזור: 2,000 × 10 = 20,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Must make 5 qualifying deposits",
+            "Minimum 200 ₪ per deposit",
+            "Coverage calculated after all 5 deposits are made",
+            "x10 wagering on recovered amount",
+            "One program enrollment per member at a time"
+          ],
+          "he": [
+            "יש לבצע 5 הפקדות מזכות",
+            "מינימום 200 ₪ להפקדה",
+            "כיסוי מחושב לאחר 5 ההפקדות",
+            "x10 מחזור על סכום משוחזר",
+            "הרשמה אחת לתוכנית לחבר בכל פעם"
+          ]
+        }
+      },
+      {
+        "id": "promo-8",
+        "name": {
+          "en": "10% Bonus on Every Credit Card Deposit",
+          "he": "בונוס 10% על כל הפקדה בכרטיס אשראי"
+        },
+        "badge": null,
+        "description": {
+          "en": "Receive an automatic 10% bonus on every deposit made via credit card.",
+          "he": "קבל בונוס אוטומטי של 10% על כל הפקדה שבוצעה באמצעות כרטיס אשראי."
+        },
+        "details": {
+          "rate": {
+            "en": "10%",
+            "he": "10%"
+          },
+          "minDeposit": {
+            "en": "100 ₪",
+            "he": "100 ₪"
+          },
+          "maxBonus": {
+            "en": "300 ₪ per deposit",
+            "he": "300 ₪ להפקדה"
+          },
+          "wagering": {
+            "en": "x8 turnover",
+            "he": "x8 מחזור"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All members depositing via credit card",
+            "he": "כל החברים המפקידים בכרטיס אשראי"
+          }
+        },
+        "example": {
+          "en": "Deposit 2,000 ₪ via Visa → Receive 200 ₪ bonus. Wagering: 200 × 8 = 1,600 ₪.",
+          "he": "הפקדה 2,000 ₪ דרך ויזה → קבלת 200 ₪ בונוס. מחזור: 200 × 8 = 1,600 ₪."
+        },
+        "rules": {
+          "en": [
+            "Applies to credit card deposits only",
+            "Automatic bonus - no code needed",
+            "Maximum 300 ₪ bonus per transaction",
+            "x8 wagering requirement",
+            "Available on every credit card deposit"
+          ],
+          "he": [
+            "חל על הפקדות בכרטיס אשראי בלבד",
+            "בונוס אוטומטי - ללא צורך בקוד",
+            "בונוס מקסימלי 300 ₪ לעסקה",
+            "דרישת מחזור x8",
+            "זמין על כל הפקדה בכרטיס אשראי"
+          ]
+        }
+      },
+      {
+        "id": "promo-9",
+        "name": {
+          "en": "10% Bank Transfer Deposit Bonus",
+          "he": "בונוס הפקדה 10% בהעברה בנקאית"
+        },
+        "badge": null,
+        "description": {
+          "en": "Receive a 10% bonus on deposits made via bank transfer.",
+          "he": "קבל בונוס 10% על הפקדות שבוצעו באמצעות העברה בנקאית."
+        },
+        "details": {
+          "rate": {
+            "en": "10%",
+            "he": "10%"
+          },
+          "minDeposit": {
+            "en": "500 ₪",
+            "he": "500 ₪"
+          },
+          "maxBonus": {
+            "en": "500 ₪ per transfer",
+            "he": "500 ₪ להעברה"
+          },
+          "wagering": {
+            "en": "x6 turnover",
+            "he": "x6 מחזור"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All members depositing via bank transfer",
+            "he": "כל החברים המפקידים בהעברה בנקאית"
+          }
+        },
+        "example": {
+          "en": "Bank transfer 5,000 ₪ → Receive 500 ₪ bonus (capped). Wagering: 500 × 6 = 3,000 ₪.",
+          "he": "העברה בנקאית 5,000 ₪ → קבלת 500 ₪ בונוס (תקרה). מחזור: 500 × 6 = 3,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Applies to bank transfer deposits only",
+            "Minimum transfer 500 ₪",
+            "Bonus credited after transfer confirmation (1-3 business days)",
+            "x6 wagering requirement",
+            "Maximum 500 ₪ bonus per transfer"
+          ],
+          "he": [
+            "חל על הפקדות בהעברה בנקאית בלבד",
+            "העברה מינימלית 500 ₪",
+            "בונוס מזוכה לאחר אישור העברה (1-3 ימי עסקים)",
+            "דרישת מחזור x6",
+            "בונוס מקסימלי 500 ₪ להעברה"
+          ]
+        }
+      },
+      {
+        "id": "promo-10",
+        "name": {
+          "en": "Tournaments & Competitions",
+          "he": "טורנירים ותחרויות"
+        },
+        "badge": "popular",
+        "description": {
+          "en": "Participate in regular tournaments and competitions with prize pools.",
+          "he": "השתתף בטורנירים ותחרויות קבועים עם קופות פרסים."
+        },
+        "details": {
+          "rate": {
+            "en": "Prize pool varies per tournament",
+            "he": "קופת פרסים משתנה לפי טורניר"
+          },
+          "minDeposit": {
+            "en": "Entry fee varies (some free)",
+            "he": "דמי כניסה משתנים (חלקם חינם)"
+          },
+          "maxBonus": {
+            "en": "Up to 50,000 ₪ prize pool",
+            "he": "קופת פרסים עד 50,000 ₪"
+          },
+          "wagering": {
+            "en": "x3 turnover on winnings",
+            "he": "x3 מחזור על זכיות"
+          },
+          "validity": {
+            "en": "Per tournament schedule",
+            "he": "לפי לוח הטורניר"
+          },
+          "eligibility": {
+            "en": "All active members (some VIP-only tournaments)",
+            "he": "כל החברים הפעילים (חלק מהטורנירים ל-VIP בלבד)"
+          }
+        },
+        "example": {
+          "en": "Enter weekly slots tournament (free entry) → Finish in top 10 → Win share of 10,000 ₪ prize pool.",
+          "he": "הירשם לטורניר סלוטים שבועי (כניסה חינם) → סיים ב-10 הראשונים → זכה בחלק מקופת פרסים של 10,000 ₪."
+        },
+        "rules": {
+          "en": [
+            "Various tournament types: slots, sports, casino",
+            "Leaderboard-based ranking",
+            "Prizes distributed within 48 hours of tournament end",
+            "Entry requirements vary per tournament",
+            "Check tournaments page for current competitions"
+          ],
+          "he": [
+            "סוגי טורנירים שונים: סלוטים, ספורט, קזינו",
+            "דירוג מבוסס טבלת מובילים",
+            "פרסים מחולקים תוך 48 שעות מסיום הטורניר",
+            "דרישות כניסה משתנות לפי טורניר",
+            "בדוק דף טורנירים לתחרויות נוכחיות"
+          ]
+        }
+      }
+    ]
+  },
+  "system": {
+    "id": "system",
+    "icon": "&#9881;",
+    "color": "#2ecc71",
+    "bonuses": [
+      {
+        "id": "system-1",
+        "name": {
+          "en": "Combined Bets Bonus up to 50%",
+          "he": "בונוס הימורים משולבים עד 50%"
+        },
+        "badge": "hot",
+        "description": {
+          "en": "Boost your winnings on combined bets (accumulators) with a bonus of up to 50%.",
+          "he": "הגדל את הזכיות שלך על הימורים משולבים (מצטברים) עם בונוס של עד 50%."
+        },
+        "details": {
+          "rate": {
+            "en": "5% per selection, up to 50%",
+            "he": "5% לבחירה, עד 50%"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "50% on net winnings",
+            "he": "50% על זכיות נטו"
+          },
+          "wagering": {
+            "en": "No wagering - paid as cash",
+            "he": "ללא מחזור - משולם כמזומן"
+          },
+          "validity": {
+            "en": "Applied automatically on winning combined bets",
+            "he": "מופעל אוטומטית על הימורים משולבים זוכים"
+          },
+          "eligibility": {
+            "en": "All members placing combined bets with 3+ selections",
+            "he": "כל החברים המבצעים הימורים משולבים עם 3+ בחירות"
+          }
+        },
+        "example": {
+          "en": "5-fold accumulator wins 1,000 ₪ → 25% bonus (5×5%) = 250 ₪ extra. Total payout: 1,250 ₪.",
+          "he": "הימור משולב של 5 זוכה 1,000 ₪ → 25% בונוס (5×5%) = 250 ₪ נוספים. תשלום כולל: 1,250 ₪."
+        },
+        "rules": {
+          "en": [
+            "Minimum 3 selections required",
+            "Each selection adds 5% bonus",
+            "Maximum 50% bonus (10+ selections)",
+            "All selections must win",
+            "Minimum odds 1.40 per selection"
+          ],
+          "he": [
+            "נדרשות מינימום 3 בחירות",
+            "כל בחירה מוסיפה 5% בונוס",
+            "בונוס מקסימלי 50% (10+ בחירות)",
+            "כל הבחירות חייבות לנצח",
+            "אודס מינימום 1.40 לבחירה"
+          ]
+        }
+      },
+      {
+        "id": "system-2",
+        "name": {
+          "en": "Bet Builder",
+          "he": "בונה הימורים"
+        },
+        "badge": "new",
+        "description": {
+          "en": "Create custom bets by combining multiple selections from the same event.",
+          "he": "צור הימורים מותאמים אישית על ידי שילוב מספר בחירות מאותו אירוע."
+        },
+        "details": {
+          "rate": {
+            "en": "Enhanced odds on combined selections",
+            "he": "אודס משופר על בחירות משולבות"
+          },
+          "minDeposit": {
+            "en": "10 ₪ minimum bet",
+            "he": "הימור מינימלי 10 ₪"
+          },
+          "maxBonus": {
+            "en": "Enhanced odds (up to 50% boost)",
+            "he": "אודס משופר (עד 50% תוספת)"
+          },
+          "wagering": {
+            "en": "No wagering - standard bet",
+            "he": "ללא מחזור - הימור רגיל"
+          },
+          "validity": {
+            "en": "Per event",
+            "he": "לפי אירוע"
+          },
+          "eligibility": {
+            "en": "All members",
+            "he": "כל החברים"
+          }
+        },
+        "example": {
+          "en": "Build a bet: Player X scores + Team A wins + Over 2.5 goals → Combined odds 8.50 (enhanced from 6.80).",
+          "he": "בנה הימור: שחקן X מבקיע + קבוצה A מנצחת + מעל 2.5 שערים → אודס משולב 8.50 (משופר מ-6.80)."
+        },
+        "rules": {
+          "en": [
+            "Available on selected sports and events",
+            "Minimum 2 selections from same event",
+            "Maximum 6 selections per bet builder",
+            "Standard cash out available",
+            "Not all markets combinable"
+          ],
+          "he": [
+            "זמין על ענפי ספורט ואירועים נבחרים",
+            "מינימום 2 בחירות מאותו אירוע",
+            "מקסימום 6 בחירות לבונה הימורים",
+            "קאש אאוט רגיל זמין",
+            "לא כל השווקים ניתנים לשילוב"
+          ]
+        }
+      },
+      {
+        "id": "system-3",
+        "name": {
+          "en": "Cash Out",
+          "he": "קאש אאוט"
+        },
+        "badge": "popular",
+        "description": {
+          "en": "Settle your bet early and secure profits or minimize losses before the event ends.",
+          "he": "סגור את ההימור שלך מוקדם ובטח רווחים או מזער הפסדים לפני סיום האירוע."
+        },
+        "details": {
+          "rate": {
+            "en": "Dynamic - based on current odds",
+            "he": "דינמי - מבוסס על אודס נוכחי"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "N/A (profit lock feature)",
+            "he": "לא רלוונטי (תכונת נעילת רווח)"
+          },
+          "wagering": {
+            "en": "No wagering - instant cash",
+            "he": "ללא מחזור - מזומן מיידי"
+          },
+          "validity": {
+            "en": "Available during live events",
+            "he": "זמין במהלך אירועים חיים"
+          },
+          "eligibility": {
+            "en": "All members with eligible open bets",
+            "he": "כל החברים עם הימורים פתוחים מזכים"
+          }
+        },
+        "example": {
+          "en": "Bet 200 ₪ at odds 3.00. Team leading at halftime → Cash out offered: 450 ₪. Accept to secure 250 ₪ profit.",
+          "he": "הימור 200 ₪ באודס 3.00. הקבוצה מובילה במחצית → הצעת קאש אאוט: 450 ₪. קבל כדי לבטח 250 ₪ רווח."
+        },
+        "rules": {
+          "en": [
+            "Available on selected pre-match and live bets",
+            "Cash out value changes in real-time",
+            "Partial cash out available on some bets",
+            "Auto cash out can be set at desired value",
+            "Not available on all markets"
+          ],
+          "he": [
+            "זמין על הימורים נבחרים לפני המשחק וחיים",
+            "ערך הקאש אאוט משתנה בזמן אמת",
+            "קאש אאוט חלקי זמין על חלק מההימורים",
+            "ניתן להגדיר קאש אאוט אוטומטי בערך רצוי",
+            "לא זמין בכל השווקים"
+          ]
+        }
+      },
+      {
+        "id": "system-4",
+        "name": {
+          "en": "Two-Factor Authentication",
+          "he": "אימות דו-שלבי"
+        },
+        "badge": null,
+        "description": {
+          "en": "Enable two-factor authentication on your account and receive a one-time security bonus.",
+          "he": "הפעל אימות דו-שלבי בחשבון שלך וקבל בונוס אבטחה חד פעמי."
+        },
+        "details": {
+          "rate": {
+            "en": "One-time bonus",
+            "he": "בונוס חד פעמי"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "50 ₪",
+            "he": "50 ₪"
+          },
+          "wagering": {
+            "en": "x3 turnover",
+            "he": "x3 מחזור"
+          },
+          "validity": {
+            "en": "7 days from activation",
+            "he": "7 ימים מרגע ההפעלה"
+          },
+          "eligibility": {
+            "en": "All members enabling 2FA for the first time",
+            "he": "כל החברים המפעילים אימות דו-שלבי בפעם הראשונה"
+          }
+        },
+        "example": {
+          "en": "Enable 2FA via SMS or authenticator app → Receive 50 ₪ bonus. Wagering: 50 × 3 = 150 ₪.",
+          "he": "הפעל אימות דו-שלבי דרך SMS או אפליקציית אימות → קבל 50 ₪ בונוס. מחזור: 50 × 3 = 150 ₪."
+        },
+        "rules": {
+          "en": [
+            "One-time bonus per account",
+            "Must keep 2FA active for at least 30 days",
+            "Supports SMS and authenticator app",
+            "Bonus credited immediately after 2FA setup",
+            "Disabling 2FA within 30 days forfeits bonus"
+          ],
+          "he": [
+            "בונוס חד פעמי לחשבון",
+            "יש לשמור על אימות דו-שלבי פעיל לפחות 30 ימים",
+            "תומך ב-SMS ואפליקציית אימות",
+            "בונוס מזוכה מיידית לאחר הגדרת 2FA",
+            "השבתת 2FA תוך 30 ימים מבטלת את הבונוס"
+          ]
+        }
+      },
+      {
+        "id": "system-5",
+        "name": {
+          "en": "Boring Game Bonus 0-0",
+          "he": "בונוס משחק משעמם 0-0"
+        },
+        "badge": null,
+        "description": {
+          "en": "If your football bet ends 0-0, receive your stake back as a bonus.",
+          "he": "אם ההימור שלך בכדורגל מסתיים 0-0, קבל את ההימור בחזרה כבונוס."
+        },
+        "details": {
+          "rate": {
+            "en": "100% stake back",
+            "he": "100% החזר הימור"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "500 ₪ per game",
+            "he": "500 ₪ למשחק"
+          },
+          "wagering": {
+            "en": "x3 turnover on refunded amount",
+            "he": "x3 מחזור על הסכום המוחזר"
+          },
+          "validity": {
+            "en": "7 days from credit",
+            "he": "7 ימים מרגע הזיכוי"
+          },
+          "eligibility": {
+            "en": "All members with qualifying football bets",
+            "he": "כל החברים עם הימורי כדורגל מזכים"
+          }
+        },
+        "example": {
+          "en": "Bet 200 ₪ on Match Result for Team A vs Team B → Game ends 0-0 → Receive 200 ₪ back as bonus.",
+          "he": "הימור 200 ₪ על תוצאת משחק קבוצה א' נגד קבוצה ב' → המשחק מסתיים 0-0 → קבלת 200 ₪ בחזרה כבונוס."
+        },
+        "rules": {
+          "en": [
+            "Applies to football match result bets only",
+            "Game must end 0-0 in regular time",
+            "Maximum refund 500 ₪",
+            "x3 wagering on refunded amount",
+            "Does not apply to draw bets"
+          ],
+          "he": [
+            "חל על הימורי תוצאת משחק כדורגל בלבד",
+            "המשחק חייב להסתיים 0-0 בזמן רגיל",
+            "החזר מקסימלי 500 ₪",
+            "x3 מחזור על הסכום המוחזר",
+            "לא חל על הימורי תיקו"
+          ]
+        }
+      },
+      {
+        "id": "system-6",
+        "name": {
+          "en": "2 Goals for Early Win (Football)",
+          "he": "2 שערים לזכייה מוקדמת (כדורגל)"
+        },
+        "badge": null,
+        "description": {
+          "en": "If your team goes 2 goals ahead, your bet is settled as a winner regardless of the final result.",
+          "he": "אם הקבוצה שלך מובילה ב-2 שערים, ההימור שלך נקבע כזוכה ללא קשר לתוצאה הסופית."
+        },
+        "details": {
+          "rate": {
+            "en": "Full payout at current odds",
+            "he": "תשלום מלא באודס הנוכחי"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Full bet winnings",
+            "he": "זכיות הימור מלאות"
+          },
+          "wagering": {
+            "en": "No wagering - paid as cash",
+            "he": "ללא מחזור - משולם כמזומן"
+          },
+          "validity": {
+            "en": "Per qualifying match",
+            "he": "לפי משחק מזכה"
+          },
+          "eligibility": {
+            "en": "All members with match result bets on eligible games",
+            "he": "כל החברים עם הימורי תוצאת משחק על משחקים מזכים"
+          }
+        },
+        "example": {
+          "en": "Bet 100 ₪ on Team A to win at odds 2.50. Team A goes 2-0 up → Bet settled as winner: 250 ₪ payout, even if final score is 2-3.",
+          "he": "הימור 100 ₪ על ניצחון קבוצה א' באודס 2.50. קבוצה א' מובילה 2-0 → ההימור נקבע כזוכה: 250 ₪ תשלום, גם אם התוצאה הסופית 2-3."
+        },
+        "rules": {
+          "en": [
+            "Applies to match result market only",
+            "Team must lead by 2 clear goals at any point",
+            "Bet settled immediately when 2-goal lead occurs",
+            "Available on selected football leagues",
+            "Pre-match and live bets eligible"
+          ],
+          "he": [
+            "חל על שוק תוצאת משחק בלבד",
+            "הקבוצה חייבת להוביל ב-2 שערים בנקודה כלשהי",
+            "ההימור נקבע מיידית כשנוצרת הובלה של 2 שערים",
+            "זמין על ליגות כדורגל נבחרות",
+            "הימורים לפני המשחק וחיים מזכים"
+          ]
+        }
+      },
+      {
+        "id": "system-7",
+        "name": {
+          "en": "20 Points for Early Win (Basketball)",
+          "he": "20 נקודות לזכייה מוקדמת (כדורסל)"
+        },
+        "badge": null,
+        "description": {
+          "en": "If your basketball team goes 20 points ahead, your bet is settled as a winner.",
+          "he": "אם קבוצת הכדורסל שלך מובילה ב-20 נקודות, ההימור שלך נקבע כזוכה."
+        },
+        "details": {
+          "rate": {
+            "en": "Full payout at current odds",
+            "he": "תשלום מלא באודס הנוכחי"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Full bet winnings",
+            "he": "זכיות הימור מלאות"
+          },
+          "wagering": {
+            "en": "No wagering - paid as cash",
+            "he": "ללא מחזור - משולם כמזומן"
+          },
+          "validity": {
+            "en": "Per qualifying match",
+            "he": "לפי משחק מזכה"
+          },
+          "eligibility": {
+            "en": "All members with money line bets on eligible basketball games",
+            "he": "כל החברים עם הימורי מאניליין על משחקי כדורסל מזכים"
+          }
+        },
+        "example": {
+          "en": "Bet 150 ₪ on Team A to win at odds 1.90. Team A leads by 20 points → Bet settled: 285 ₪ payout.",
+          "he": "הימור 150 ₪ על ניצחון קבוצה א' באודס 1.90. קבוצה א' מובילה ב-20 נקודות → ההימור נקבע: 285 ₪ תשלום."
+        },
+        "rules": {
+          "en": [
+            "Applies to money line market only",
+            "Team must lead by 20+ points at any point",
+            "Bet settled immediately when 20-point lead occurs",
+            "Available on NBA, Euroleague, and selected leagues",
+            "Pre-match and live bets eligible"
+          ],
+          "he": [
+            "חל על שוק מאניליין בלבד",
+            "הקבוצה חייבת להוביל ב-20+ נקודות בנקודה כלשהי",
+            "ההימור נקבע מיידית כשנוצרת הובלה של 20 נקודות",
+            "זמין על NBA, יורוליג וליגות נבחרות",
+            "הימורים לפני המשחק וחיים מזכים"
+          ]
+        }
+      },
+      {
+        "id": "system-8",
+        "name": {
+          "en": "2 Sets for Early Win (Tennis)",
+          "he": "2 סטים לזכייה מוקדמת (טניס)"
+        },
+        "badge": null,
+        "description": {
+          "en": "If your tennis player wins the first 2 sets, your bet is settled as a winner.",
+          "he": "אם שחקן הטניס שלך זוכה ב-2 הסטים הראשונים, ההימור שלך נקבע כזוכה."
+        },
+        "details": {
+          "rate": {
+            "en": "Full payout at current odds",
+            "he": "תשלום מלא באודס הנוכחי"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Full bet winnings",
+            "he": "זכיות הימור מלאות"
+          },
+          "wagering": {
+            "en": "No wagering - paid as cash",
+            "he": "ללא מחזור - משולם כמזומן"
+          },
+          "validity": {
+            "en": "Per qualifying match",
+            "he": "לפי משחק מזכה"
+          },
+          "eligibility": {
+            "en": "All members with match winner bets on eligible tennis matches",
+            "he": "כל החברים עם הימורי זוכה משחק על משחקי טניס מזכים"
+          }
+        },
+        "example": {
+          "en": "Bet 100 ₪ on Player A at odds 2.20. Player A wins first 2 sets → Bet settled: 220 ₪ payout, even if player loses the match.",
+          "he": "הימור 100 ₪ על שחקן א' באודס 2.20. שחקן א' זוכה ב-2 הסטים הראשונים → ההימור נקבע: 220 ₪ תשלום, גם אם השחקן מפסיד את המשחק."
+        },
+        "rules": {
+          "en": [
+            "Applies to match winner market only",
+            "Player must win first 2 sets",
+            "Available on Grand Slams, ATP, and WTA events",
+            "Bet settled after second set win",
+            "Pre-match and live bets eligible"
+          ],
+          "he": [
+            "חל על שוק זוכה משחק בלבד",
+            "השחקן חייב לנצח ב-2 הסטים הראשונים",
+            "זמין על גרנד סלאם, ATP ו-WTA",
+            "ההימור נקבע לאחר זכייה בסט השני",
+            "הימורים לפני המשחק וחיים מזכים"
+          ]
+        }
+      },
+      {
+        "id": "system-9",
+        "name": {
+          "en": "3 Goals for Early Win (Ice Hockey)",
+          "he": "3 שערים לזכייה מוקדמת (הוקי קרח)"
+        },
+        "badge": null,
+        "description": {
+          "en": "If your ice hockey team goes 3 goals ahead, your bet is settled as a winner.",
+          "he": "אם קבוצת הוקי הקרח שלך מובילה ב-3 שערים, ההימור שלך נקבע כזוכה."
+        },
+        "details": {
+          "rate": {
+            "en": "Full payout at current odds",
+            "he": "תשלום מלא באודס הנוכחי"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Full bet winnings",
+            "he": "זכיות הימור מלאות"
+          },
+          "wagering": {
+            "en": "No wagering - paid as cash",
+            "he": "ללא מחזור - משולם כמזומן"
+          },
+          "validity": {
+            "en": "Per qualifying match",
+            "he": "לפי משחק מזכה"
+          },
+          "eligibility": {
+            "en": "All members with match result bets on eligible ice hockey games",
+            "he": "כל החברים עם הימורי תוצאת משחק על משחקי הוקי קרח מזכים"
+          }
+        },
+        "example": {
+          "en": "Bet 100 ₪ on Team A at odds 2.00. Team A leads 4-1 → Bet settled: 200 ₪ payout, even if final score is 4-5.",
+          "he": "הימור 100 ₪ על קבוצה א' באודס 2.00. קבוצה א' מובילה 4-1 → ההימור נקבע: 200 ₪ תשלום, גם אם התוצאה הסופית 4-5."
+        },
+        "rules": {
+          "en": [
+            "Applies to match result market only",
+            "Team must lead by 3 clear goals at any point",
+            "Bet settled immediately when 3-goal lead occurs",
+            "Available on NHL and selected ice hockey leagues",
+            "Pre-match and live bets eligible"
+          ],
+          "he": [
+            "חל על שוק תוצאת משחק בלבד",
+            "הקבוצה חייבת להוביל ב-3 שערים בנקודה כלשהי",
+            "ההימור נקבע מיידית כשנוצרת הובלה של 3 שערים",
+            "זמין על NHL וליגות הוקי קרח נבחרות",
+            "הימורים לפני המשחק וחיים מזכים"
+          ]
+        }
+      },
+      {
+        "id": "system-10",
+        "name": {
+          "en": "Edit Bet (Cratos)",
+          "he": "עריכת הימור (קראטוס)"
+        },
+        "badge": "new",
+        "description": {
+          "en": "Edit your open bets by adding, removing, or swapping selections before events start.",
+          "he": "ערוך את ההימורים הפתוחים שלך על ידי הוספה, הסרה או החלפת בחירות לפני תחילת האירועים."
+        },
+        "details": {
+          "rate": {
+            "en": "N/A (feature, not bonus)",
+            "he": "לא רלוונטי (תכונה, לא בונוס)"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "wagering": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "validity": {
+            "en": "Available until event starts",
+            "he": "זמין עד תחילת האירוע"
+          },
+          "eligibility": {
+            "en": "All members with open pre-match bets",
+            "he": "כל החברים עם הימורים פתוחים לפני המשחק"
+          }
+        },
+        "example": {
+          "en": "Placed a 3-fold accumulator → One game postponed → Edit bet: swap postponed game for another match → Bet updated.",
+          "he": "ביצעת הימור משולב של 3 → משחק אחד נדחה → ערוך הימור: החלף את המשחק שנדחה במשחק אחר → ההימור עודכן."
+        },
+        "rules": {
+          "en": [
+            "Available on pre-match bets only",
+            "Cannot edit after event starts",
+            "Odds recalculated after edit",
+            "Stake amount can be adjusted",
+            "Some markets may not support editing"
+          ],
+          "he": [
+            "זמין על הימורים לפני המשחק בלבד",
+            "לא ניתן לערוך לאחר תחילת האירוע",
+            "אודס מחושב מחדש לאחר עריכה",
+            "ניתן להתאים את סכום ההימור",
+            "חלק מהשווקים עשויים לא לתמוך בעריכה"
+          ]
+        }
+      },
+      {
+        "id": "system-11",
+        "name": {
+          "en": "Fan Bonus on Favorite Team",
+          "he": "בונוס אוהד על הקבוצה האהובה"
+        },
+        "badge": null,
+        "description": {
+          "en": "Select your favorite team and receive enhanced odds or bonuses when betting on their games.",
+          "he": "בחר את הקבוצה האהובה שלך וקבל אודס משופר או בונוסים כשאתה מהמר על המשחקים שלהם."
+        },
+        "details": {
+          "rate": {
+            "en": "10% odds boost on favorite team",
+            "he": "שיפור אודס 10% על הקבוצה האהובה"
+          },
+          "minDeposit": {
+            "en": "50 ₪ minimum bet",
+            "he": "הימור מינימלי 50 ₪"
+          },
+          "maxBonus": {
+            "en": "Enhanced odds (max extra payout 200 ₪)",
+            "he": "אודס משופר (תשלום נוסף מקסימלי 200 ₪)"
+          },
+          "wagering": {
+            "en": "No wagering - paid as cash on winnings",
+            "he": "ללא מחזור - משולם כמזומן על זכיות"
+          },
+          "validity": {
+            "en": "Ongoing (once per game of favorite team)",
+            "he": "שוטף (פעם אחת למשחק של הקבוצה האהובה)"
+          },
+          "eligibility": {
+            "en": "All members who set a favorite team in profile",
+            "he": "כל החברים שהגדירו קבוצה אהובה בפרופיל"
+          }
+        },
+        "example": {
+          "en": "Favorite team: Maccabi Tel Aviv. Bet 100 ₪ at odds 2.00 → Boosted to 2.20 → Win 220 ₪ instead of 200 ₪.",
+          "he": "קבוצה אהובה: מכבי תל אביב. הימור 100 ₪ באודס 2.00 → משופר ל-2.20 → זכייה 220 ₪ במקום 200 ₪."
+        },
+        "rules": {
+          "en": [
+            "Set favorite team in account settings",
+            "One favorite team per account",
+            "Can change favorite team once per season",
+            "10% odds boost on match winner market",
+            "Maximum extra payout capped at 200 ₪"
+          ],
+          "he": [
+            "הגדר קבוצה אהובה בהגדרות החשבון",
+            "קבוצה אהובה אחת לחשבון",
+            "ניתן לשנות קבוצה אהובה פעם אחת בעונה",
+            "שיפור אודס 10% על שוק זוכה המשחק",
+            "תשלום נוסף מקסימלי מוגבל ל-200 ₪"
+          ]
+        }
+      },
+      {
+        "id": "system-12",
+        "name": {
+          "en": "Screen Sharing on Social Media",
+          "he": "שיתוף מסך ברשתות חברתיות"
+        },
+        "badge": null,
+        "description": {
+          "en": "Share your bet slip on social media and receive a bonus if it wins.",
+          "he": "שתף את שובר ההימור שלך ברשתות חברתיות וקבל בונוס אם הוא זוכה."
+        },
+        "details": {
+          "rate": {
+            "en": "Extra 10% on winnings if shared",
+            "he": "10% נוסף על זכיות אם שותף"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Extra 10% on winnings (max 500 ₪)",
+            "he": "10% נוסף על זכיות (מקסימום 500 ₪)"
+          },
+          "wagering": {
+            "en": "x3 turnover on bonus portion",
+            "he": "x3 מחזור על חלק הבונוס"
+          },
+          "validity": {
+            "en": "Credited after bet settles as winner",
+            "he": "מזוכה לאחר שההימור נקבע כזוכה"
+          },
+          "eligibility": {
+            "en": "All members who share bet slips publicly",
+            "he": "כל החברים המשתפים שוברי הימור באופן ציבורי"
+          }
+        },
+        "example": {
+          "en": "Share bet slip on Twitter → Bet wins 2,000 ₪ → Extra 10% = 200 ₪ bonus. Wagering: 200 × 3 = 600 ₪.",
+          "he": "שתף שובר הימור בטוויטר → ההימור זוכה 2,000 ₪ → 10% נוסף = 200 ₪ בונוס. מחזור: 200 × 3 = 600 ₪."
+        },
+        "rules": {
+          "en": [
+            "Must share before event starts",
+            "Post must tag official account",
+            "Proof of sharing required",
+            "Bonus credited only if bet wins",
+            "Maximum one shared bet bonus per day"
+          ],
+          "he": [
+            "יש לשתף לפני תחילת האירוע",
+            "הפוסט חייב לתייג את החשבון הרשמי",
+            "נדרשת הוכחת שיתוף",
+            "בונוס מזוכה רק אם ההימור זוכה",
+            "בונוס הימור משותף אחד מקסימום ליום"
+          ]
+        }
+      },
+      {
+        "id": "system-13",
+        "name": {
+          "en": "Enhanced Odds on Selected Games",
+          "he": "אודס משופר על משחקים נבחרים"
+        },
+        "badge": "hot",
+        "description": {
+          "en": "Get boosted odds on specially selected games and events.",
+          "he": "קבל אודס מוגבר על משחקים ואירועים שנבחרו במיוחד."
+        },
+        "details": {
+          "rate": {
+            "en": "Odds boosted by 20-50%",
+            "he": "אודס מוגבר ב-20-50%"
+          },
+          "minDeposit": {
+            "en": "20 ₪ minimum bet",
+            "he": "הימור מינימלי 20 ₪"
+          },
+          "maxBonus": {
+            "en": "Maximum bet 500 ₪ on enhanced odds",
+            "he": "הימור מקסימלי 500 ₪ על אודס משופר"
+          },
+          "wagering": {
+            "en": "No wagering - extra paid as bonus funds",
+            "he": "ללא מחזור - התוספת משולמת ככספי בונוס"
+          },
+          "validity": {
+            "en": "Per selected event",
+            "he": "לפי אירוע נבחר"
+          },
+          "eligibility": {
+            "en": "All members (one enhanced odds bet per event)",
+            "he": "כל החברים (הימור אודס משופר אחד לאירוע)"
+          }
+        },
+        "example": {
+          "en": "Regular odds: Team A 2.00 → Enhanced: 2.50. Bet 200 ₪ → Win 500 ₪ instead of 400 ₪. Extra 100 ₪ as bonus.",
+          "he": "אודס רגיל: קבוצה א' 2.00 → משופר: 2.50. הימור 200 ₪ → זכייה 500 ₪ במקום 400 ₪. 100 ₪ נוספים כבונוס."
+        },
+        "rules": {
+          "en": [
+            "Available on pre-selected games only",
+            "Maximum stake 500 ₪ per enhanced odds bet",
+            "Extra winnings paid as bonus funds",
+            "One enhanced odds bet per customer per event",
+            "Check promotions page for daily enhanced odds"
+          ],
+          "he": [
+            "זמין על משחקים שנבחרו מראש בלבד",
+            "הימור מקסימלי 500 ₪ להימור אודס משופר",
+            "זכיות נוספות משולמות ככספי בונוס",
+            "הימור אודס משופר אחד ללקוח לאירוע",
+            "בדוק דף מבצעים לאודס משופר יומי"
+          ]
+        }
+      },
+      {
+        "id": "system-14",
+        "name": {
+          "en": "VIP Program & Points Accumulation",
+          "he": "תוכנית VIP וצבירת נקודות"
+        },
+        "badge": "vip",
+        "description": {
+          "en": "Earn loyalty points on every bet and climb VIP tiers for exclusive rewards.",
+          "he": "צבור נקודות נאמנות על כל הימור וטפס בדרגות VIP לפרסים בלעדיים."
+        },
+        "details": {
+          "rate": {
+            "en": "1 point per 100 ₪ wagered",
+            "he": "1 נקודה לכל 100 ₪ שהומרו"
+          },
+          "minDeposit": {
+            "en": "N/A",
+            "he": "לא רלוונטי"
+          },
+          "maxBonus": {
+            "en": "Unlimited points accumulation",
+            "he": "צבירת נקודות ללא הגבלה"
+          },
+          "wagering": {
+            "en": "Points redeemable at x1 value",
+            "he": "נקודות ניתנות למימוש בערך x1"
+          },
+          "validity": {
+            "en": "Points valid for 12 months",
+            "he": "נקודות תקפות ל-12 חודשים"
+          },
+          "eligibility": {
+            "en": "All members (automatic enrollment)",
+            "he": "כל החברים (הרשמה אוטומטית)"
+          }
+        },
+        "example": {
+          "en": "Wager 50,000 ₪ in a month → Earn 500 points → Redeem for 250 ₪ bonus or VIP perks. Gold tier at 1,000 points.",
+          "he": "הימר 50,000 ₪ בחודש → צבור 500 נקודות → ממש ל-250 ₪ בונוס או הטבות VIP. דרגת זהב ב-1,000 נקודות."
+        },
+        "rules": {
+          "en": [
+            "Points earned automatically on every settled bet",
+            "VIP tiers: Bronze, Silver, Gold, Platinum, Diamond",
+            "Higher tiers unlock better bonuses and lower wagering",
+            "Points can be redeemed for cash bonuses or free bets",
+            "Tier status reviewed monthly based on activity"
+          ],
+          "he": [
+            "נקודות נצברות אוטומטית על כל הימור שנקבע",
+            "דרגות VIP: ברונזה, כסף, זהב, פלטינה, יהלום",
+            "דרגות גבוהות יותר פותחות בונוסים טובים יותר ומחזור נמוך",
+            "ניתן לממש נקודות לבונוסי מזומן או הימורים חינם",
+            "סטטוס דרגה נבדק חודשית על בסיס פעילות"
+          ]
+        }
+      }
+    ]
+  }
+}
