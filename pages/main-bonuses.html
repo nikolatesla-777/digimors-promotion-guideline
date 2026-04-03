@@ -611,12 +611,13 @@
       cashback10: {
         icon: '💰', tag: 'Weekly · Every Thursday', title: '%10 Weekly Cashback',
         accent: '#2ecc71',
+        maxWithdrawal: '10x bonus amount',
         params: [
           { label: 'Bonus Type',   value: 'Weekly Cashback', highlight: true },
           { label: 'Rate',         value: '10% of Weekly Net Loss', highlight: true },
-          { label: 'Min Loss',     value: '500 ₺ (weekly)' },
-          { label: 'Max Cashback', value: '15,000 ₺ per week' },
-          { label: 'Wagering',     value: 'x1 (no rollover)' },
+          { label: 'Min Loss',     value: '1,000 ₺ (weekly)' },
+          { label: 'Max Cashback', value: '10,000 ₺ per week' },
+          { label: 'Wagering',     value: 'x5 (bonus amount)' },
           { label: 'Period',       value: 'Mon 00:00 – Sun 23:59' },
           { label: 'Credit Day',   value: 'Every Thursday' },
           { label: 'Validity',     value: '3 days after credit' },
@@ -624,16 +625,17 @@
         platforms: ['Sports (Spor)', 'Slots', 'Live Casino'],
         rules: [
           'Calculation period: Monday 00:00 to Sunday 23:59 (UTC+3).',
-          'Cashback is credited every Thursday by 14:00 for the previous week\'s net losses.',
+          'Cashback is credited every Thursday for the previous week\'s net losses.',
           'Net loss = Total Deposits − Total Withdrawals. Bonus is applied on the remaining net loss amount.',
-          'Cashback carries NO wagering requirement — can be withdrawn immediately.',
+          'Wagering requirement: x5 on bonus amount before withdrawal.',
           'Each platform is calculated separately; player receives cashback for each platform they lost on.',
           'If a player has an active bonus during the period, only real-money losses count.',
-          'Minimum weekly net loss must reach 500 ₺ to qualify for the cashback.',
-          'Maximum cashback per week is capped at 15,000 ₺ across all platforms combined.',
+          'Minimum weekly net loss must reach 1,000 ₺ to qualify for the cashback.',
+          'Maximum cashback per week is capped at 10,000 ₺ across all platforms combined.',
+          'Maximum withdrawal from this bonus is 10x the bonus amount received.',
           'Bonus expires after 3 days if not used; expired cashback is not re-credited.',
         ],
-        note: 'Digitain Config: Bonus Type → "Cashback". Schedule: Weekly (Thursday). Rollover: x1. Separate bonus instances per platform recommended.',
+        note: 'Digitain Config: Bonus Type → "Cashback". Schedule: Weekly (Thursday). Rollover: x5. Max withdrawal: 10x bonus. Separate bonus instances per platform recommended.',
       },
 
       bank10: {
@@ -1099,7 +1101,7 @@
         });
         html += `<div class="param-item" style="border-color:rgba(212,175,55,0.3);background:rgba(212,175,55,0.06)">
             <div class="param-label">Max Withdrawal</div>
-            <div class="param-value highlight">20x bonus amount</div>
+            <div class="param-value highlight">${b.maxWithdrawal || '20x bonus amount'}</div>
           </div>`;
         html += '</div>';
       }
