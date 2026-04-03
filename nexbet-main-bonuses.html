@@ -1,0 +1,3460 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBet - Main Bonuses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── RESET & BASE ── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --bg-primary: #1a1a2e;
+            --bg-secondary: #16213e;
+            --accent: #d4af37;
+            --accent-light: #f4d03f;
+            --text-primary: #ffffff;
+            --text-secondary: #e0e0e0;
+            --text-muted: #b0b0b0;
+            --card-bg: rgba(255,255,255,0.03);
+            --card-hover: rgba(212,175,55,0.1);
+        }
+        body {
+            font-family: 'Lato', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        /* ── HEADER ── */
+        .header {
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%);
+            padding: 25px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--bg-primary);
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        .header-subtitle {
+            font-size: 1rem;
+            color: var(--bg-primary);
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        /* ── CONTAINER ── */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ── PAGE HEADER ── */
+        .page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        .page-intro {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: -6px;
+        }
+
+        /* ── SECTION LABELS ── */
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin: 42px 0 6px;
+        }
+        .section-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: 0;
+        }
+
+        /* ── BONUS GRID & CARDS ── */
+        .main-bonuses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 18px;
+            margin-top: 16px;
+        }
+        .mb-card {
+            background: rgba(255,255,255,0.04);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.07);
+            padding: 22px 20px 18px;
+            transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        .mb-card * { pointer-events: none; }
+        .mb-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--ca, #d4af37);
+            border-radius: 14px 14px 0 0;
+        }
+        .mb-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 36px rgba(0,0,0,0.4);
+            border-color: rgba(255,255,255,0.15);
+        }
+        .mb-card-icon { font-size: 1.7rem; margin-bottom: 8px; display: block; }
+        .mb-card-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.07);
+            color: var(--ca, #d4af37);
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+        .mb-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 900;
+            color: var(--ca, #d4af37);
+            margin-bottom: 11px;
+            line-height: 1.3;
+        }
+        .mb-card ul, .mb-card ol { list-style: none; padding: 0; margin: 0; counter-reset: c; }
+        .mb-card li {
+            font-size: 0.83rem;
+            color: #d0d0d0;
+            padding: 4px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            counter-increment: c;
+        }
+        .mb-card li:last-child { border-bottom: none; }
+        .mb-card ul li::before { content: '›'; color: var(--ca, #d4af37); font-weight: 900; font-size: 1rem; flex-shrink: 0; }
+        .mb-card ol li::before {
+            content: counter(c);
+            background: var(--ca, #d4af37);
+            color: #1a1a2e;
+            font-weight: 900;
+            font-size: 0.7rem;
+            width: 18px; height: 18px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .mb-click-hint {
+            margin-top: 12px;
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.3);
+            text-align: right;
+        }
+
+        /* Color accents */
+        .mb-discount  { --ca: #e74c3c; }
+        .mb-cashback  { --ca: #2ecc71; }
+        .mb-deposit   { --ca: #4a9eff; }
+        .mb-crypto    { --ca: #f39c12; }
+        .mb-welcome   { --ca: #d4af37; }
+        .mb-special   { --ca: #9b59b6; }
+        .mb-midnight  { --ca: #667eea; }
+        .mb-crash     { --ca: #e67e22; }
+        .mb-insurance { --ca: #1abc9c; }
+        .mb-freespin  { --ca: #ff6b6b; }
+        .mb-live      { --ca: #e74c3c; }
+
+        /* ── MODAL ── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.75);
+            z-index: 9000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+        }
+        .modal-overlay.open { display: flex; }
+        .modal-box {
+            background: #1a1a2e;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.1);
+            max-width: 680px;
+            width: 100%;
+            max-height: 88vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+        }
+        .modal-header {
+            padding: 24px 28px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            position: sticky;
+            top: 0;
+            background: #1a1a2e;
+            z-index: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .modal-header-left { display: flex; align-items: center; gap: 14px; }
+        .modal-icon { font-size: 2rem; }
+        .modal-tag {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 4px;
+            background: rgba(255,255,255,0.08);
+        }
+        .modal-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 900;
+            line-height: 1.2;
+        }
+        .modal-close {
+            background: rgba(255,255,255,0.08);
+            border: none;
+            color: #fff;
+            font-size: 1.3rem;
+            width: 34px; height: 34px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            transition: background 0.2s;
+        }
+        .modal-close:hover { background: rgba(255,255,255,0.16); }
+        .modal-body { padding: 20px 28px 28px; }
+
+        /* Param grid */
+        .param-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 22px;
+        }
+        .param-item {
+            background: rgba(255,255,255,0.04);
+            border-radius: 10px;
+            padding: 12px 14px;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .param-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #888;
+            margin-bottom: 4px;
+        }
+        .param-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .param-value.highlight { color: var(--modal-accent, #d4af37); }
+
+        /* Rules section */
+        .modal-section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #777;
+            margin: 20px 0 10px;
+        }
+        .rule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .rule-list li {
+            font-size: 0.875rem;
+            color: #d0d0d0;
+            padding: 8px 12px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px;
+            border-left: 3px solid var(--modal-accent, #d4af37);
+            line-height: 1.5;
+        }
+
+        /* Stage blocks */
+        .stage-block {
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .stage-block-header {
+            background: rgba(255,255,255,0.05);
+            padding: 10px 16px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--modal-accent, #d4af37);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .stage-num {
+            background: var(--modal-accent, #d4af37);
+            color: #1a1a2e;
+            font-size: 0.7rem;
+            font-weight: 900;
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .stage-block-body {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+            padding: 12px 16px;
+        }
+        .stage-param .param-label { font-size: 0.62rem; }
+        .stage-param .param-value { font-size: 0.85rem; }
+
+        /* Warning / Note boxes */
+        .modal-warning {
+            background: rgba(231,76,60,0.1);
+            border: 1px solid rgba(231,76,60,0.3);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.82rem;
+            color: #f39c9c;
+            margin-top: 18px;
+            line-height: 1.6;
+        }
+        .modal-note {
+            background: rgba(74,158,255,0.08);
+            border: 1px solid rgba(74,158,255,0.2);
+            border-radius: 10px;
+            padding: 12px 16px;
+            font-size: 0.82rem;
+            color: #a8cfff;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: rgba(26,26,46,0.9);
+            padding: 30px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .footer p { color: #808080; font-size: 0.9rem; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 15px; }
+            .logo { font-size: 2rem; }
+            .page-header h1 { font-size: 1.8rem; }
+            .main-bonuses-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .header { padding: 15px; }
+            .logo { font-size: 1.6rem; }
+            .container { padding: 20px 10px; }
+        }
+
+        /* ── TABS ── */
+        .tab-nav {
+            display: flex;
+            gap: 6px;
+            overflow-x: auto;
+            padding: 0 0 16px;
+            margin-bottom: 8px;
+            scrollbar-width: none;
+        }
+        .tab-nav::-webkit-scrollbar { display: none; }
+        .tab-btn {
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #b0b0b0;
+            font-family: 'Lato', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .tab-btn:hover { background: rgba(255,255,255,0.1); color: #fff; }
+        .tab-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #1a1a2e;
+        }
+        .tab-panel { display: none; }
+        .tab-panel.active { display: block; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-inner">
+            <div>
+                <span class="logo">NexBet</span>
+                <div class="header-subtitle">Bonuses &amp; Promotions Guide</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>NexBet Bonus Guide</h1>
+            <p class="page-intro">70 Bonuses &amp; Promotions — click any card to view full rules</p>
+        </div>
+
+        <div class="tab-nav">
+            <button class="tab-btn active" onclick="showTab('main')">⭐ Main Bonuses</button>
+            <button class="tab-btn" onclick="showTab('sports')">⚽ Sports</button>
+            <button class="tab-btn" onclick="showTab('slots')">🎰 Slots</button>
+            <button class="tab-btn" onclick="showTab('casino')">🎲 Live Casino</button>
+            <button class="tab-btn" onclick="showTab('happyhour')">⏰ Happy Hour</button>
+            <button class="tab-btn" onclick="showTab('promotions')">🎁 General Promotions</button>
+            <button class="tab-btn" onclick="showTab('system')">⚙️ System Promotions</button>
+        </div>
+
+        <div id="tab-main" class="tab-panel active">
+
+        <!-- LOSS & CASHBACK -->
+        <p class="section-label">Loss &amp; Cashback</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-discount" onclick="openModal('discount20')">
+                <span class="mb-card-icon">🔻</span>
+                <div class="mb-card-tag">Every Loss</div>
+                <div class="mb-card-title">%20 Discount</div>
+                <ul>
+                    <li>Spor Discount</li>
+                    <li>Slot Discount</li>
+                    <li>Live Casino Discount</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('cashback10')">
+                <span class="mb-card-icon">💰</span>
+                <div class="mb-card-tag">Weekly</div>
+                <div class="mb-card-title">%10 Cashback</div>
+                <ul>
+                    <li>Spor Cashback</li>
+                    <li>Slot Cashback</li>
+                    <li>Live Casino Cashback</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        <!-- DEPOSIT BONUSES -->
+        <p class="section-label">Deposit Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-deposit" onclick="openModal('bank10')">
+                <span class="mb-card-icon">🏦</span>
+                <div class="mb-card-tag">Bank Transfer</div>
+                <div class="mb-card-title">%10 Bank Deposit Bonus</div>
+                <ul>
+                    <li>%10 Spor</li>
+                    <li>%10 Slot</li>
+                    <li>%10 Live Casino</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('cc15')">
+                <span class="mb-card-icon">💳</span>
+                <div class="mb-card-tag">Credit Card</div>
+                <div class="mb-card-title">%10 Credit Card Deposit Bonus</div>
+                <ul>
+                    <li>%15 Spor</li>
+                    <li>%15 Slot</li>
+                    <li>%15 Live Casino</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-crypto" onclick="openModal('crypto20')">
+                <span class="mb-card-icon">₿</span>
+                <div class="mb-card-tag">Crypto</div>
+                <div class="mb-card-title">%20 Crypto Deposit Bonus</div>
+                <ul>
+                    <li>%20 Spor</li>
+                    <li>%20 Slot + 20 Freespin (Gift)</li>
+                    <li>%20 Live Casino</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        <!-- WELCOME BONUSES -->
+        <p class="section-label">Welcome Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-welcome" onclick="openModal('welcomeSports')">
+                <span class="mb-card-icon">⚽</span>
+                <div class="mb-card-tag">New Members</div>
+                <div class="mb-card-title">Welcome Sports Bonus</div>
+                <ol>
+                    <li>Stage %30</li>
+                    <li>Stage %20</li>
+                    <li>Stage %10</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-welcome" onclick="openModal('welcomeSlots')">
+                <span class="mb-card-icon">🎰</span>
+                <div class="mb-card-tag">New Members</div>
+                <div class="mb-card-title">Welcome Slot Bonus</div>
+                <ol>
+                    <li>Stage %100</li>
+                    <li>Stage %50 (2nd Chance)</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-welcome" onclick="openModal('welcomeLiveCasino')">
+                <span class="mb-card-icon">🃏</span>
+                <div class="mb-card-tag">New Members</div>
+                <div class="mb-card-title">Welcome LiveCasino Bonus</div>
+                <ol>
+                    <li>Stage %100</li>
+                    <li>Stage %50 (2nd Chance)</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        <!-- SPECIAL BONUSES -->
+        <p class="section-label">Special Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-special" onclick="openModal('deposit5th')">
+                <span class="mb-card-icon">🎁</span>
+                <div class="mb-card-tag">Daily 4 Loss Streak</div>
+                <div class="mb-card-title">5. Deposit is From Us</div>
+                <ul>
+                    <li>4 yatırım yap, kaybettiysen</li>
+                    <li>Ortalama tutar bonus olarak verilir</li>
+                    <li>Spor · Slot · Live Casino</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('doubleSlot')">
+                <span class="mb-card-icon">2️⃣</span>
+                <div class="mb-card-tag">Slots</div>
+                <div class="mb-card-title">Double Slot Bonus</div>
+                <ul>
+                    <li>%20 Deposit</li>
+                    <li>%10 Discount</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-midnight" onclick="openModal('midnight')">
+                <span class="mb-card-icon">🌙</span>
+                <div class="mb-card-tag">After Midnight</div>
+                <div class="mb-card-title">Midnight Slot Bonus</div>
+                <ul>
+                    <li>%30 Discount</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        <!-- ONE-TIME BONUSES -->
+        <p class="section-label">One-Time Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-crash" onclick="openModal('crash50')">
+                <span class="mb-card-icon">🚀</span>
+                <div class="mb-card-tag">Crash Games</div>
+                <div class="mb-card-title">%50 Bonus (Crash)</div>
+                <ol>
+                    <li>First Deposit Bonus</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-insurance" onclick="openModal('insurance100')">
+                <span class="mb-card-icon">🛡️</span>
+                <div class="mb-card-tag">Sports</div>
+                <div class="mb-card-title">Sports %100 Insurance</div>
+                <ol>
+                    <li>Only First Bet for Loss</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('freespin')">
+                <span class="mb-card-icon">🎡</span>
+                <div class="mb-card-tag">Slots</div>
+                <div class="mb-card-title">Slot %50 Freespin</div>
+                <ol>
+                    <li>Only First Deposit</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-live" onclick="openModal('liveCashback50')">
+                <span class="mb-card-icon">🎲</span>
+                <div class="mb-card-tag">Live Casino</div>
+                <div class="mb-card-title">LiveCasino %50 Cashback</div>
+                <ol>
+                    <li>Only First Bet for Loss</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-main -->
+
+        <div id="tab-sports" class="tab-panel">
+
+        <!-- SPORTS BONUSES -->
+        <p class="section-label" style="margin-top:56px;">Sports Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-welcome" onclick="openModal('sp_welcome')">
+                <span class="mb-card-icon">🏆</span>
+                <div class="mb-card-tag">Sports · New Members</div>
+                <div class="mb-card-title">Welcome Sports Bonus Package</div>
+                <ol>
+                    <li>Stage 1: 30% on 1st deposit</li>
+                    <li>Stage 2: 20% on 2nd deposit</li>
+                    <li>Stage 3: 10% on 3rd deposit</li>
+                </ol>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('sp_recurring')">
+                <span class="mb-card-icon">🔄</span>
+                <div class="mb-card-tag">Sports · All Members</div>
+                <div class="mb-card-title">Recurring Sports Deposit Bonus (up to 20%)</div>
+                <ul>
+                    <li>5%–20% tiered by deposit</li>
+                    <li>Min deposit: 100 ₺</li>
+                    <li>Via promo code / campaign</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('sp_vip')">
+                <span class="mb-card-icon">👑</span>
+                <div class="mb-card-tag">Sports · VIP</div>
+                <div class="mb-card-title">VIP Sports Bonus No Wagering</div>
+                <ul>
+                    <li>Bronze 5% → Platinum 20%</li>
+                    <li>No wagering requirement</li>
+                    <li>Max bonus: 5,000 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('sp_cashback_game')">
+                <span class="mb-card-icon">💸</span>
+                <div class="mb-card-tag">Sports · Daily Selected</div>
+                <div class="mb-card-title">Cashback Bonus for Selected Game</div>
+                <ul>
+                    <li>10% cashback on losses</li>
+                    <li>Daily selected games</li>
+                    <li>Min bet 50 ₺, max 1,000 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('sp_weekly_general')">
+                <span class="mb-card-icon">📅</span>
+                <div class="mb-card-tag">Sports · Non-VIP · Thursday</div>
+                <div class="mb-card-title">Weekly Loss Bonus Thursday (up to 10%)</div>
+                <ul>
+                    <li>500–1,999 ₺ loss = 5%</li>
+                    <li>2,000–4,999 ₺ loss = 7%</li>
+                    <li>5,000 ₺+ loss = 10%</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('sp_weekly_vip')">
+                <span class="mb-card-icon">🌟</span>
+                <div class="mb-card-tag">Sports · VIP · Thursday</div>
+                <div class="mb-card-title">Weekly Loss Bonus VIP Thursday (up to 25%)</div>
+                <ul>
+                    <li>Bronze 10% → Platinum 25%</li>
+                    <li>Max bonus: 10,000 ₺</li>
+                    <li>Wagering x1</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('sp_free_bet_30')">
+                <span class="mb-card-icon">🎯</span>
+                <div class="mb-card-tag">Sports · Daily</div>
+                <div class="mb-card-title">Free Bet 30% from Daily Deposit</div>
+                <ul>
+                    <li>30% of daily deposits</li>
+                    <li>Min 1,000 ₺/day, max 3,000 ₺</li>
+                    <li>Min odds 1.80, 3 selections</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('sp_bet_get')">
+                <span class="mb-card-icon">🏅</span>
+                <div class="mb-card-tag">Sports · All Members</div>
+                <div class="mb-card-title">Bet &amp; Get</div>
+                <ul>
+                    <li>Place 3 × 100 ₺ qualifying bets</li>
+                    <li>Min odds 1.50 per bet</li>
+                    <li>Get 50 ₺ free bet</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-insurance" onclick="openModal('sp_insurance_first')">
+                <span class="mb-card-icon">🛡️</span>
+                <div class="mb-card-tag">Sports · New Members</div>
+                <div class="mb-card-title">Insurance on First Bet</div>
+                <ul>
+                    <li>100% refund if first bet loses</li>
+                    <li>Max 500 ₺, wagering x3</li>
+                    <li>Min odds 1.80, 2 selections</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-sports -->
+
+        <div id="tab-slots" class="tab-panel">
+
+        <!-- SLOT BONUSES -->
+        <p class="section-label" style="margin-top:56px;">Slot Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-freespin" onclick="openModal('sl_first')">
+                <span class="mb-card-icon">🎰</span>
+                <div class="mb-card-tag">Slots · New Members</div>
+                <div class="mb-card-title">First Slot Deposit Bonus 20%</div>
+                <ul>
+                    <li>20%, min dep 100 ₺, max 1,000 ₺</li>
+                    <li>Wagering x25 (dep+bonus)</li>
+                    <li>New members only</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('sl_second')">
+                <span class="mb-card-icon">🎰</span>
+                <div class="mb-card-tag">Slots · New Members</div>
+                <div class="mb-card-title">Second Slot Deposit Bonus 15%</div>
+                <ul>
+                    <li>15%, min dep 100 ₺, max 750 ₺</li>
+                    <li>Wagering x25 (dep+bonus)</li>
+                    <li>After 1st slot bonus used</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('sl_freespins_first')">
+                <span class="mb-card-icon">🎡</span>
+                <div class="mb-card-tag">Slots · New Members</div>
+                <div class="mb-card-title">Free Spins Bonus First Deposit</div>
+                <ul>
+                    <li>50 free spins, min dep 200 ₺</li>
+                    <li>Wagering x30 on winnings</li>
+                    <li>Spins valid 24h</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('sl_20_10')">
+                <span class="mb-card-icon">2️⃣</span>
+                <div class="mb-card-tag">Slots · All Members</div>
+                <div class="mb-card-title">20% Deposit + 10% Loss Bonus</div>
+                <ul>
+                    <li>20% deposit bonus (x25 wagering)</li>
+                    <li>+10% loss bonus if lost (x15)</li>
+                    <li>Min dep 200 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('sl_weekly_loss')">
+                <span class="mb-card-icon">📅</span>
+                <div class="mb-card-tag">Slots · All Members · Monday</div>
+                <div class="mb-card-title">Weekly Loss Bonus Monday 10%</div>
+                <ul>
+                    <li>10%, min loss 200 ₺, max 2,000 ₺</li>
+                    <li>Wagering x15, 3 days</li>
+                    <li>Mon–Sun calc, credited Monday</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('sl_vip_weekly')">
+                <span class="mb-card-icon">👑</span>
+                <div class="mb-card-tag">Slots · VIP</div>
+                <div class="mb-card-title">VIP Weekly Loss Bonus (up to 25%)</div>
+                <ul>
+                    <li>Bronze 10% → Platinum 25%</li>
+                    <li>Min loss 500 ₺, max 10,000 ₺</li>
+                    <li>Wagering x10, 7 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('sl_daily_fs')">
+                <span class="mb-card-icon">✨</span>
+                <div class="mb-card-tag">Slots · Media/VIP/Promo</div>
+                <div class="mb-card-title">Daily Free Spins Media/VIP/Promo</div>
+                <ul>
+                    <li>10–100 free spins, no deposit</li>
+                    <li>Wagering x30, max win 250 ₺/day</li>
+                    <li>Via social media/VIP/campaigns</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-midnight" onclick="openModal('sl_midnight')">
+                <span class="mb-card-icon">🌙</span>
+                <div class="mb-card-tag">Slots · After Midnight</div>
+                <div class="mb-card-title">30% Bonus on Losses After Midnight</div>
+                <ul>
+                    <li>30%, plays 00:00–06:00</li>
+                    <li>Min loss 100 ₺, max 1,500 ₺</li>
+                    <li>Wagering x15, credited at 07:00</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('sl_happy_hour')">
+                <span class="mb-card-icon">⏰</span>
+                <div class="mb-card-tag">Slots · Happy Hour</div>
+                <div class="mb-card-title">Happy Hour Free Spins</div>
+                <ul>
+                    <li>20 free spins/hour, no deposit</li>
+                    <li>Max 200 ₺/session, wagering x25</li>
+                    <li>Opt-in required before start</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-crash" onclick="openModal('sl_crash50')">
+                <span class="mb-card-icon">🚀</span>
+                <div class="mb-card-tag">Slots · Crash · New Members</div>
+                <div class="mb-card-title">First Deposit 50% Crash Games</div>
+                <ul>
+                    <li>50%, min dep 100 ₺, max 500 ₺</li>
+                    <li>Wagering x20 (dep+bonus)</li>
+                    <li>Aviator / Spaceman / JetX</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-slots -->
+
+        <div id="tab-casino" class="tab-panel">
+
+        <!-- LIVE CASINO BONUSES -->
+        <p class="section-label" style="margin-top:56px;">Live Casino Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-live" onclick="openModal('ca_first')">
+                <span class="mb-card-icon">🃏</span>
+                <div class="mb-card-tag">Casino · New Members</div>
+                <div class="mb-card-title">First Live Casino Deposit 20%</div>
+                <ul>
+                    <li>20%, min dep 150 ₺, max 1,000 ₺</li>
+                    <li>Wagering x25 (dep+bonus)</li>
+                    <li>New members only</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-live" onclick="openModal('ca_second')">
+                <span class="mb-card-icon">🃏</span>
+                <div class="mb-card-tag">Casino · New Members</div>
+                <div class="mb-card-title">Second Live Casino Deposit 15%</div>
+                <ul>
+                    <li>15%, min dep 50 ₺, max 750 ₺</li>
+                    <li>Wagering x30 on slots</li>
+                    <li>After 1st casino bonus used</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('ca_freespins_first')">
+                <span class="mb-card-icon">🎡</span>
+                <div class="mb-card-tag">Casino · New Members</div>
+                <div class="mb-card-title">Free Spins First Deposit</div>
+                <ul>
+                    <li>Up to 100 free spins, min dep 100 ₺</li>
+                    <li>Wagering x25 on winnings</li>
+                    <li>New members only</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('ca_20_10')">
+                <span class="mb-card-icon">2️⃣</span>
+                <div class="mb-card-tag">Casino · All Members</div>
+                <div class="mb-card-title">20% Deposit + 10% Loss Bonus</div>
+                <ul>
+                    <li>20% dep + 10% loss</li>
+                    <li>Max dep bonus 500 ₺ + loss 200 ₺</li>
+                    <li>Wagering x25 / x10, 7 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('ca_weekly_loss')">
+                <span class="mb-card-icon">📅</span>
+                <div class="mb-card-tag">Casino · All Members · Monday</div>
+                <div class="mb-card-title">Weekly Loss Bonus Monday 10%</div>
+                <ul>
+                    <li>10%, max 500 ₺/week</li>
+                    <li>Wagering x10 on slots</li>
+                    <li>Credited Monday</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('ca_vip_weekly')">
+                <span class="mb-card-icon">👑</span>
+                <div class="mb-card-tag">Casino · VIP</div>
+                <div class="mb-card-title">VIP Weekly Loss up to 25%</div>
+                <ul>
+                    <li>Up to 25% by VIP tier</li>
+                    <li>Wagering x5, 7 days</li>
+                    <li>VIP members only</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('ca_daily_fs')">
+                <span class="mb-card-icon">✨</span>
+                <div class="mb-card-tag">Casino · Media/VIP/Promo</div>
+                <div class="mb-card-title">Daily Free Spins Media/VIP/Promo</div>
+                <ul>
+                    <li>10–50 free spins daily</li>
+                    <li>Wagering x20, valid 24h</li>
+                    <li>Via media/VIP/promo codes</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-midnight" onclick="openModal('ca_midnight')">
+                <span class="mb-card-icon">🌙</span>
+                <div class="mb-card-tag">Casino · After Midnight</div>
+                <div class="mb-card-title">30% After Midnight</div>
+                <ul>
+                    <li>30%, min dep 50 ₺, max 1,000 ₺/night</li>
+                    <li>Wagering x15, 24h validity</li>
+                    <li>Plays 00:00–06:00</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-freespin" onclick="openModal('ca_happy_hour')">
+                <span class="mb-card-icon">⏰</span>
+                <div class="mb-card-tag">Casino · Happy Hour</div>
+                <div class="mb-card-title">Happy Hour Free Spins</div>
+                <ul>
+                    <li>Up to 30 free spins</li>
+                    <li>Min dep 100 ₺ during happy hour</li>
+                    <li>Wagering x15, happy hour only</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-crash" onclick="openModal('ca_crash50')">
+                <span class="mb-card-icon">🚀</span>
+                <div class="mb-card-tag">Casino · Crash · New Members</div>
+                <div class="mb-card-title">First Deposit 50% Crash Games</div>
+                <ul>
+                    <li>50%, min dep 100 ₺, max 2,000 ₺</li>
+                    <li>Wagering x35 on crash games</li>
+                    <li>New members only, 14 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-casino -->
+
+        <div id="tab-happyhour" class="tab-panel">
+
+        <!-- HAPPY HOUR -->
+        <p class="section-label" style="margin-top:56px;">Happy Hour</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-midnight" onclick="openModal('hh_freespins')">
+                <span class="mb-card-icon">⏰</span>
+                <div class="mb-card-tag">Happy Hour · All Members</div>
+                <div class="mb-card-title">Happy Hour Free Spins</div>
+                <ul>
+                    <li>20–50 free spins during windows</li>
+                    <li>No deposit needed, max 300 ₺/session</li>
+                    <li>Wagering x25, opt-in required</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-midnight" onclick="openModal('hh_midnight')">
+                <span class="mb-card-icon">🌙</span>
+                <div class="mb-card-tag">Happy Hour · After Midnight</div>
+                <div class="mb-card-title">30% After Midnight All Casino</div>
+                <ul>
+                    <li>30% on net losses 00:00–06:00</li>
+                    <li>Min loss 100 ₺, max 2,000 ₺</li>
+                    <li>Wagering x10, credited at 07:00</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-happyhour -->
+
+        <div id="tab-promotions" class="tab-panel">
+
+        <!-- GENERAL PROMOTIONS -->
+        <p class="section-label" style="margin-top:56px;">General Promotions</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-special" onclick="openModal('pr_loyalty')">
+                <span class="mb-card-icon">⭐</span>
+                <div class="mb-card-tag">Promotions · Loyalty</div>
+                <div class="mb-card-title">Loyalty Bonus (up to 15%)</div>
+                <ul>
+                    <li>Up to 15% by loyalty tier</li>
+                    <li>Max 1,000 ₺/month, wagering x5</li>
+                    <li>Active 3+ months required</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('pr_social_share')">
+                <span class="mb-card-icon">📲</span>
+                <div class="mb-card-tag">Promotions · Social Media</div>
+                <div class="mb-card-title">Social Media Sharing Bonus</div>
+                <ul>
+                    <li>Max 50 ₺/share, up to 200 ₺/month</li>
+                    <li>Wagering x3, 7 days</li>
+                    <li>Verified social accounts required</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('pr_refer_friend')">
+                <span class="mb-card-icon">👥</span>
+                <div class="mb-card-tag">Promotions · Referral</div>
+                <div class="mb-card-title">Refer a Friend</div>
+                <ul>
+                    <li>100 ₺ + 10% of friend's 1st deposit</li>
+                    <li>Friend must deposit 200 ₺+</li>
+                    <li>Max 500 ₺/referral, wagering x5</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('pr_birthday')">
+                <span class="mb-card-icon">🎂</span>
+                <div class="mb-card-tag">Promotions · Birthday</div>
+                <div class="mb-card-title">Birthday Bonus</div>
+                <ul>
+                    <li>200 ₺ + 20 free spins</li>
+                    <li>Wagering x10, 7 days from birthday</li>
+                    <li>Verified date of birth required</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('pr_social_follow')">
+                <span class="mb-card-icon">👍</span>
+                <div class="mb-card-tag">Promotions · Social Follow</div>
+                <div class="mb-card-title">Social Media Follow Bonus</div>
+                <ul>
+                    <li>25 ₺ per platform, max 100 ₺ total</li>
+                    <li>Wagering x5, 7 days</li>
+                    <li>One-time per platform</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-crypto" onclick="openModal('pr_crypto')">
+                <span class="mb-card-icon">₿</span>
+                <div class="mb-card-tag">Promotions · Crypto</div>
+                <div class="mb-card-title">Crypto Deposit Bonus 20% + 20 Free Spins</div>
+                <ul>
+                    <li>20% bonus + 20 FS</li>
+                    <li>Min dep 200 ₺ equiv., max 2,000 ₺</li>
+                    <li>Wagering x20 bonus / x25 FS wins</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('pr_invest5')">
+                <span class="mb-card-icon">📈</span>
+                <div class="mb-card-tag">Promotions · Investment</div>
+                <div class="mb-card-title">Investment 5 Deposits 4 Loss Coverage</div>
+                <ul>
+                    <li>Deposit 5× → 4 losing sessions covered</li>
+                    <li>Min dep 200 ₺ each, max 80%</li>
+                    <li>Wagering x10, 30 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('pr_cc10')">
+                <span class="mb-card-icon">💳</span>
+                <div class="mb-card-tag">Promotions · Credit Card</div>
+                <div class="mb-card-title">10% Credit Card Deposit Bonus</div>
+                <ul>
+                    <li>10%, min dep 100 ₺, max 300 ₺/dep</li>
+                    <li>Wagering x8, 7 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('pr_bank10')">
+                <span class="mb-card-icon">🏦</span>
+                <div class="mb-card-tag">Promotions · Bank Transfer</div>
+                <div class="mb-card-title">10% Bank Transfer Deposit Bonus</div>
+                <ul>
+                    <li>10%, min dep 500 ₺, max 500 ₺/transfer</li>
+                    <li>Wagering x6, 7 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('pr_tournaments')">
+                <span class="mb-card-icon">🏆</span>
+                <div class="mb-card-tag">Promotions · Tournaments</div>
+                <div class="mb-card-title">Tournaments &amp; Competitions</div>
+                <ul>
+                    <li>Prize pools vary, some free entry</li>
+                    <li>Max prize pool: 50,000 ₺</li>
+                    <li>Wagering x3 on winnings</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-promotions -->
+
+        <div id="tab-system" class="tab-panel">
+
+        <!-- SYSTEM PROMOTIONS -->
+        <p class="section-label" style="margin-top:56px;">System Promotions</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-crash" onclick="openModal('sys_acca')">
+                <span class="mb-card-icon">⚡</span>
+                <div class="mb-card-tag">Sports · Acca Boost</div>
+                <div class="mb-card-title">Combined Bets Bonus (up to 50%)</div>
+                <ul>
+                    <li>3+ selections: 3% → 50%</li>
+                    <li>Min odds per selection: 1.40</li>
+                    <li>No wagering — paid as cash</li>
+                    <li>Max bonus: 5,000 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('sys_betbuilder')">
+                <span class="mb-card-icon">🔧</span>
+                <div class="mb-card-tag">Sports Feature</div>
+                <div class="mb-card-title">Bet Builder</div>
+                <ul>
+                    <li>2–12 selections, same match</li>
+                    <li>Football / Basketball / Tennis</li>
+                    <li>Max stake: 500 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('sys_cashout')">
+                <span class="mb-card-icon">💸</span>
+                <div class="mb-card-tag">Betting Feature</div>
+                <div class="mb-card-title">Cash Out</div>
+                <ul>
+                    <li>Full or Partial Cash Out</li>
+                    <li>Auto Cash Out option</li>
+                    <li>Min cash-out: 5 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-midnight" onclick="openModal('sys_2fa')">
+                <span class="mb-card-icon">🔐</span>
+                <div class="mb-card-tag">Security · One-Time</div>
+                <div class="mb-card-title">Two-Factor Authentication Bonus</div>
+                <ul>
+                    <li>25 ₺ free bet (one-time)</li>
+                    <li>Wagering: x3</li>
+                    <li>Valid 7 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('sys_boring00')">
+                <span class="mb-card-icon">⚽</span>
+                <div class="mb-card-tag">Football · 1X2 Refund</div>
+                <div class="mb-card-title">Boring Game Bonus 0-0</div>
+                <ul>
+                    <li>100% stake refund if 0-0</li>
+                    <li>Stake: 20–200 ₺</li>
+                    <li>Wagering: x3 / 3 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-cashback" onclick="openModal('sys_earlywin_football')">
+                <span class="mb-card-icon">⚽</span>
+                <div class="mb-card-tag">Football Feature</div>
+                <div class="mb-card-title">2 Goals Early Win</div>
+                <ul>
+                    <li>Team goes 2-0 up → bet wins</li>
+                    <li>1X2 pre-match singles only</li>
+                    <li>Max payout: 2,000 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-crash" onclick="openModal('sys_earlywin_basketball')">
+                <span class="mb-card-icon">🏀</span>
+                <div class="mb-card-tag">Basketball Feature</div>
+                <div class="mb-card-title">20 Points Early Win</div>
+                <ul>
+                    <li>Team goes +20 pts → bet wins</li>
+                    <li>Match Winner market</li>
+                    <li>Max payout: 2,000 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-deposit" onclick="openModal('sys_earlywin_tennis')">
+                <span class="mb-card-icon">🎾</span>
+                <div class="mb-card-tag">Tennis Feature</div>
+                <div class="mb-card-title">2 Sets Early Win</div>
+                <ul>
+                    <li>Player wins first 2 sets → bet wins</li>
+                    <li>Match Winner pre-match only</li>
+                    <li>Max payout: 1,500 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-midnight" onclick="openModal('sys_earlywin_hockey')">
+                <span class="mb-card-icon">🏒</span>
+                <div class="mb-card-tag">Ice Hockey Feature</div>
+                <div class="mb-card-title">3 Goals Early Win</div>
+                <ul>
+                    <li>Team goes 3-0 up → bet wins</li>
+                    <li>Regular time only</li>
+                    <li>Max payout: 1,500 ₺</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-special" onclick="openModal('sys_editbet')">
+                <span class="mb-card-icon">✏️</span>
+                <div class="mb-card-tag">Betting Feature</div>
+                <div class="mb-card-title">Edit Bet (Cratos)</div>
+                <ul>
+                    <li>Add / remove / swap selections</li>
+                    <li>Max 3 edits per bet</li>
+                    <li>Until 5 min before event</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-discount" onclick="openModal('sys_fanbonus')">
+                <span class="mb-card-icon">⭐</span>
+                <div class="mb-card-tag">Sports · Winning Boost</div>
+                <div class="mb-card-title">Fan Bonus on Favorite Team</div>
+                <ul>
+                    <li>+10% on winning bets</li>
+                    <li>Min stake: 20 ₺ · Min odds: 1.50</li>
+                    <li>Max bonus: 200 ₺/bet</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-insurance" onclick="openModal('sys_social')">
+                <span class="mb-card-icon">📱</span>
+                <div class="mb-card-tag">Social · Free Bet</div>
+                <div class="mb-card-title">Screen Sharing on Social Media</div>
+                <ul>
+                    <li>15 ₺ free bet per share</li>
+                    <li>Max 3×/week = 45 ₺</li>
+                    <li>Wagering: x5 / 3 days</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-welcome" onclick="openModal('sys_enhanced')">
+                <span class="mb-card-icon">📈</span>
+                <div class="mb-card-tag">Sports · Daily Boost</div>
+                <div class="mb-card-title">Enhanced Odds on Selected Games</div>
+                <ul>
+                    <li>Daily trading team picks</li>
+                    <li>Max stake: 200 ₺/bet</li>
+                    <li>Enhanced portion: x1 wagering</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+            <div class="mb-card mb-welcome" onclick="openModal('sys_vip')">
+                <span class="mb-card-icon">👑</span>
+                <div class="mb-card-tag">VIP · Loyalty</div>
+                <div class="mb-card-title">VIP Program &amp; Points</div>
+                <ul>
+                    <li>Bronze → Silver → Gold → Platinum</li>
+                    <li>5% → 10% → 15% → 25% cashback</li>
+                    <li>100 pts = 10 ₺ · x3 wagering</li>
+                </ul>
+                <div class="mb-click-hint">View rules →</div>
+            </div>
+
+        </div>
+
+        </div><!-- /tab-system -->
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 NexBet - All Rights Reserved</p>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+        <div class="modal-box" id="modalBox">
+            <div class="modal-header">
+                <div class="modal-header-left">
+                    <div class="modal-icon" id="mIcon"></div>
+                    <div>
+                        <div class="modal-tag" id="mTag"></div>
+                        <div class="modal-title" id="mTitle"></div>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closeModal()">✕</button>
+            </div>
+            <div class="modal-body" id="mBody"></div>
+        </div>
+    </div>
+
+    <script>
+    const BONUSES = {
+
+      discount20: {
+        icon: '🔻', tag: 'Every Loss · Loss Refund', title: '%20 Discount (Every Loss)',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type',      value: 'Loss Refund (Discount)', highlight: true },
+          { label: 'Rate',            value: '20% of Net Loss', highlight: true },
+          { label: 'Min Loss',        value: '200 ₺' },
+          { label: 'Max Bonus',       value: '10,000 ₺ per event' },
+          { label: 'Wagering',        value: 'x1 (no rollover)' },
+          { label: 'Validity',        value: '3 days after credit' },
+          { label: 'Activation',      value: 'Player request → system auto-assigns' },
+          { label: 'Eligible Players', value: 'All verified accounts' },
+        ],
+        platforms: ['Sports (Spor)', 'Slots', 'Live Casino'],
+        rules: [
+          'Net loss is calculated as: Total Deposits − Total Withdrawals = Net Loss. Bonus is applied on the remaining net loss amount.',
+          'Bonus is credited within 24 hours after the losing event/session is confirmed.',
+          'Each platform (Sports / Slots / Live Casino) is treated as a separate bonus instance.',
+          'Bonus funds carry x1 wagering requirement — can be withdrawn after a single qualifying bet.',
+          'Bonus is not combined with other loss/cashback promotions for the same session.',
+          'Maximum bonus credit per event/session is 10,000 ₺ regardless of total loss.',
+          'Bonus expires automatically after 3 days if wagering requirement is not completed.',
+          'Self-excluded or suspended accounts are not eligible.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Loss Bonus". Trigger: Player request (system auto-assigns if eligible). Apply per platform separately. Set rollover multiplier to x1.',
+      },
+
+      cashback10: {
+        icon: '💰', tag: 'Weekly · Every Thursday', title: '%10 Weekly Cashback',
+        accent: '#2ecc71',
+        maxWithdrawal: '10x bonus amount',
+        params: [
+          { label: 'Bonus Type',   value: 'Weekly Cashback', highlight: true },
+          { label: 'Rate',         value: '10% of Weekly Net Loss', highlight: true },
+          { label: 'Min Loss',     value: '1,000 ₺ (weekly)' },
+          { label: 'Max Cashback', value: '10,000 ₺ per week' },
+          { label: 'Wagering',     value: 'x5 (bonus amount)' },
+          { label: 'Period',       value: 'Thu 00:00 – Wed 23:59' },
+          { label: 'Credit Day',   value: 'Every Thursday' },
+          { label: 'Validity',     value: '3 days after credit' },
+        ],
+        platforms: ['Sports (Spor)', 'Slots', 'Live Casino'],
+        rules: [
+          'Calculation period: Thursday 00:00 to Wednesday 23:59 (UTC+3).',
+          'Cashback is credited every Thursday for the previous Thu–Wed period\'s net losses.',
+          'Net loss = Total Deposits − Total Withdrawals. Bonus is applied on the remaining net loss amount.',
+          'Wagering requirement: x5 on bonus amount before withdrawal.',
+          'Each platform is calculated separately; player receives cashback for each platform they lost on.',
+          'If a player has an active bonus during the period, only real-money losses count.',
+          'Minimum weekly net loss must reach 1,000 ₺ to qualify for the cashback.',
+          'Maximum cashback per week is capped at 10,000 ₺ across all platforms combined.',
+          'Maximum withdrawal from this bonus is 10x the bonus amount received.',
+          'Bonus expires after 3 days if not used; expired cashback is not re-credited.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Cashback". Schedule: Weekly (Thursday). Rollover: x5. Max withdrawal: 10x bonus. Separate bonus instances per platform recommended.',
+      },
+
+      bank10: {
+        icon: '🏦', tag: 'Deposit Method · Bank Transfer', title: '%10 Bank Deposit Bonus',
+        accent: '#4a9eff',
+        maxWithdrawal: 'No limit',
+        params: [
+          { label: 'Bonus Type',             value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate',                   value: '10%', highlight: true },
+          { label: 'Method',                 value: 'Bank Transfer Only' },
+          { label: 'Min Deposit',            value: '100 ₺' },
+          { label: 'Max Bonus/Dep.',         value: '1,000 ₺ per deposit' },
+          { label: 'Max Bonus/Day',          value: '10,000 ₺ per day' },
+          { label: 'Wagering (Sports)',      value: 'x2 (bonus amount)' },
+          { label: 'Wagering (Slot/Live)',   value: 'x4 (bonus amount)' },
+          { label: 'Validity',               value: '7 days after activation' },
+          { label: 'Bet Type',               value: 'Min 2 matches, odds ≥ 1.50' },
+          { label: 'Sports',                 value: 'All sports included' },
+        ],
+        platforms: ['Sports (Spor)', 'Slots', 'Live Casino'],
+        rules: [
+          'Bonus is triggered when a deposit is made via Bank Transfer (EFT/Havale).',
+          'Bonus rate is 10% on all three platforms — Sports, Slots, and Live Casino.',
+          'Player must request the bonus via the Bonus Request section before depositing.',
+          'Minimum qualifying deposit: 100 ₺.',
+          'Maximum bonus per deposit: 1,000 ₺.',
+          'Maximum total bonus credited per day: 10,000 ₺.',
+          'Wagering requirement: x2 on bonus amount for Sports, x4 on bonus amount for Slots and Live Casino.',
+          'Sports wagers must be combined bets with minimum 2 matches, each selection at odds ≥ 1.50.',
+          'All sports disciplines are eligible for wagering contribution.',
+          'No maximum withdrawal limit applies to winnings from this bonus.',
+          'Bonus is valid for 7 days from activation; unmet wagering forfeits the bonus.',
+          'Bonus cannot be stacked with other deposit bonuses on the same deposit.',
+          'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Deposit Bonus". Payment Filter: Bank Transfer. Rate: 10%. Cap: 1,000 ₺/deposit, 10,000 ₺/day. Rollover: x2 Sports / x4 Slots & Live Casino (bonus only). Min odds: 1.50, min selections: 2. No withdrawal cap.',
+      },
+
+      cc15: {
+        icon: '💳', tag: 'Deposit Method · Credit Card', title: '%10 Credit Card Deposit Bonus (%15 per platform)',
+        accent: '#4a9eff',
+        maxWithdrawal: 'No limit',
+        params: [
+          { label: 'Bonus Type',             value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate',                   value: '%15 (Sports / Slots / Live)', highlight: true },
+          { label: 'Method',                 value: 'Credit Card Only' },
+          { label: 'Min Deposit',            value: '100 ₺' },
+          { label: 'Max Bonus/Dep.',         value: '1,000 ₺ per deposit' },
+          { label: 'Max Bonus/Day',          value: '10,000 ₺ per day' },
+          { label: 'Wagering (Sports)',      value: 'x2 (bonus amount)' },
+          { label: 'Wagering (Slot/Live)',   value: 'x4 (bonus amount)' },
+          { label: 'Validity',               value: '7 days after activation' },
+          { label: 'Bet Type',               value: 'Min 2 matches, odds ≥ 1.50' },
+          { label: 'Sports',                 value: 'All sports included' },
+        ],
+        platforms: ['Sports — %15', 'Slots — %15', 'Live Casino — %15'],
+        rules: [
+          'Bonus is triggered on deposits made via Credit Card (Visa / Mastercard).',
+          'Rate is 15% on all platforms: Sports, Slots, and Live Casino.',
+          'Player must request the bonus via the Bonus Request section before depositing.',
+          'Minimum qualifying deposit: 100 ₺.',
+          'Maximum bonus per deposit: 1,000 ₺.',
+          'Maximum total bonus credited per day: 10,000 ₺.',
+          'Wagering requirement: x2 on bonus amount for Sports, x4 on bonus amount for Slots and Live Casino.',
+          'Sports wagers must be combined bets with minimum 2 matches, each selection at odds ≥ 1.50.',
+          'All sports disciplines are eligible for wagering contribution.',
+          'No maximum withdrawal limit applies to winnings from this bonus.',
+          'Bonus expires after 7 days; unmet wagering forfeits the bonus.',
+          'Cannot be combined with other deposit bonuses on the same deposit.',
+          'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Deposit Bonus". Payment Filter: Credit Card. Rate: 15%. Cap: 1,000 ₺/deposit, 10,000 ₺/day. Rollover: x2 Sports / x4 Slots & Live Casino (bonus only). Min odds: 1.50, min selections: 2. No withdrawal cap.',
+      },
+
+      crypto20: {
+        icon: '₿', tag: 'Deposit Method · Cryptocurrency', title: '%20 Crypto Deposit Bonus',
+        accent: '#f39c12',
+        maxWithdrawal: 'No limit',
+        params: [
+          { label: 'Bonus Type',           value: 'Deposit Bonus + Free Spins', highlight: true },
+          { label: 'Rate',                 value: '20% + 20 FS (Slots only)', highlight: true },
+          { label: 'Method',               value: 'Crypto Payments Only' },
+          { label: 'Min Deposit',          value: '100 ₺ equivalent' },
+          { label: 'Max Bonus/Dep.',       value: '1,000 ₺ per deposit' },
+          { label: 'Max Bonus/Day',        value: '10,000 ₺ per day' },
+          { label: 'Wagering (Sports)',    value: 'x2 bonus · x1 FS' },
+          { label: 'Wagering (Slot/Live)', value: 'x4 bonus · x1 FS' },
+          { label: 'Free Spins',           value: '20 FS — Sweet Bonanza' },
+          { label: 'FS Max Win',           value: '1,000 ₺ → converts to cash' },
+          { label: 'Validity',             value: '7 days' },
+          { label: 'Bet Type',             value: 'Min 2 matches, odds ≥ 1.50' },
+          { label: 'Sports',               value: 'All sports included' },
+        ],
+        platforms: ['Sports — %20', 'Slots — %20 + 20 Free Spins (gift)', 'Live Casino — %20'],
+        rules: [
+          'Triggered when a deposit is made via any supported cryptocurrency (BTC, ETH, USDT, etc.).',
+          'Bonus rate is 20% across all platforms.',
+          'Slots platform receives an additional 20 Free Spins as a gift on top of the 20% deposit bonus.',
+          '20 Free Spins are credited exclusively for Sweet Bonanza.',
+          'Free Spin winnings carry no wagering requirement — winnings convert directly to real money (cash).',
+          'Maximum amount converted to cash from Free Spin winnings: 1,000 ₺.',
+          'Deposit bonus (20%) wagering: x2 on bonus amount for Sports, x4 for Slots and Live Casino.',
+          'Minimum deposit: 100 ₺ equivalent at time of transaction.',
+          'Maximum bonus per deposit: 1,000 ₺. Maximum total bonus per day: 10,000 ₺.',
+          'Player must request the bonus via the Bonus Request section before depositing.',
+          'Sports wagers must be combined bets with minimum 2 matches, each selection at odds ≥ 1.50.',
+          'All sports disciplines are eligible for wagering contribution.',
+          'No maximum withdrawal limit applies to winnings from this bonus.',
+          'Bonus is valid for 7 days; free spins expire within 24 hours of credit if not used.',
+          'Cannot be combined with other deposit bonuses on the same deposit.',
+          'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
+        ],
+        note: 'Digitain Config: Deposit Bonus (20%) + Free Spins gift (20 spins on Sweet Bonanza). Payment Filter: Crypto. Cap: 1,000 ₺/deposit, 10,000 ₺/day. Rollover: x2 Sports / x4 Slots & Live Casino. FS winnings: no rollover, converts to cash, max 1,000 ₺. Min odds: 1.50, min selections: 2. No withdrawal cap.',
+        warning: 'Free Spins must be assigned to Sweet Bonanza in Digitain before the bonus goes live.',
+      },
+
+      welcomeSports: {
+        icon: '⚽', tag: 'Welcome Package · New Members Only', title: 'Welcome Sports Bonus',
+        accent: '#d4af37',
+        stages: [
+          {
+            num: 1, label: '1st Deposit — %30',
+            params: [
+              { label: 'Rate', value: '30%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '3,000 ₺' },
+              { label: 'Wagering', value: 'x5 (bonus amount)' },
+              { label: 'Bet Type', value: '2-match combo, odds ≥ 1.50' },
+              { label: 'Validity', value: '3 days' },
+            ]
+          },
+          {
+            num: 2, label: '2nd Deposit — %20',
+            params: [
+              { label: 'Rate', value: '20%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '2,000 ₺' },
+              { label: 'Wagering', value: 'x5 (bonus amount)' },
+              { label: 'Bet Type', value: '2-match combo, odds ≥ 1.50' },
+              { label: 'Validity', value: '3 days' },
+            ]
+          },
+          {
+            num: 3, label: '3rd Deposit — %10',
+            params: [
+              { label: 'Rate', value: '10%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '1,000 ₺' },
+              { label: 'Wagering', value: 'x5 (bonus amount)' },
+              { label: 'Bet Type', value: '2-match combo, odds ≥ 1.50' },
+              { label: 'Validity', value: '3 days' },
+            ]
+          },
+        ],
+        rules: [
+          'Available only to newly registered and fully verified players (KYC complete).',
+          'Stages must be completed in order: Stage 1 → Stage 2 → Stage 3.',
+          'Stage 2 is unlocked only after Stage 1 wagering requirement is fully met.',
+          'Stage 3 is unlocked only after Stage 2 wagering requirement is fully met.',
+          'Each stage bonus is only triggered on the corresponding deposit number.',
+          'Wagering requirement: x5 on bonus amount for all stages.',
+          'Bets must be combined (accumulator) with minimum 2 matches; each selection at odds ≥ 1.50.',
+          'All sports disciplines are eligible — no sport restriction applies.',
+          'If a stage bonus expires before wagering is met, the remaining stages are forfeited.',
+          'This package is a one-time offer — each player may claim it only once.',
+          'Bonus funds cannot be withdrawn; only winnings generated from wagering are withdrawable.',
+          'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
+        ],
+        note: 'Digitain Config: Multi-stage welcome bonus. Bonus Type → "Deposit Bonus". Platform: Sports. Create 3 separate linked bonuses. Rollover: x5 (bonus only). Min odds: 1.50, min selections: 2.',
+        warning: 'If the player does not make the 2nd or 3rd deposit within 30 days of the previous stage activation, the package expires.',
+      },
+
+      welcomeSlots: {
+        icon: '🎰', tag: 'Welcome Package · New Members Only', title: 'Welcome Slot Bonus',
+        accent: '#d4af37',
+        maxWithdrawal: '20x deposit amount',
+        stages: [
+          {
+            num: 1, label: '1st Deposit — %100',
+            params: [
+              { label: 'Rate', value: '100%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '1,000 ₺' },
+              { label: 'Wagering', value: 'x10 (bonus amount)' },
+              { label: 'Platform', value: 'Slots only' },
+              { label: 'Validity', value: '7 days' },
+            ]
+          },
+          {
+            num: 2, label: '2nd Chance — %50 (Loss Required)',
+            params: [
+              { label: 'Rate', value: '50%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '1,000 ₺' },
+              { label: 'Wagering', value: 'x7 (bonus amount)' },
+              { label: 'Platform', value: 'Slots only' },
+              { label: 'Eligibility', value: 'Stage 1 participant + net loss' },
+              { label: 'Validity', value: '7 days' },
+            ]
+          },
+        ],
+        rules: [
+          'Available only to newly registered and fully verified players.',
+          'Stage 1: 100% bonus on first slots deposit, max bonus 1,000 ₺, wagering x10.',
+          'Stage 2 is a second chance bonus — it is NOT unlocked by completing Stage 1.',
+          'Stage 2 eligibility: player must have participated in Stage 1 AND experienced a net loss.',
+          'Net loss condition: Total Deposits − Total Withdrawals must be negative at the end of Stage 1.',
+          'Stage 2 is offered as a consolation bonus to players who lost during their Stage 1 experience.',
+          'Bonus funds can only be used on Slot games — Live Casino and Sports are excluded.',
+          'Minimum qualifying deposit: 100 ₺ per stage.',
+          'Maximum withdrawal from this bonus: 20x the deposit amount made at each stage.',
+          'Bonus expires after 7 days; unmet wagering forfeits the bonus and any remaining balance.',
+          'One-time offer per player — cannot be re-claimed.',
+          'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
+        ],
+        note: 'Digitain Config: Stage 1 → Deposit Bonus x10, Slots only. Stage 2 → triggered for Stage 1 participants with net loss (second chance). Rollover: x7. Max withdrawal: 20x deposit. Eligibility: new accounts.',
+      },
+
+      welcomeLiveCasino: {
+        icon: '🃏', tag: 'Welcome Package · New Members Only', title: 'Welcome LiveCasino Bonus',
+        accent: '#d4af37',
+        maxWithdrawal: '20x deposit amount',
+        stages: [
+          {
+            num: 1, label: '1st Deposit — %100',
+            params: [
+              { label: 'Rate', value: '100%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '1,000 ₺' },
+              { label: 'Wagering', value: 'x10 (bonus amount)' },
+              { label: 'Platform', value: 'Live Casino only' },
+              { label: 'Validity', value: '7 days' },
+            ]
+          },
+          {
+            num: 2, label: '2nd Chance — %50 (Loss Required)',
+            params: [
+              { label: 'Rate', value: '50%' },
+              { label: 'Min Deposit', value: '100 ₺' },
+              { label: 'Max Bonus', value: '1,000 ₺' },
+              { label: 'Wagering', value: 'x7 (bonus amount)' },
+              { label: 'Platform', value: 'Live Casino only' },
+              { label: 'Eligibility', value: 'Stage 1 participant + net loss' },
+              { label: 'Validity', value: '7 days' },
+            ]
+          },
+        ],
+        rules: [
+          'Available only to newly registered and fully verified players.',
+          'Stage 1: 100% bonus on first Live Casino deposit, max bonus 1,000 ₺, wagering x10.',
+          'Stage 2 is a second chance bonus — it is NOT unlocked by completing Stage 1.',
+          'Stage 2 eligibility: player must have participated in Stage 1 AND experienced a net loss.',
+          'Net loss condition: Total Deposits − Total Withdrawals must be negative at the end of Stage 1.',
+          'Stage 2 is offered as a consolation bonus to players who lost during their Stage 1 experience.',
+          'Bonus funds can only be used on Live Casino tables — Slots and Sports are excluded.',
+          'Minimum qualifying deposit: 100 ₺ per stage.',
+          'Maximum withdrawal from this bonus: 20x the deposit amount made at each stage.',
+          'Bonus expires after 7 days; unmet wagering forfeits the bonus.',
+          'One-time offer per player — cannot be re-claimed.',
+          'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
+        ],
+        note: 'Digitain Config: Stage 1 → Deposit Bonus x10, Live Casino only. Stage 2 → triggered for Stage 1 participants with net loss (second chance). Rollover: x7. Max withdrawal: 20x deposit. Eligibility: new accounts.',
+      },
+
+      deposit5th: {
+        icon: '🎁', tag: 'Loyalty · Daily 4 Loss Streak', title: '5. Deposit is From Us',
+        accent: '#9b59b6',
+        maxWithdrawal: '10x bonus amount',
+        params: [
+          { label: 'Bonus Type',   value: 'Arithmetic Average Gift', highlight: true },
+          { label: 'Trigger',      value: '4 deposits in a day, all lost', highlight: true },
+          { label: 'Bonus Amount', value: 'Average of 4 deposits', highlight: true },
+          { label: 'Max Bonus',    value: '2,000 ₺', highlight: true },
+          { label: 'Example',      value: '(1000+500+1000+500)÷4 = 750 ₺' },
+          { label: 'Wagering',     value: 'x10 (bonus amount)' },
+          { label: 'Sports Bet',   value: '2-match combo, odds ≥ 1.50' },
+          { label: 'Validity',     value: '7 days' },
+          { label: 'Activation',   value: 'Player request → system auto-assigns' },
+        ],
+        platforms: ['Sports (Spor)', 'Slots', 'Live Casino'],
+        rules: [
+          'Trigger condition: player must make exactly 4 deposits within the same calendar day AND lose all 4.',
+          'Net loss condition: Total Deposits − Total Withdrawals must be negative for all 4 deposits.',
+          'Bonus amount = arithmetic average of the 4 deposit amounts. Maximum bonus credit: 2,000 ₺.',
+          'Example: deposits of 1,000 ₺ + 500 ₺ + 1,000 ₺ + 500 ₺ → bonus = (1,000+500+1,000+500) ÷ 4 = 750 ₺.',
+          'Bonus is usable on Sports, Slots, and Live Casino.',
+          'Wagering requirement: x10 on bonus amount before withdrawal.',
+          'Sports wagers must be combined bets with minimum 2 matches, each selection at odds ≥ 1.50.',
+          'Maximum withdrawal from this bonus: 10x the bonus amount received.',
+          'Bonus expires after 7 days from credit.',
+          'Frequency: applicable once per calendar day per player.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Loss Bonus" (manual calculation). Trigger: 4 losing deposits in one day. Bonus = average of 4 deposits. Rollover: x10. Max withdrawal: 10x bonus. Sports: 2-match combo, min odds 1.50.',
+      },
+
+      doubleSlot: {
+        icon: '2️⃣', tag: 'Slots · Combined Bonus', title: 'Double Slot Bonus',
+        accent: '#9b59b6',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type',            value: 'Deposit + Discount Combo', highlight: true },
+          { label: 'Deposit Bonus',         value: '%20 on deposit', highlight: true },
+          { label: 'Discount Bonus',        value: '%10 on losses (if any)', highlight: true },
+          { label: 'Platform',              value: 'Slots only' },
+          { label: 'Max Deposit Bonus',     value: '2,000 ₺' },
+          { label: 'Max Discount',          value: '10,000 ₺' },
+          { label: 'Wagering (dep.)',       value: 'x10 (bonus amount)' },
+          { label: 'Wagering (disc.)',      value: 'x1 (no rollover)' },
+          { label: 'Max Withdrawal (disc.)',value: '10x discount bonus amount' },
+          { label: 'Validity',              value: '24 hours' },
+          { label: 'Frequency',             value: 'Once per deposit' },
+        ],
+        platforms: ['Slots only'],
+        rules: [
+          'Player receives two bonuses on a single deposit: 20% deposit bonus + 10% discount on any resulting losses.',
+          'Both bonuses are active within the same 24-hour window from deposit confirmation.',
+          'Deposit bonus (20%): credited immediately upon qualifying deposit. Wagering: x10 on bonus amount.',
+          'Discount bonus (10%): calculated on net losses (Total Deposits − Total Withdrawals) at end of session. Wagering: x1 (no rollover).',
+          'Maximum deposit bonus: 2,000 ₺ per deposit.',
+          'Maximum discount bonus: 10,000 ₺.',
+          'Both bonuses are restricted to Slots only — Sports and Live Casino are excluded.',
+          'Discount bonus is only credited if the player has a net loss after the session.',
+          'If the player generates winnings using the discount bonus and wishes to withdraw, the maximum withdrawable amount is 10x the discount bonus received.',
+          'Cannot be combined with any other deposit or loss bonus offer.',
+          'One activation per deposit per player.',
+        ],
+        note: 'Digitain Config: (1) Deposit Bonus 20% — Slots, cap 2,000 ₺, x10 rollover. (2) Loss/Discount Bonus 10% — Slots, cap 10,000 ₺, x1 rollover, 24h window. Linked to same deposit.',
+      },
+
+      midnight: {
+        icon: '🌙', tag: 'Time-Based · After Midnight', title: 'Midnight Slot Bonus',
+        accent: '#667eea',
+        params: [
+          { label: 'Bonus Type',   value: 'Time-Limited Loss Refund', highlight: true },
+          { label: 'Rate',         value: '30% of Session Losses', highlight: true },
+          { label: 'Active Hours', value: '00:00 – 08:00 (UTC+3)' },
+          { label: 'Min Loss',     value: '100 ₺' },
+          { label: 'Max Bonus',    value: '10,000 ₺' },
+          { label: 'Wagering',     value: 'x5 (bonus amount)' },
+          { label: 'Validity',     value: '24 hours after credit' },
+          { label: 'Platform',     value: 'Slots only' },
+        ],
+        platforms: ['Slots only'],
+        rules: [
+          'Player must deposit and lose within the 00:00–08:00 window to qualify for this bonus.',
+          'Bonus requests are only accepted until 08:00 — requests made after 08:00 are not eligible.',
+          'Loss refund rate: 30% on net losses (Total Deposits − Total Withdrawals) within the window.',
+          'Minimum qualifying loss: 100 ₺.',
+          'Maximum bonus credit: 10,000 ₺ per night.',
+          'Wagering: x5 on bonus amount before withdrawal.',
+          'Bonus is valid for 24 hours from credit.',
+          'One bonus per night per player.',
+          'Cannot be combined with other loss/cashback promotions.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Loss Bonus". Request window: 00:00–08:00 only. Platform: Slots. Max: 10,000 ₺. Rollover: x5 (bonus only). Daily reset.',
+      },
+
+      crash50: {
+        icon: '🚀', tag: 'One-Time · First Deposit', title: '%50 Crash Games Bonus',
+        accent: '#e67e22',
+        maxWithdrawal: '10x deposit amount',
+        params: [
+          { label: 'Bonus Type',  value: 'First Deposit Bonus', highlight: true },
+          { label: 'Rate',        value: '50%', highlight: true },
+          { label: 'Platform',    value: 'Crash Games only' },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus',   value: '2,500 ₺' },
+          { label: 'Wagering',    value: 'x15 (bonus amount)' },
+          { label: 'Validity',    value: '7 days' },
+          { label: 'Eligibility', value: 'One-time, first deposit only' },
+        ],
+        platforms: ['Crash Games only (e.g. Aviator, Spaceman, JetX)'],
+        rules: [
+          'Available only on the player\'s very first deposit — one-time offer per account.',
+          'Player must request the bonus via the Bonus Request section before making the deposit.',
+          'Bonus rate: 50% of first deposit amount.',
+          'Minimum deposit: 100 ₺.',
+          'Maximum bonus: 2,500 ₺ (e.g., deposit 5,000 ₺ → bonus capped at 2,500 ₺).',
+          'Bonus funds are restricted to Crash games only — Slots, Sports, and Live Casino are excluded.',
+          'Wagering: x15 on bonus amount before withdrawal.',
+          'Bonus expires after 7 days; unmet wagering forfeits the bonus balance.',
+          'If the player does not request the bonus before depositing, it cannot be applied retroactively.',
+          'Only one welcome bonus type (Sports / Slots / Casino / Crash) can be claimed per first deposit.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Deposit Bonus". Trigger: 1st deposit only. Game filter: Crash games. Rate: 50%. Cap: 2,500 ₺. Rollover: x15. Max withdrawal: 10x deposit.',
+        warning: 'Ensure Crash game category is correctly tagged in Digitain game filter before activating.',
+      },
+
+      insurance100: {
+        icon: '🛡️', tag: 'One-Time · First Bet', title: 'Sports %100 Insurance',
+        accent: '#1abc9c',
+        maxWithdrawal: '10x deposit amount',
+        params: [
+          { label: 'Bonus Type',  value: 'First Bet Insurance', highlight: true },
+          { label: 'Coverage',    value: '100% of First Bet Loss', highlight: true },
+          { label: 'Platform',    value: 'Sports only' },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Refund',  value: '1,000 ₺' },
+          { label: 'Bet Type',    value: '3-match combo, odds ≥ 1.75' },
+          { label: 'Wagering',    value: 'x5 (refunded bonus)' },
+          { label: 'Validity',    value: '3 days after credit' },
+          { label: 'Eligibility', value: 'One-time, first sports bet only' },
+        ],
+        platforms: ['Sports only'],
+        rules: [
+          'Insurance applies only to the player\'s very first sports bet — one per account, lifetime.',
+          'If the first bet loses, 100% of the stake is refunded as a bonus (not cash).',
+          'If the first bet wins, no refund is issued.',
+          'Minimum qualifying deposit: 100 ₺.',
+          'Maximum insured amount: 1,000 ₺.',
+          'Bet must be a combined (accumulator) with minimum 3 matches, each selection at odds ≥ 1.75.',
+          'Refund is credited as bonus funds within 24 hours of the bet settlement.',
+          'Wagering: x5 on the refunded bonus amount.',
+          'Maximum withdrawal: 10x the deposit amount.',
+          'Insurance bonus expires after 3 days from credit.',
+          'Free bets, bonus-funded bets, or bets placed with promotional funds do not count as the "first bet".',
+          'Player must have completed KYC verification before placing the insured bet.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Free Bet" or "Insurance". Trigger: 1st real-money settled bet (loss only). Platform: Sports. Min deposit: 100 ₺. Bet: 3-match combo, min odds 1.75. Cap: 1,000 ₺. Rollover: x5. Max withdrawal: 10x deposit.',
+      },
+
+      freespin: {
+        icon: '🎡', tag: 'One-Time · First Deposit', title: 'Slot %50 Freespin',
+        accent: '#ff6b6b',
+        maxWithdrawal: '20x deposit amount',
+        params: [
+          { label: 'Bonus Type',  value: 'Deposit Bonus — Sweet Bonanza', highlight: true },
+          { label: 'Rate',        value: '50%', highlight: true },
+          { label: 'Game',        value: 'Sweet Bonanza only' },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus',   value: '500 ₺' },
+          { label: 'Wagering',    value: 'x30 (bonus amount)' },
+          { label: 'Validity',    value: '7 days' },
+          { label: 'Eligibility', value: 'One-time, first deposit only' },
+        ],
+        platforms: ['Slots — Sweet Bonanza only'],
+        rules: [
+          'Bonus is credited on the player\'s first qualifying deposit only — one-time per account.',
+          'Bonus rate: 50% of deposit amount, exclusively for Sweet Bonanza.',
+          'Minimum deposit: 100 ₺ to qualify.',
+          'Maximum bonus credit: 500 ₺.',
+          'Bonus funds can only be used on Sweet Bonanza — no other games are eligible.',
+          'Wagering requirement: x30 on bonus amount.',
+          'Maximum withdrawal: 20x the deposit amount.',
+          'Bonus expires after 7 days; unmet wagering forfeits the bonus.',
+          'Player must request the bonus via the Bonus Request section before making the first deposit.',
+          'Cannot be combined with other welcome bonus types for the same deposit.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Deposit Bonus". Game filter: Sweet Bonanza only. Trigger: 1st deposit. Rate: 50%. Cap: 500 ₺. Rollover: x30. Max withdrawal: 20x deposit.',
+      },
+
+      // ── SPORTS BONUSES ──────────────────────────────────────────
+      sp_welcome: {
+        icon: '🏆', tag: 'Sports · New Members', title: 'Welcome Sports Bonus Package',
+        accent: '#4a9eff',
+        hideMaxWithdrawal: true,
+        stages: [
+          { num: '1', label: '1st Deposit — 30%', params: [
+            { label: 'Rate', value: '30%', highlight: true },
+            { label: 'Min Deposit', value: '100 ₺' },
+            { label: 'Wagering', value: 'x5 bonus amount' },
+            { label: 'Validity', value: '3 days' },
+          ]},
+          { num: '2', label: '2nd Deposit — 20%', params: [
+            { label: 'Rate', value: '20%', highlight: true },
+            { label: 'Min Deposit', value: '100 ₺' },
+            { label: 'Wagering', value: 'x5 bonus amount' },
+            { label: 'Validity', value: '3 days' },
+          ]},
+          { num: '3', label: '3rd Deposit — 10%', params: [
+            { label: 'Rate', value: '10%', highlight: true },
+            { label: 'Min Deposit', value: '100 ₺' },
+            { label: 'Wagering', value: 'x5 bonus amount' },
+            { label: 'Validity', value: '3 days' },
+          ]},
+        ],
+        rules: [
+          'Available only to new members who have never previously activated a welcome bonus.',
+          'Each stage is unlocked only after the previous stage\'s wagering requirement is fully completed.',
+          'Minimum deposit of 100 ₺ is required for each stage.',
+          'Wagering requirement is x5 the bonus amount for each stage.',
+          'Bonus funds can only be used on sports markets; casino games do not contribute.',
+          'Each stage bonus expires after 3 days if wagering is not completed.',
+          'Bonus cannot be combined with any other welcome or deposit promotion.',
+          'Withdrawals are not permitted until all active bonus wagering requirements are met.',
+          'The platform reserves the right to cancel the bonus if fraudulent activity is detected.',
+        ],
+      },
+
+      sp_recurring: {
+        icon: '🔄', tag: 'Sports · All Members', title: 'Recurring Sports Deposit Bonus (up to 20%)',
+        accent: '#4a9eff',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '5%–20% (tiered by deposit)', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus', value: '2,000 ₺' },
+          { label: 'Wagering', value: 'x5 bonus amount' },
+          { label: 'Validity', value: '3 days after activation' },
+          { label: 'Eligibility', value: 'Via promo code or campaign' },
+        ],
+        rules: [
+          'Deposit tiers: 100–499 ₺ = 5%, 500–1,999 ₺ = 10%, 2,000–4,999 ₺ = 15%, 5,000 ₺+ = 20%.',
+          'Available through promotional codes or media campaigns only — not automatically awarded.',
+          'Minimum deposit of 100 ₺ required to activate the bonus.',
+          'Maximum bonus credit per activation is 2,000 ₺ regardless of deposit amount.',
+          'Wagering requirement: x5 the bonus amount on sports markets.',
+          'Bonus expires 3 days after activation; unmet wagering forfeits the bonus.',
+          'Only one recurring sports deposit bonus can be active at a time.',
+          'Bonus funds cannot be withdrawn until wagering requirements are fully satisfied.',
+          'Platform may update deposit tiers; current rates are published on the promotions page.',
+        ],
+      },
+
+      sp_vip: {
+        icon: '👑', tag: 'Sports · VIP', title: 'VIP Sports Bonus No Wagering',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'VIP Deposit Bonus', highlight: true },
+          { label: 'Bronze', value: '5%', highlight: true },
+          { label: 'Silver', value: '10%', highlight: true },
+          { label: 'Gold', value: '15%', highlight: true },
+          { label: 'Platinum', value: '20%', highlight: true },
+          { label: 'Wagering', value: 'None' },
+          { label: 'Max Bonus', value: '5,000 ₺' },
+          { label: 'Validity', value: '7 days' },
+          { label: 'Withdrawal Limit', value: '3× bonus amount' },
+        ],
+        rules: [
+          'Exclusive to VIP members (Bronze, Silver, Gold, Platinum tiers).',
+          'Bonus rate is determined by the player\'s current VIP tier at the time of deposit.',
+          'No wagering requirement — bonus is credited directly as withdrawable funds subject to the 3× withdrawal limit.',
+          'Maximum bonus credit is 5,000 ₺ regardless of deposit amount or tier.',
+          'Bonus is credited manually by the VIP account manager within 24 hours of the qualifying deposit.',
+          'Validity period is 7 days from the date of credit; unused bonus expires after this period.',
+          'Maximum withdrawal from this bonus is 3× the bonus amount received.',
+          'Cannot be combined with other active deposit bonuses.',
+          'VIP tier is verified at the time of credit; downgrades before credit may affect the rate.',
+        ],
+      },
+
+      sp_cashback_game: {
+        icon: '💸', tag: 'Sports · Daily Selected', title: 'Cashback Bonus for Selected Game',
+        accent: '#2ecc71',
+        params: [
+          { label: 'Bonus Type', value: 'Cashback', highlight: true },
+          { label: 'Rate', value: '10%', highlight: true },
+          { label: 'Applies To', value: 'Daily selected games' },
+          { label: 'Min Bet', value: '50 ₺' },
+          { label: 'Max Cashback', value: '1,000 ₺' },
+          { label: 'Wagering', value: 'x3 cashback amount' },
+          { label: 'Validity', value: '3 days after credit' },
+        ],
+        rules: [
+          'Cashback is calculated as 10% of net losses on the daily selected sports game/market.',
+          'The selected game or market changes daily and is announced on the promotions page.',
+          'Minimum single bet of 50 ₺ required to qualify for cashback.',
+          'Maximum cashback credit per day is 1,000 ₺.',
+          'Wagering requirement: x3 the cashback amount on sports markets.',
+          'Cashback is credited within 24 hours of the day\'s end.',
+          'Bonus expires 3 days after credit; unmet wagering forfeits the bonus.',
+          'Cashback applies to settled losses only; pending bets are excluded.',
+          'Cannot be combined with other active cashback promotions.',
+        ],
+      },
+
+      sp_weekly_general: {
+        icon: '📅', tag: 'Sports · Non-VIP · Thursday', title: 'Weekly Loss Bonus Thursday (up to 10%)',
+        accent: '#4a9eff',
+        params: [
+          { label: 'Bonus Type', value: 'Weekly Loss Bonus', highlight: true },
+          { label: '500–1,999 ₺ loss', value: '5%', highlight: true },
+          { label: '2,000–4,999 ₺ loss', value: '7%', highlight: true },
+          { label: '5,000 ₺+ loss', value: '10%', highlight: true },
+          { label: 'Max Bonus', value: '2,000 ₺' },
+          { label: 'Wagering', value: 'x3 bonus amount' },
+          { label: 'Validity', value: '3 days after credit' },
+          { label: 'Calculation', value: 'Mon–Sun · Credited Thursday' },
+          { label: 'Eligibility', value: 'Non-VIP members only' },
+        ],
+        rules: [
+          'Loss is calculated on net sports losses from Monday 00:00 to Sunday 23:59.',
+          'Bonus is credited every Thursday for the previous week\'s losses.',
+          'Tiers: 500–1,999 ₺ net loss = 5%, 2,000–4,999 ₺ = 7%, 5,000 ₺+ = 10%.',
+          'Maximum bonus credit is 2,000 ₺ per week regardless of total losses.',
+          'Available to non-VIP members only; VIP members have a separate weekly loss bonus.',
+          'Wagering requirement: x3 the bonus amount on sports markets.',
+          'Bonus expires 3 days after credit; unmet wagering forfeits the bonus.',
+          'Minimum qualifying weekly loss is 500 ₺; losses below this threshold are not eligible.',
+          'Bonus is not credited if the account has an active withdrawal request during the calculation period.',
+        ],
+      },
+
+      sp_weekly_vip: {
+        icon: '🌟', tag: 'Sports · VIP · Thursday', title: 'Weekly Loss Bonus VIP Thursday (up to 25%)',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'VIP Weekly Loss Bonus', highlight: true },
+          { label: 'Bronze', value: '10%', highlight: true },
+          { label: 'Silver', value: '15%', highlight: true },
+          { label: 'Gold', value: '20%', highlight: true },
+          { label: 'Platinum', value: '25%', highlight: true },
+          { label: 'Max Bonus', value: '10,000 ₺' },
+          { label: 'Wagering', value: 'x1 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+          { label: 'Calculation', value: 'Mon–Sun · Credited Thursday' },
+        ],
+        rules: [
+          'Exclusive to VIP members (Bronze, Silver, Gold, Platinum tiers).',
+          'Loss is calculated on net sports losses from Monday 00:00 to Sunday 23:59.',
+          'Bonus is credited every Thursday for the previous week\'s losses.',
+          'Rate is determined by the player\'s VIP tier on the date of credit.',
+          'Maximum bonus credit is 10,000 ₺ per week regardless of total losses.',
+          'Wagering requirement: x1 the bonus amount on sports markets (minimum rollover).',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'VIP manager may adjust the credit date by up to 24 hours in exceptional circumstances.',
+          'Cannot be stacked with non-VIP weekly loss bonus.',
+        ],
+      },
+
+      sp_free_bet_30: {
+        icon: '🎯', tag: 'Sports · Daily', title: 'Free Bet 30% from Daily Deposit',
+        accent: '#4a9eff',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type', value: 'Free Bet', highlight: true },
+          { label: 'Rate', value: '30% of daily deposits', highlight: true },
+          { label: 'Min Daily Deposit', value: '1,000 ₺' },
+          { label: 'Max Free Bet', value: '3,000 ₺' },
+          { label: 'Min Odds', value: '1.80' },
+          { label: 'Selections', value: 'Minimum 3 selections' },
+          { label: 'Validity', value: '24 hours from credit' },
+          { label: 'Stake Returned', value: 'No' },
+        ],
+        rules: [
+          'Free bet is calculated as 30% of the player\'s total deposits for the calendar day.',
+          'Minimum total daily deposit of 1,000 ₺ required to qualify.',
+          'Maximum free bet credit is 3,000 ₺ per day.',
+          'Free bet must be placed on a selection with minimum odds of 1.80.',
+          'Bet slip must contain at least 3 selections to qualify.',
+          'Free bet stake is not returned with winnings — only net profit is paid.',
+          'Free bet expires 24 hours after credit; unused bets are forfeited.',
+          'Free bet cannot be split across multiple bets.',
+          'Winnings from free bets are credited as real balance with no additional wagering.',
+        ],
+      },
+
+      sp_bet_get: {
+        icon: '🏅', tag: 'Sports · All Members', title: 'Bet & Get',
+        accent: '#4a9eff',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type', value: 'Free Bet Reward', highlight: true },
+          { label: 'Qualifying Bets', value: '3 × 100 ₺', highlight: true },
+          { label: 'Min Odds/Bet', value: '1.50' },
+          { label: 'Free Bet Reward', value: '50 ₺', highlight: true },
+          { label: 'Validity', value: '48 hours to use free bet' },
+          { label: 'Stake Returned', value: 'No' },
+        ],
+        rules: [
+          'Place 3 qualifying bets of at least 100 ₺ each to earn a 50 ₺ free bet.',
+          'Each qualifying bet must be placed at minimum odds of 1.50.',
+          'All 3 qualifying bets must be settled before the free bet is credited.',
+          'Free bet is credited within 24 hours of the 3rd qualifying bet being settled.',
+          'Free bet must be used within 48 hours of credit; unused bets are forfeited.',
+          'Free bet stake is not returned with winnings — only net profit is paid.',
+          'Qualifying bets must be on sports markets; casino bets do not count.',
+          'Cash-out bets do not qualify as qualifying bets.',
+          'This promotion may be run during specific campaign periods only.',
+        ],
+      },
+
+      sp_insurance_first: {
+        icon: '🛡️', tag: 'Sports · New Members', title: 'Insurance on First Bet',
+        accent: '#1abc9c',
+        params: [
+          { label: 'Bonus Type', value: 'Bet Insurance', highlight: true },
+          { label: 'Refund Rate', value: '100% if first bet loses', highlight: true },
+          { label: 'Max Refund', value: '500 ₺' },
+          { label: 'Wagering', value: 'x3 refund amount' },
+          { label: 'Validity', value: '3 days after credit' },
+          { label: 'Min Odds', value: '1.80' },
+          { label: 'Selections', value: 'Minimum 2 selections' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members placing their first sports bet only — one-time per account.',
+          'If the first bet loses, 100% of the stake is refunded as a bonus (max 500 ₺).',
+          'First bet must be placed at minimum odds of 1.80.',
+          'Bet slip must contain at least 2 selections to qualify.',
+          'Refund is credited as bonus funds within 24 hours of the losing bet being settled.',
+          'Wagering requirement: x3 the refund amount on sports markets.',
+          'Bonus expires 3 days after credit; unmet wagering forfeits the bonus.',
+          'Insurance applies to the first bet placed after account registration and first deposit only.',
+          'Partial cash-out of the insured bet will reduce the insurance amount proportionally.',
+        ],
+      },
+
+      // ── SLOT BONUSES ─────────────────────────────────────────────
+      sl_first: {
+        icon: '🎰', tag: 'Slots · New Members', title: 'First Slot Deposit Bonus 20%',
+        accent: '#ff6b6b',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '20%', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus', value: '1,000 ₺' },
+          { label: 'Wagering', value: 'x25 (deposit + bonus)' },
+          { label: 'Validity', value: '7 days' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members only — one-time per account on the first slot deposit.',
+          'Bonus rate: 20% of the qualifying deposit amount.',
+          'Minimum deposit of 100 ₺ required to activate the bonus.',
+          'Maximum bonus credit is 1,000 ₺ regardless of deposit amount.',
+          'Wagering requirement: x25 on the combined deposit + bonus amount on slot games.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus and associated winnings.',
+          'Only slot games contribute to wagering; sports and live casino bets are excluded.',
+          'Cannot be combined with other welcome or first-deposit bonuses.',
+          'Player must request the bonus before making the qualifying deposit.',
+        ],
+      },
+
+      sl_second: {
+        icon: '🎰', tag: 'Slots · New Members', title: 'Second Slot Deposit Bonus 15%',
+        accent: '#ff6b6b',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '15%', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus', value: '750 ₺' },
+          { label: 'Wagering', value: 'x25 (deposit + bonus)' },
+          { label: 'Validity', value: '7 days' },
+          { label: 'Eligibility', value: 'After 1st slot bonus completed' },
+        ],
+        rules: [
+          'Available to new members who have already activated and completed the First Slot Deposit Bonus.',
+          'Bonus is unlocked only after the wagering requirements of the first slot bonus are fully met.',
+          'Bonus rate: 15% of the qualifying deposit amount.',
+          'Minimum deposit of 100 ₺ required to activate the bonus.',
+          'Maximum bonus credit is 750 ₺ regardless of deposit amount.',
+          'Wagering requirement: x25 on the combined deposit + bonus amount on slot games.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus and associated winnings.',
+          'Only slot games contribute to wagering; sports and live casino bets are excluded.',
+          'Cannot be combined with other active deposit bonuses.',
+        ],
+      },
+
+      sl_freespins_first: {
+        icon: '🎡', tag: 'Slots · New Members', title: 'Free Spins Bonus First Deposit',
+        accent: '#ff6b6b',
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Free Spins', value: '50', highlight: true },
+          { label: 'Min Deposit', value: '200 ₺' },
+          { label: 'Wagering', value: 'x30 on spin winnings' },
+          { label: 'Spins Validity', value: '24 hours from credit' },
+          { label: 'Wagering Validity', value: '3 days after spins expire' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members only on their first qualifying slot deposit — one-time per account.',
+          'Minimum deposit of 200 ₺ required to receive the 50 free spins.',
+          'Free spins are credited to the designated slot game within 24 hours of the qualifying deposit.',
+          'Free spins must be used within 24 hours of credit; unused spins are forfeited.',
+          'Wagering requirement: x30 on all winnings accumulated from the free spins.',
+          'Wagering must be completed within 3 days after the spins expire.',
+          'Failure to complete wagering within the validity period forfeits all spin winnings.',
+          'Free spins cannot be exchanged for cash or transferred to another game.',
+          'Cannot be combined with other free spin promotions on the same account.',
+        ],
+      },
+
+      sl_20_10: {
+        icon: '2️⃣', tag: 'Slots · All Members', title: '20% Deposit + 10% Loss Bonus',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Deposit Bonus Rate', value: '20%', highlight: true },
+          { label: 'Deposit Wagering', value: 'x25 (dep + bonus)' },
+          { label: 'Max Deposit Bonus', value: '1,000 ₺' },
+          { label: 'Dep. Bonus Validity', value: '7 days' },
+          { label: 'Loss Bonus Rate', value: '10% (if net loss)', highlight: true },
+          { label: 'Loss Wagering', value: 'x15 loss bonus' },
+          { label: 'Max Loss Bonus', value: '500 ₺' },
+          { label: 'Loss Bonus Validity', value: '3 days' },
+          { label: 'Min Deposit', value: '200 ₺' },
+        ],
+        rules: [
+          'This promotion combines a 20% deposit bonus and a 10% loss bonus in a single activation.',
+          'Minimum deposit of 200 ₺ required to activate both components.',
+          'Deposit bonus (20%, max 1,000 ₺): wagering x25 on deposit + bonus, expires 7 days.',
+          'Loss bonus (10%, max 500 ₺): credited if net losses are recorded after deposit bonus wagering ends.',
+          'Loss bonus wagering requirement: x15 on the loss bonus amount on slot games.',
+          'Loss bonus expires 3 days after credit; unmet wagering forfeits it.',
+          'Both bonuses can only be used on slot games — other game types are excluded.',
+          'Loss bonus is credited automatically within 24 hours of the deposit bonus expiry.',
+          'Cannot be combined with other active slot promotions on the same account.',
+        ],
+      },
+
+      sl_weekly_loss: {
+        icon: '📅', tag: 'Slots · All Members · Monday', title: 'Weekly Loss Bonus Monday 10%',
+        accent: '#2ecc71',
+        params: [
+          { label: 'Bonus Type', value: 'Weekly Loss Bonus', highlight: true },
+          { label: 'Rate', value: '10%', highlight: true },
+          { label: 'Min Loss', value: '200 ₺' },
+          { label: 'Max Bonus', value: '2,000 ₺' },
+          { label: 'Wagering', value: 'x15 bonus amount' },
+          { label: 'Validity', value: '3 days after credit' },
+          { label: 'Calculation', value: 'Mon–Sun · Credited Monday' },
+        ],
+        rules: [
+          'Net slot losses are calculated from Monday 00:00 to Sunday 23:59 each week.',
+          'Bonus is credited every Monday for the previous week\'s net losses.',
+          'Minimum qualifying weekly net loss is 200 ₺.',
+          'Maximum bonus credit is 2,000 ₺ per week regardless of total losses.',
+          'Wagering requirement: x15 the bonus amount on slot games.',
+          'Bonus expires 3 days after credit; unmet wagering forfeits the bonus.',
+          'Available to all members; VIP members may also receive the VIP weekly slot loss bonus separately.',
+          'Bonus is not credited if the account has an active withdrawal request during the calculation period.',
+          'Only settled slot game results count toward the weekly loss calculation.',
+        ],
+      },
+
+      sl_vip_weekly: {
+        icon: '👑', tag: 'Slots · VIP', title: 'VIP Weekly Loss Bonus (up to 25%)',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'VIP Weekly Loss Bonus', highlight: true },
+          { label: 'Bronze', value: '10%', highlight: true },
+          { label: 'Silver', value: '15%', highlight: true },
+          { label: 'Gold', value: '20%', highlight: true },
+          { label: 'Platinum', value: '25%', highlight: true },
+          { label: 'Min Loss', value: '500 ₺' },
+          { label: 'Max Bonus', value: '10,000 ₺' },
+          { label: 'Wagering', value: 'x10 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+        ],
+        rules: [
+          'Exclusive to VIP members (Bronze, Silver, Gold, Platinum tiers).',
+          'Net slot losses are calculated from Monday 00:00 to Sunday 23:59 each week.',
+          'Rate is determined by the player\'s VIP tier on the date of credit.',
+          'Minimum qualifying weekly net loss is 500 ₺.',
+          'Maximum bonus credit is 10,000 ₺ per week regardless of total losses.',
+          'Wagering requirement: x10 the bonus amount on slot games.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'VIP manager credits the bonus by end of business Monday following the calculation week.',
+          'Cannot be stacked with the general weekly slot loss bonus.',
+        ],
+      },
+
+      sl_daily_fs: {
+        icon: '✨', tag: 'Slots · Media/VIP/Promo', title: 'Daily Free Spins Media/VIP/Promo',
+        accent: '#ff6b6b',
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Spins', value: '10–100 free spins', highlight: true },
+          { label: 'Min Deposit', value: 'Not required' },
+          { label: 'Wagering', value: 'x30 on winnings' },
+          { label: 'Spins Validity', value: '24 hours from credit' },
+          { label: 'Wagering Validity', value: '3 days after spins expire' },
+          { label: 'Max Win', value: '250 ₺ per day' },
+          { label: 'Source', value: 'Social media / VIP / campaigns' },
+        ],
+        rules: [
+          'Free spins are distributed via social media announcements, VIP manager allocation, or promotional campaigns.',
+          'Number of spins varies between 10 and 100 depending on the source and campaign.',
+          'No deposit required to receive or use the free spins.',
+          'Spins must be used within 24 hours of credit; unused spins are forfeited.',
+          'Wagering requirement: x30 on all winnings from the free spins.',
+          'Maximum total win from daily free spins is capped at 250 ₺ per day.',
+          'Wagering must be completed within 3 days after the spins expire.',
+          'Free spins are designated for a specific game as announced at the time of distribution.',
+          'Cannot be combined with other concurrent free spin promotions on the same account.',
+        ],
+      },
+
+      sl_midnight: {
+        icon: '🌙', tag: 'Slots · After Midnight', title: '30% Bonus on Losses After Midnight',
+        accent: '#667eea',
+        params: [
+          { label: 'Bonus Type', value: 'Loss Bonus', highlight: true },
+          { label: 'Rate', value: '30%', highlight: true },
+          { label: 'Active Window', value: '00:00–06:00' },
+          { label: 'Min Loss', value: '100 ₺' },
+          { label: 'Max Bonus', value: '1,500 ₺' },
+          { label: 'Wagering', value: 'x15 bonus amount' },
+          { label: 'Validity', value: '24 hours from credit' },
+          { label: 'Credit Time', value: '07:00 same morning' },
+        ],
+        rules: [
+          'Applies to net slot losses incurred between 00:00 and 06:00 (platform time).',
+          'Minimum qualifying net loss during the window is 100 ₺.',
+          'Bonus rate: 30% of net losses, capped at 1,500 ₺ per session window.',
+          'Bonus is automatically credited at 07:00 on the same morning.',
+          'Wagering requirement: x15 the bonus amount on slot games.',
+          'Bonus expires 24 hours after credit; unmet wagering forfeits the bonus.',
+          'Only slot games played in the 00:00–06:00 window qualify; earlier or later sessions are excluded.',
+          'Cannot be combined with other active loss bonuses.',
+          'Player must have an active account in good standing to receive the midnight bonus.',
+        ],
+      },
+
+      sl_happy_hour: {
+        icon: '⏰', tag: 'Slots · Happy Hour', title: 'Happy Hour Free Spins',
+        accent: '#ff6b6b',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Spins', value: '20 free spins per hour', highlight: true },
+          { label: 'Min Deposit', value: 'Not required' },
+          { label: 'Max Win', value: '200 ₺ per session' },
+          { label: 'Wagering', value: 'x25 on winnings' },
+          { label: 'Validity', value: '3 days after credit' },
+          { label: 'Opt-In', value: 'Required before window starts' },
+        ],
+        rules: [
+          'Happy Hour windows are scheduled by the platform and announced in advance.',
+          'Player must opt in before the happy hour window begins to receive free spins.',
+          'Late opt-ins after the window has started are not eligible for that session.',
+          '20 free spins are awarded per active happy hour window.',
+          'No deposit is required to receive the happy hour free spins.',
+          'Maximum winnings from happy hour spins are capped at 200 ₺ per session.',
+          'Wagering requirement: x25 on all winnings from the free spins.',
+          'Bonus expires 3 days after credit; unmet wagering forfeits the bonus.',
+          'Free spins are designated for a specific slot game as announced at the start of the happy hour.',
+        ],
+      },
+
+      sl_crash50: {
+        icon: '🚀', tag: 'Slots · Crash · New Members', title: 'First Deposit 50% Crash Games',
+        accent: '#e67e22',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '50%', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus', value: '500 ₺' },
+          { label: 'Wagering', value: 'x20 (deposit + bonus)' },
+          { label: 'Validity', value: '7 days' },
+          { label: 'Eligible Games', value: 'Aviator, Spaceman, JetX' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members only on their first qualifying crash game deposit — one-time per account.',
+          'Bonus rate: 50% of the qualifying deposit amount.',
+          'Minimum deposit of 100 ₺ required to activate the bonus.',
+          'Maximum bonus credit is 500 ₺ regardless of deposit amount.',
+          'Wagering requirement: x20 on the combined deposit + bonus amount.',
+          'Wagering must be completed exclusively on eligible crash games: Aviator, Spaceman, and JetX.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus and associated winnings.',
+          'Other slot or casino games do not contribute to wagering for this bonus.',
+          'Cannot be combined with other welcome or first-deposit bonuses.',
+        ],
+      },
+
+      // ── LIVE CASINO BONUSES ───────────────────────────────────────
+      ca_first: {
+        icon: '🃏', tag: 'Casino · New Members', title: 'First Live Casino Deposit 20%',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '20%', highlight: true },
+          { label: 'Min Deposit', value: '150 ₺' },
+          { label: 'Max Bonus', value: '1,000 ₺' },
+          { label: 'Wagering', value: 'x25 (deposit + bonus)' },
+          { label: 'Validity', value: '7 days' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members only on their first qualifying live casino deposit — one-time per account.',
+          'Bonus rate: 20% of the qualifying deposit amount.',
+          'Minimum deposit of 150 ₺ required to activate the bonus.',
+          'Maximum bonus credit is 1,000 ₺ regardless of deposit amount.',
+          'Wagering requirement: x25 on the combined deposit + bonus amount on live casino games.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'Only live casino games contribute to wagering; slots and sports bets are excluded.',
+          'Cannot be combined with other welcome or first-deposit bonuses.',
+          'Player must request the bonus before making the qualifying deposit.',
+        ],
+      },
+
+      ca_second: {
+        icon: '🃏', tag: 'Casino · New Members', title: 'Second Live Casino Deposit 15%',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '15%', highlight: true },
+          { label: 'Min Deposit', value: '50 ₺' },
+          { label: 'Max Bonus', value: '750 ₺' },
+          { label: 'Wagering', value: 'x30 on slots' },
+          { label: 'Validity', value: '14 days' },
+          { label: 'Eligibility', value: 'After 1st casino bonus used' },
+        ],
+        rules: [
+          'Available to new members who have already activated and completed the First Live Casino Deposit Bonus.',
+          'Bonus is unlocked only after the wagering requirements of the first casino bonus are fully met.',
+          'Bonus rate: 15% of the qualifying deposit amount.',
+          'Minimum deposit of 50 ₺ required to activate the bonus.',
+          'Maximum bonus credit is 750 ₺ regardless of deposit amount.',
+          'Wagering requirement: x30 on slot games (not live casino games for this bonus).',
+          'Bonus expires 14 days after credit; unmet wagering forfeits the bonus.',
+          'Slot contributions apply; live casino and sports bets do not count toward wagering.',
+          'Cannot be combined with other active deposit bonuses.',
+        ],
+      },
+
+      ca_freespins_first: {
+        icon: '🎡', tag: 'Casino · New Members', title: 'Free Spins First Deposit',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Free Spins', value: 'Up to 100', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Wagering', value: 'x25 on spin winnings' },
+          { label: 'Validity', value: '7 days' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members only on their first qualifying casino deposit — one-time per account.',
+          'Minimum deposit of 100 ₺ required to receive up to 100 free spins.',
+          'Exact number of spins awarded depends on the current campaign rate.',
+          'Free spins are credited to the designated game within 24 hours of the qualifying deposit.',
+          'Wagering requirement: x25 on all winnings accumulated from the free spins.',
+          'Bonus validity period is 7 days from the date of credit.',
+          'Failure to complete wagering within the validity period forfeits all spin winnings.',
+          'Free spins cannot be exchanged for cash or transferred to another game.',
+          'Cannot be combined with other free spin promotions on the same account.',
+        ],
+      },
+
+      ca_20_10: {
+        icon: '2️⃣', tag: 'Casino · All Members', title: '20% Deposit + 10% Loss Bonus',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Deposit Bonus Rate', value: '20%', highlight: true },
+          { label: 'Deposit Wagering', value: 'x25 on live casino' },
+          { label: 'Max Deposit Bonus', value: '500 ₺' },
+          { label: 'Loss Bonus Rate', value: '10%', highlight: true },
+          { label: 'Loss Wagering', value: 'x10 loss bonus' },
+          { label: 'Max Loss Bonus', value: '200 ₺' },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Validity', value: '7 days' },
+        ],
+        rules: [
+          'This promotion combines a 20% deposit bonus and a 10% loss bonus in a single activation.',
+          'Minimum deposit of 100 ₺ required to activate both components.',
+          'Deposit bonus (20%, max 500 ₺): wagering x25 on live casino games, expires 7 days.',
+          'Loss bonus (10%, max 200 ₺): credited if net losses are recorded after deposit bonus wagering ends.',
+          'Loss bonus wagering requirement: x10 on the loss bonus amount on live casino games.',
+          'Loss bonus expires 7 days after credit; unmet wagering forfeits it.',
+          'Both bonuses can only be used on live casino games — other game types are excluded.',
+          'Loss bonus is credited automatically within 24 hours of the deposit bonus expiry.',
+          'Cannot be combined with other active casino promotions on the same account.',
+        ],
+      },
+
+      ca_weekly_loss: {
+        icon: '📅', tag: 'Casino · All Members · Monday', title: 'Weekly Loss Bonus Monday 10%',
+        accent: '#2ecc71',
+        params: [
+          { label: 'Bonus Type', value: 'Weekly Loss Bonus', highlight: true },
+          { label: 'Rate', value: '10%', highlight: true },
+          { label: 'Max Bonus', value: '500 ₺ per week' },
+          { label: 'Wagering', value: 'x10 on slots' },
+          { label: 'Validity', value: '7 days after credit' },
+          { label: 'Calculation', value: 'Mon–Sun · Credited Monday' },
+        ],
+        rules: [
+          'Net live casino losses are calculated from Monday 00:00 to Sunday 23:59 each week.',
+          'Bonus is credited every Monday for the previous week\'s net live casino losses.',
+          'Bonus rate: 10% of net live casino losses.',
+          'Maximum bonus credit is 500 ₺ per week regardless of total losses.',
+          'Wagering requirement: x10 on slot games (not live casino) to convert bonus to real funds.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'Available to all members; VIP members also receive the VIP weekly casino loss bonus separately.',
+          'Bonus is not credited if the account has an active withdrawal request during the calculation period.',
+          'Only settled live casino game results count toward the weekly loss calculation.',
+        ],
+      },
+
+      ca_vip_weekly: {
+        icon: '👑', tag: 'Casino · VIP', title: 'VIP Weekly Loss up to 25%',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'VIP Weekly Loss Bonus', highlight: true },
+          { label: 'Rate', value: 'Up to 25% by VIP tier', highlight: true },
+          { label: 'Wagering', value: 'x5 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+          { label: 'Eligibility', value: 'VIP members only' },
+        ],
+        rules: [
+          'Exclusive to VIP members (Bronze, Silver, Gold, Platinum tiers).',
+          'Net live casino losses are calculated from Monday 00:00 to Sunday 23:59 each week.',
+          'Rate is determined by the player\'s VIP tier on the date of credit.',
+          'Wagering requirement: x5 the bonus amount on live casino games.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'VIP manager credits the bonus by end of business Monday following the calculation week.',
+          'Cannot be stacked with the general weekly casino loss bonus.',
+          'VIP tier downgrades between the calculation period and credit date may affect the rate applied.',
+          'Maximum bonus credit per week is set according to the platform\'s VIP programme schedule.',
+        ],
+      },
+
+      ca_daily_fs: {
+        icon: '✨', tag: 'Casino · Media/VIP/Promo', title: 'Daily Free Spins Media/VIP/Promo',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Spins', value: '10–50 free spins daily', highlight: true },
+          { label: 'Wagering', value: 'x20 on winnings' },
+          { label: 'Validity', value: '24 hours from credit' },
+          { label: 'Source', value: 'Social media / VIP / promo codes' },
+        ],
+        rules: [
+          'Free spins are distributed via social media announcements, VIP manager allocation, or promotional codes.',
+          'Number of spins varies between 10 and 50 depending on the source and campaign.',
+          'No deposit is required to receive or use the free spins.',
+          'Spins must be used within 24 hours of credit; unused spins are forfeited.',
+          'Wagering requirement: x20 on all winnings from the free spins.',
+          'Winnings must be wagered on eligible casino games as specified in the campaign.',
+          'Free spins are designated for a specific game as announced at the time of distribution.',
+          'Cannot be combined with other concurrent free spin promotions on the same account.',
+          'Platform reserves the right to change the eligible game without prior notice between campaign periods.',
+        ],
+      },
+
+      ca_midnight: {
+        icon: '🌙', tag: 'Casino · After Midnight', title: '30% After Midnight',
+        accent: '#667eea',
+        params: [
+          { label: 'Bonus Type', value: 'Loss Bonus', highlight: true },
+          { label: 'Rate', value: '30%', highlight: true },
+          { label: 'Active Window', value: '00:00–06:00' },
+          { label: 'Min Deposit', value: '50 ₺' },
+          { label: 'Max Bonus', value: '1,000 ₺ per night' },
+          { label: 'Wagering', value: 'x15 bonus amount' },
+          { label: 'Validity', value: '24 hours from credit' },
+        ],
+        rules: [
+          'Applies to net live casino losses incurred between 00:00 and 06:00 (platform time).',
+          'A minimum deposit of 50 ₺ must have been made before the start of the qualifying window.',
+          'Bonus rate: 30% of net live casino losses during the window.',
+          'Maximum bonus credit is 1,000 ₺ per qualifying night.',
+          'Bonus is automatically credited within 24 hours of the window closing.',
+          'Wagering requirement: x15 the bonus amount on live casino games.',
+          'Bonus expires 24 hours after credit; unmet wagering forfeits the bonus.',
+          'Only live casino games played in the 00:00–06:00 window qualify.',
+          'Cannot be combined with other active loss bonuses on the same account.',
+        ],
+      },
+
+      ca_happy_hour: {
+        icon: '⏰', tag: 'Casino · Happy Hour', title: 'Happy Hour Free Spins',
+        accent: '#e74c3c',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Spins', value: 'Up to 30 free spins', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺ during happy hour' },
+          { label: 'Wagering', value: 'x15 on winnings' },
+          { label: 'Validity', value: 'During happy hour window only' },
+        ],
+        rules: [
+          'Happy Hour windows are scheduled by the platform and announced in advance.',
+          'A deposit of at least 100 ₺ must be made during the active happy hour window to qualify.',
+          'Up to 30 free spins are credited within the happy hour window upon qualifying deposit.',
+          'Free spins must be used before the happy hour window ends; unused spins are forfeited.',
+          'Wagering requirement: x15 on all winnings from the happy hour spins.',
+          'Wagering must be completed on eligible casino games within 7 days.',
+          'Maximum number of spins and eligible game are announced at the start of each happy hour.',
+          'Cannot be combined with other deposit promotions during the same happy hour window.',
+          'Platform reserves the right to cancel or modify happy hour schedules without prior notice.',
+        ],
+      },
+
+      ca_crash50: {
+        icon: '🚀', tag: 'Casino · Crash · New Members', title: 'First Deposit 50% Crash Games',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '50%', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus', value: '2,000 ₺' },
+          { label: 'Wagering', value: 'x35 on crash games' },
+          { label: 'Validity', value: '14 days' },
+          { label: 'Eligibility', value: 'New members only' },
+        ],
+        rules: [
+          'Available to new members only on their first qualifying crash game deposit — one-time per account.',
+          'Bonus rate: 50% of the qualifying deposit amount.',
+          'Minimum deposit of 100 ₺ required to activate the bonus.',
+          'Maximum bonus credit is 2,000 ₺ regardless of deposit amount.',
+          'Wagering requirement: x35 on the bonus amount on eligible crash games only.',
+          'Eligible crash games are designated by the platform and may include Aviator, Spaceman, or JetX.',
+          'Bonus expires 14 days after credit; unmet wagering forfeits the bonus and associated winnings.',
+          'Live casino, slots, and sports bets do not contribute to wagering for this bonus.',
+          'Cannot be combined with other welcome or first-deposit bonuses.',
+        ],
+      },
+
+      // ── HAPPY HOUR ───────────────────────────────────────────────
+      hh_freespins: {
+        icon: '⏰', tag: 'Happy Hour · All Members', title: 'Happy Hour Free Spins',
+        accent: '#667eea',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type', value: 'Free Spins', highlight: true },
+          { label: 'Spins', value: '20–50 per session', highlight: true },
+          { label: 'Min Deposit', value: 'Not required' },
+          { label: 'Max Win', value: '300 ₺ per session' },
+          { label: 'Wagering', value: 'x25 on winnings' },
+          { label: 'Validity', value: 'Active happy hour window' },
+          { label: 'Opt-In', value: 'Required before window starts' },
+          { label: 'Activation', value: 'Admin-activated windows' },
+        ],
+        rules: [
+          'Happy Hour windows are activated by the platform admin and announced via social media or in-app notifications.',
+          'Player must opt in before the happy hour window begins; late opt-ins are not eligible.',
+          '20 to 50 free spins are awarded per active happy hour session depending on the window configuration.',
+          'No deposit is required to receive or use the free spins.',
+          'Maximum winnings from happy hour spins are capped at 300 ₺ per session.',
+          'Wagering requirement: x25 on all winnings from the free spins.',
+          'Wagering must be completed within 7 days of the session end.',
+          'Spins are designated for a specific game as announced at the start of each happy hour.',
+          'Cannot be combined with other concurrent free spin promotions during the same window.',
+        ],
+      },
+
+      hh_midnight: {
+        icon: '🌙', tag: 'Happy Hour · After Midnight', title: '30% After Midnight All Casino',
+        accent: '#667eea',
+        params: [
+          { label: 'Bonus Type', value: 'Net Loss Bonus', highlight: true },
+          { label: 'Rate', value: '30%', highlight: true },
+          { label: 'Active Window', value: '00:00–06:00' },
+          { label: 'Min Loss', value: '100 ₺' },
+          { label: 'Max Bonus', value: '2,000 ₺' },
+          { label: 'Wagering', value: 'x10 bonus amount' },
+          { label: 'Credit Time', value: '07:00 same morning' },
+          { label: 'Validity', value: '24 hours from credit' },
+        ],
+        rules: [
+          'Applies to net casino losses (all casino game types) incurred between 00:00 and 06:00 platform time.',
+          'Minimum qualifying net loss during the window is 100 ₺.',
+          'Bonus rate: 30% of net casino losses during the window, capped at 2,000 ₺.',
+          'Bonus is automatically credited at 07:00 on the same morning following the qualifying session.',
+          'Wagering requirement: x10 the bonus amount on any casino game.',
+          'Bonus expires 24 hours after credit; unmet wagering forfeits the bonus.',
+          'Applies to all casino games played in the 00:00–06:00 window; sports bets are excluded.',
+          'Only one midnight bonus is credited per qualifying night per account.',
+          'Cannot be combined with other active loss bonuses on the same account.',
+        ],
+      },
+
+      // ── GENERAL PROMOTIONS ───────────────────────────────────────
+      pr_loyalty: {
+        icon: '⭐', tag: 'Promotions · Loyalty', title: 'Loyalty Bonus (up to 15%)',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'Loyalty Bonus', highlight: true },
+          { label: 'Rate', value: 'Up to 15% by tier', highlight: true },
+          { label: 'Max Bonus', value: '1,000 ₺ per month' },
+          { label: 'Wagering', value: 'x5 bonus amount' },
+          { label: 'Validity', value: '30 days after credit' },
+          { label: 'Eligibility', value: 'Active 3+ months' },
+        ],
+        rules: [
+          'Available to members who have been active on the platform for a minimum of 3 consecutive months.',
+          'Bonus rate is determined by the player\'s loyalty tier; exact tier thresholds are published on the loyalty programme page.',
+          'Maximum bonus credit is 1,000 ₺ per calendar month regardless of loyalty tier or activity.',
+          'Wagering requirement: x5 the bonus amount on any eligible game.',
+          'Bonus is credited monthly and expires 30 days after credit; unmet wagering forfeits the bonus.',
+          'Loyalty tier is assessed on the first day of each month based on activity from the previous month.',
+          'Players must have made at least one deposit in the previous 30 days to qualify.',
+          'Cannot be combined with other monthly bonus promotions on the same account.',
+          'Platform reserves the right to adjust loyalty tier thresholds and rates with 30 days\' notice.',
+        ],
+      },
+
+      pr_social_share: {
+        icon: '📲', tag: 'Promotions · Social Media', title: 'Social Media Sharing Bonus',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'Social Share Reward', highlight: true },
+          { label: 'Per Share', value: 'Fixed bonus (max 50 ₺)', highlight: true },
+          { label: 'Monthly Cap', value: '200 ₺' },
+          { label: 'Wagering', value: 'x3 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+          { label: 'Requirement', value: 'Verified social accounts' },
+        ],
+        rules: [
+          'Player must link and verify their social media account(s) in their profile before sharing.',
+          'A fixed bonus amount (up to 50 ₺ per approved share) is credited for qualifying social media shares.',
+          'Maximum total bonus from social sharing is capped at 200 ₺ per calendar month.',
+          'Each share must include the required promotional content as specified by the platform.',
+          'Shares are reviewed by the promotions team; fraudulent or low-quality shares are disqualified.',
+          'Wagering requirement: x3 the bonus amount on any eligible game.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'Only one bonus per unique qualifying share; duplicate shares are not eligible.',
+          'Platform reserves the right to change the bonus amount or pause the promotion at any time.',
+        ],
+      },
+
+      pr_refer_friend: {
+        icon: '👥', tag: 'Promotions · Referral', title: 'Refer a Friend',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'Referral Bonus', highlight: true },
+          { label: 'Base Reward', value: '100 ₺', highlight: true },
+          { label: 'Additional Reward', value: '10% of friend\'s 1st deposit', highlight: true },
+          { label: 'Friend Min Deposit', value: '200 ₺' },
+          { label: 'Max Per Referral', value: '500 ₺' },
+          { label: 'Wagering', value: 'x5 total bonus' },
+          { label: 'Validity', value: '30 days after credit' },
+        ],
+        rules: [
+          'Referring player receives 100 ₺ plus 10% of the referred friend\'s first qualifying deposit.',
+          'Referred friend must register using the referral link or code and make a minimum deposit of 200 ₺.',
+          'Maximum total bonus per successful referral is 500 ₺ (100 ₺ base + up to 400 ₺ from 10%).',
+          'Bonus is credited within 72 hours of the referred friend\'s first qualifying deposit being settled.',
+          'Wagering requirement: x5 the total referral bonus amount on any eligible game.',
+          'Bonus expires 30 days after credit; unmet wagering forfeits the bonus.',
+          'Self-referrals using multiple accounts are strictly prohibited and will result in account suspension.',
+          'Referred friend must be a genuinely new member with no prior account on the platform.',
+          'There is no cap on the number of friends that can be referred; each referral is evaluated independently.',
+        ],
+      },
+
+      pr_birthday: {
+        icon: '🎂', tag: 'Promotions · Birthday', title: 'Birthday Bonus',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'Birthday Gift', highlight: true },
+          { label: 'Cash Bonus', value: '200 ₺', highlight: true },
+          { label: 'Free Spins', value: '20 free spins', highlight: true },
+          { label: 'Wagering', value: 'x10 bonus amount' },
+          { label: 'Validity', value: '7 days from birthday' },
+          { label: 'Requirement', value: 'Verified date of birth' },
+        ],
+        rules: [
+          'Available to all members who have their date of birth verified in their account profile.',
+          'Birthday bonus includes 200 ₺ cash bonus and 20 free spins on a designated game.',
+          'Bonus is credited on the member\'s birthday or within 24 hours of the start of the birthday.',
+          'Wagering requirement: x10 the cash bonus amount and x10 on free spin winnings.',
+          'Bonus expires 7 days from the member\'s birthday date; unmet wagering forfeits the bonus.',
+          'Date of birth must be verified at least 7 days before the birthday to be eligible for that year.',
+          'Free spins are designated for a specific game as announced at the time of credit.',
+          'Cannot be combined with other active welcome or deposit bonuses.',
+          'This bonus is awarded once per calendar year per verified account.',
+        ],
+      },
+
+      pr_social_follow: {
+        icon: '👍', tag: 'Promotions · Social Follow', title: 'Social Media Follow Bonus',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'Follow Reward', highlight: true },
+          { label: 'Per Platform', value: '25 ₺', highlight: true },
+          { label: 'Max Total', value: '100 ₺' },
+          { label: 'Wagering', value: 'x5 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+          { label: 'Frequency', value: 'One-time per platform' },
+        ],
+        rules: [
+          'Player earns 25 ₺ for each platform where they follow the official NexBet account.',
+          'Eligible platforms are listed on the promotions page; maximum total reward is 100 ₺ (up to 4 platforms).',
+          'This is a one-time reward per platform — re-following after unfollow does not re-qualify.',
+          'Player must submit proof of follow via the promotions support channel for verification.',
+          'Bonus is credited within 48 hours of successful verification.',
+          'Wagering requirement: x5 the total bonus amount on any eligible game.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'Platform accounts must remain followed for the bonus to remain valid.',
+          'Unfollowing before wagering is completed may result in bonus cancellation.',
+        ],
+      },
+
+      pr_crypto: {
+        icon: '₿', tag: 'Promotions · Crypto', title: 'Crypto Deposit Bonus 20% + 20 Free Spins',
+        accent: '#f39c12',
+        params: [
+          { label: 'Bonus Type', value: 'Crypto Deposit Bonus', highlight: true },
+          { label: 'Deposit Rate', value: '20%', highlight: true },
+          { label: 'Free Spins', value: '20', highlight: true },
+          { label: 'Min Deposit', value: '200 ₺ equivalent' },
+          { label: 'Max Cash Bonus', value: '2,000 ₺' },
+          { label: 'Bonus Wagering', value: 'x20 bonus amount' },
+          { label: 'FS Wagering', value: 'x25 spin winnings' },
+          { label: 'Validity', value: '14 days' },
+        ],
+        rules: [
+          'Available to all members making a qualifying deposit via a supported cryptocurrency.',
+          'Minimum deposit equivalent to 200 ₺ required to receive the 20% bonus and 20 free spins.',
+          'Cash bonus: 20% of the deposited amount, capped at 2,000 ₺.',
+          'Free spins are credited within 24 hours of the qualifying deposit on the designated game.',
+          'Cash bonus wagering requirement: x20 on any eligible casino or sports market.',
+          'Free spin winnings wagering requirement: x25 on slot games.',
+          'Both bonus components expire 14 days after credit; unmet wagering forfeits the respective component.',
+          'Exchange rate used for equivalent calculation is based on the rate at the time of deposit.',
+          'Cannot be combined with other crypto-specific deposit promotions in the same period.',
+        ],
+      },
+
+      pr_invest5: {
+        icon: '📈', tag: 'Promotions · Investment', title: 'Investment 5 Deposits 4 Loss Coverage',
+        accent: '#9b59b6',
+        params: [
+          { label: 'Bonus Type', value: 'Loss Coverage', highlight: true },
+          { label: 'Qualifying Deposits', value: '5 deposits', highlight: true },
+          { label: 'Sessions Covered', value: 'Up to 4 losing sessions', highlight: true },
+          { label: 'Min Per Deposit', value: '200 ₺' },
+          { label: 'Max Coverage', value: '80% of total deposited' },
+          { label: 'Wagering', value: 'x10 coverage amount' },
+          { label: 'Validity', value: '30 days' },
+        ],
+        rules: [
+          'Player must make 5 separate qualifying deposits of at least 200 ₺ each within the promotion period.',
+          'If all 5 sessions result in a net loss, up to 4 of those losing sessions are covered.',
+          'Maximum coverage is 80% of the total amount deposited across the 5 qualifying deposits.',
+          'Coverage is calculated on net losses per session; wins within a session offset losses.',
+          'Bonus is credited as a single amount within 48 hours of the 5th qualifying deposit being settled.',
+          'Wagering requirement: x10 the coverage amount on any eligible game.',
+          'Bonus expires 30 days after credit; unmet wagering forfeits the bonus.',
+          'The 5 deposits must be consecutive and made within a rolling 30-day window.',
+          'This promotion can only be activated once per calendar month per account.',
+        ],
+      },
+
+      pr_cc10: {
+        icon: '💳', tag: 'Promotions · Credit Card', title: '10% Credit Card Deposit Bonus',
+        accent: '#4a9eff',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '10%', highlight: true },
+          { label: 'Min Deposit', value: '100 ₺' },
+          { label: 'Max Bonus', value: '300 ₺ per deposit' },
+          { label: 'Wagering', value: 'x8 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+        ],
+        rules: [
+          'Available to all members making a qualifying deposit via credit card.',
+          'Bonus rate: 10% of each qualifying credit card deposit.',
+          'Minimum deposit of 100 ₺ required per transaction to activate the bonus.',
+          'Maximum bonus credit is 300 ₺ per individual deposit transaction.',
+          'Wagering requirement: x8 the bonus amount on any eligible game.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'Multiple credit card deposits may each qualify independently, subject to the per-deposit cap.',
+          'Bonus is not available for deposits made via debit cards or prepaid cards.',
+          'Platform reserves the right to limit or suspend this bonus during promotional blackout periods.',
+        ],
+      },
+
+      pr_bank10: {
+        icon: '🏦', tag: 'Promotions · Bank Transfer', title: '10% Bank Transfer Deposit Bonus',
+        accent: '#4a9eff',
+        params: [
+          { label: 'Bonus Type', value: 'Deposit Bonus', highlight: true },
+          { label: 'Rate', value: '10%', highlight: true },
+          { label: 'Min Deposit', value: '500 ₺' },
+          { label: 'Max Bonus', value: '500 ₺ per transfer' },
+          { label: 'Wagering', value: 'x6 bonus amount' },
+          { label: 'Validity', value: '7 days after credit' },
+        ],
+        rules: [
+          'Available to all members making a qualifying deposit via bank transfer.',
+          'Bonus rate: 10% of each qualifying bank transfer deposit.',
+          'Minimum deposit of 500 ₺ required per transfer to activate the bonus.',
+          'Maximum bonus credit is 500 ₺ per individual bank transfer transaction.',
+          'Wagering requirement: x6 the bonus amount on any eligible game.',
+          'Bonus expires 7 days after credit; unmet wagering forfeits the bonus.',
+          'Multiple bank transfer deposits may each qualify independently, subject to the per-transfer cap.',
+          'Transfer must be made from a bank account registered in the player\'s name to be eligible.',
+          'Processing time for bank transfers may delay bonus credit by up to 24 hours after funds clear.',
+        ],
+      },
+
+      pr_tournaments: {
+        icon: '🏆', tag: 'Promotions · Tournaments', title: 'Tournaments & Competitions',
+        accent: '#9b59b6',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type', value: 'Tournament Prize', highlight: true },
+          { label: 'Prize Pools', value: 'Varies per tournament', highlight: true },
+          { label: 'Entry', value: 'Some free, some paid' },
+          { label: 'Max Prize Pool', value: '50,000 ₺' },
+          { label: 'Wagering', value: 'x3 on prize winnings' },
+          { label: 'Schedule', value: 'Per tournament calendar' },
+        ],
+        rules: [
+          'Tournament schedules, entry requirements, and prize pools are published on the Tournaments page.',
+          'Entry to some tournaments is free; others require a buy-in as specified per event.',
+          'Maximum prize pool per single tournament is 50,000 ₺; individual prizes depend on leaderboard position.',
+          'Wagering requirement: x3 on any prize winnings credited as bonus funds.',
+          'Prize validity period is specified per tournament; unclaimed prizes expire on the published deadline.',
+          'Leaderboard rankings are based on scoring criteria specified for each tournament (e.g., total wagered, biggest win).',
+          'Players must opt in to a tournament before the start time to be eligible for prizes.',
+          'Fraudulent play or chip dumping will result in disqualification and account review.',
+          'Platform reserves the right to cancel or modify tournament conditions with reasonable notice.',
+        ],
+      },
+
+      // ── SYSTEM PROMOTIONS ──────────────────────────────────────
+      sys_acca: {
+        icon: '⚡', tag: 'Sports · Acca Boost', title: 'Combined Bets Bonus (up to 50%)',
+        accent: '#f39c12',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type',       value: 'Accumulator Boost', highlight: true },
+          { label: 'Rate',             value: '3% (3 sel.) → 50% (14+ sel.)', highlight: true },
+          { label: 'Min Selections',   value: '3 selections' },
+          { label: 'Min Odds/Sel.',    value: '1.40 per selection' },
+          { label: 'Max Bonus',        value: '5,000 ₺ per bet' },
+          { label: 'Wagering',         value: 'None — paid as real balance' },
+          { label: 'Bet Type',         value: 'Pre-match only (live excluded)' },
+          { label: 'Cash-out',         value: 'Not eligible' },
+        ],
+        rules: [
+          'Place a combined (accumulator) bet with 3 or more selections.',
+          'Each selection must have minimum odds of 1.40.',
+          'All selections must win for the bonus to apply.',
+          'Bonus tiers: 3 sel.=3% · 4=5% · 5=7% · 6=10% · 7=15% · 8=20% · 9=25% · 10=30% · 11=35% · 12=40% · 13=45% · 14+=50%.',
+          'Bonus is automatically added to your winnings as real balance — no wagering required.',
+          'Void selections reduce the combo count and the bonus is recalculated accordingly.',
+          'Live selections within a combined bet do not count toward the bonus tier.',
+          'Cash-out bets are not eligible for this bonus.',
+          'The company reserves the right to modify or cancel the promotion at any time.',
+        ],
+      },
+
+      sys_betbuilder: {
+        icon: '🔧', tag: 'Sports Feature', title: 'Bet Builder',
+        accent: '#4a9eff',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Betting Feature (not a bonus)', highlight: true },
+          { label: 'Min Selections',   value: '2 per Bet Builder' },
+          { label: 'Max Selections',   value: '12 per Bet Builder' },
+          { label: 'Max Stake',        value: '500 ₺ per bet' },
+          { label: 'Sports',           value: 'Football, Basketball, Tennis' },
+          { label: 'Bet Type',         value: 'Pre-match and live' },
+          { label: 'Cash-out',         value: 'Available' },
+          { label: 'Wagering',         value: 'N/A — standard bet rules' },
+        ],
+        rules: [
+          'Select an eligible match (Football, Basketball, or Tennis) and click the Bet Builder option.',
+          'Select at least 2 and up to 12 selections from the same event.',
+          'The combined odds are calculated automatically.',
+          'Enter your stake (maximum 500 ₺) and place the bet.',
+          'Cash-out is available on Bet Builder bets.',
+          'If a selection is voided, the bet is recalculated without the void selection.',
+          'Not all markets within a match may be combinable.',
+          'Odds are subject to change until the bet is confirmed.',
+          'Standard betting rules and terms of service apply.',
+          'The company reserves the right to modify or suspend the Bet Builder feature at any time.',
+        ],
+      },
+
+      sys_cashout: {
+        icon: '💸', tag: 'Betting Feature', title: 'Cash Out',
+        accent: '#2ecc71',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Betting Feature (not a bonus)', highlight: true },
+          { label: 'Cash-out Value',   value: 'Dynamic — based on current odds', highlight: true },
+          { label: 'Min Cash-out',     value: '5 ₺' },
+          { label: 'Types',            value: 'Full, Partial, Auto Cash Out' },
+          { label: 'Availability',     value: 'Pre-match & live eligible bets' },
+          { label: 'Wagering',         value: 'N/A' },
+        ],
+        rules: [
+          'While a bet is active, check the cash-out value in your bet slip or open bets.',
+          'Full Cash Out settles the entire bet at the current value.',
+          'Partial Cash Out allows you to settle a portion while keeping the rest active.',
+          'Auto Cash Out: set a target value and the bet auto-settles when reached.',
+          'The cash-out amount is credited to your account instantly.',
+          'Cash-out values fluctuate in real-time based on current odds and game state.',
+          'Cash-out bets do not count toward wagering requirements of any bonus.',
+          'Not all markets and events support cash out.',
+          'Cash-out requests may be delayed or rejected during rapid odds changes.',
+          'The company can suspend cash-out availability at any time without prior notice.',
+        ],
+      },
+
+      sys_2fa: {
+        icon: '🔐', tag: 'Security · One-Time', title: 'Two-Factor Authentication Bonus',
+        accent: '#667eea',
+        params: [
+          { label: 'Bonus Type',       value: 'Free Bet (one-time)', highlight: true },
+          { label: 'Amount',           value: '25 ₺ free bet', highlight: true },
+          { label: 'Methods',          value: 'Google Authenticator or SMS' },
+          { label: 'Wagering',         value: 'x3 bonus amount' },
+          { label: 'Validity',         value: '7 days from activation' },
+          { label: 'Eligibility',      value: 'First-time 2FA activation only' },
+        ],
+        rules: [
+          'Go to account security settings and enable Two-Factor Authentication (Google Authenticator or SMS).',
+          'A 25 ₺ free bet is credited automatically after successful 2FA setup.',
+          'One-time bonus per account — available only for first-time 2FA activation.',
+          'Wagering requirement: x3 on the free bet amount, must be completed within 7 days.',
+          'Only the winnings from the free bet are withdrawable — the free bet stake itself is not.',
+          '2FA must remain active for at least 30 days; disabling it within 30 days forfeits the bonus.',
+          'If the free bet is not used within 7 days, it expires automatically.',
+        ],
+        maxWithdrawal: 'Winnings only (stake not withdrawable)',
+      },
+
+      sys_boring00: {
+        icon: '⚽', tag: 'Football · 1X2 Refund', title: 'Boring Game Bonus 0-0',
+        accent: '#95a5a6',
+        params: [
+          { label: 'Bonus Type',       value: '100% Stake Refund', highlight: true },
+          { label: 'Market',           value: '1X2 (Match Result)', highlight: true },
+          { label: 'Bet Type',         value: 'Pre-match single bets only' },
+          { label: 'Min Stake',        value: '20 ₺' },
+          { label: 'Max Stake',        value: '200 ₺' },
+          { label: 'Condition',        value: 'Match ends 0-0 in regular time' },
+          { label: 'Wagering',         value: 'x3 on refunded amount' },
+          { label: 'Validity',         value: '3 days from credit' },
+        ],
+        rules: [
+          'Place a pre-match single bet on the 1X2 (Match Result) market with a stake between 20 ₺ and 200 ₺.',
+          'If the match ends 0-0 in regular time (90 minutes), your stake is refunded as bonus funds.',
+          'Only regular time counts — extra time and penalties are excluded.',
+          'The refunded amount is subject to a x3 wagering requirement, to be completed within 3 days.',
+          'Applies to any 1X2 selection (Home, Draw, Away) — not only Draw bets.',
+          'If wagering is not completed within 3 days, the bonus and winnings are forfeited.',
+          'The company reserves the right to modify or cancel the promotion at any time.',
+        ],
+        maxWithdrawal: 'No specific limit (standard terms)',
+      },
+
+      sys_earlywin_football: {
+        icon: '⚽', tag: 'Football Feature', title: '2 Goals Early Win (Football)',
+        accent: '#2ecc71',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Early Settlement', highlight: true },
+          { label: 'Condition',        value: 'Selected team goes 2-0 up', highlight: true },
+          { label: 'Market',           value: '1X2 (Match Result)' },
+          { label: 'Bet Type',         value: 'Pre-match singles only' },
+          { label: 'Min Stake',        value: '10 ₺' },
+          { label: 'Max Payout',       value: '2,000 ₺' },
+          { label: 'Wagering',         value: 'N/A — paid as cash' },
+          { label: 'Validity',         value: 'Regular time only (90 min)' },
+        ],
+        rules: [
+          'Place a pre-match single bet on the 1X2 market for an eligible football match.',
+          'If your selected team goes 2 goals ahead at any point during regular time, the bet is immediately settled as a winner.',
+          'The full payout is credited at the original bet odds — the final result does not affect the payout.',
+          'Own goals count toward the 2-goal lead.',
+          'Regular time only (90 minutes) — extra time is excluded.',
+          'Maximum payout: 2,000 ₺.',
+          'This is a betting feature, not a bonus — no wagering requirements apply.',
+          'Available on selected football leagues only.',
+          'The company reserves the right to modify or cancel this feature at any time.',
+        ],
+      },
+
+      sys_earlywin_basketball: {
+        icon: '🏀', tag: 'Basketball Feature', title: '20 Points Early Win (Basketball)',
+        accent: '#f39c12',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Early Settlement', highlight: true },
+          { label: 'Condition',        value: 'Selected team goes +20 pts ahead', highlight: true },
+          { label: 'Market',           value: 'Match Winner' },
+          { label: 'Bet Type',         value: 'Pre-match and live bets' },
+          { label: 'Min Stake',        value: '10 ₺' },
+          { label: 'Max Payout',       value: '2,000 ₺' },
+          { label: 'Leagues',          value: 'NBA, EuroLeague, Selected Leagues' },
+          { label: 'Wagering',         value: 'N/A — paid as cash' },
+        ],
+        rules: [
+          'Place a pre-match or live bet on the Match Winner market for an eligible basketball game.',
+          'If your selected team goes 20 points ahead at any point, the bet is immediately settled as a winner.',
+          'The full payout is credited at the original bet odds — the final result does not affect the payout.',
+          'Maximum payout: 2,000 ₺.',
+          'Available on NBA, EuroLeague, and selected basketball leagues.',
+          'This is a betting feature, not a bonus — no wagering requirements apply.',
+          'The company reserves the right to modify or cancel this feature at any time.',
+        ],
+      },
+
+      sys_earlywin_tennis: {
+        icon: '🎾', tag: 'Tennis Feature', title: '2 Sets Early Win (Tennis)',
+        accent: '#4a9eff',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Early Settlement', highlight: true },
+          { label: 'Condition',        value: 'Player wins first 2 sets', highlight: true },
+          { label: 'Market',           value: 'Match Winner' },
+          { label: 'Bet Type',         value: 'Pre-match singles only' },
+          { label: 'Min Stake',        value: '10 ₺' },
+          { label: 'Max Payout',       value: '1,500 ₺' },
+          { label: 'Tournaments',      value: 'Grand Slam, ATP, WTA' },
+          { label: 'Wagering',         value: 'N/A — paid as cash' },
+        ],
+        rules: [
+          'Place a pre-match single bet on the Match Winner market for an eligible tennis match.',
+          'If your selected player wins the first 2 sets, the bet is immediately settled as a winner.',
+          'The full payout is credited at the original bet odds — the final result does not matter.',
+          'Walkovers and retirements: standard void rules apply.',
+          'Maximum payout: 1,500 ₺.',
+          'Available on Grand Slam, ATP, and WTA tournaments.',
+          'This is a betting feature, not a bonus — no wagering requirements apply.',
+          'The company reserves the right to modify or cancel this feature at any time.',
+        ],
+      },
+
+      sys_earlywin_hockey: {
+        icon: '🏒', tag: 'Ice Hockey Feature', title: '3 Goals Early Win (Ice Hockey)',
+        accent: '#667eea',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Early Settlement', highlight: true },
+          { label: 'Condition',        value: 'Selected team goes 3-0 up', highlight: true },
+          { label: 'Market',           value: 'Match Winner (regular time)' },
+          { label: 'Bet Type',         value: 'Pre-match singles only' },
+          { label: 'Min Stake',        value: '10 ₺' },
+          { label: 'Max Payout',       value: '1,500 ₺' },
+          { label: 'Leagues',          value: 'NHL, KHL, SHL' },
+          { label: 'Validity',         value: 'Regular time only (OT/Shootout excluded)' },
+        ],
+        rules: [
+          'Place a pre-match single bet on the Match Winner (regular time) market.',
+          'If your selected team goes 3 goals ahead at any point during regular time, the bet is immediately settled as a winner.',
+          'The full payout is credited at the original bet odds — the final result does not affect the payout.',
+          'Regular time only — overtime and shootouts are excluded.',
+          'Maximum payout: 1,500 ₺.',
+          'Available on NHL, KHL, and SHL leagues.',
+          'This is a betting feature, not a bonus — no wagering requirements apply.',
+          'The company reserves the right to modify or cancel this feature at any time.',
+        ],
+      },
+
+      sys_editbet: {
+        icon: '✏️', tag: 'Betting Feature', title: 'Edit Bet (Cratos)',
+        accent: '#9b59b6',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Feature Type',     value: 'Betting Feature (not a bonus)', highlight: true },
+          { label: 'Edits Allowed',    value: 'Max 3 edits per bet' },
+          { label: 'Edit Window',      value: 'Until 5 minutes before 1st event' },
+          { label: 'Bet Types',        value: 'Pre-match singles & accumulators' },
+          { label: 'Operations',       value: 'Add, remove, or swap selections' },
+          { label: 'Stake Change',     value: 'Not allowed — selections only' },
+          { label: 'Wagering',         value: 'N/A — standard bet rules' },
+        ],
+        rules: [
+          'Go to your open bets and select the bet you want to edit, then click Edit Bet.',
+          'You can add, remove, or swap selections (up to 3 edits per bet).',
+          'The odds are recalculated automatically after each edit based on current market prices.',
+          'Confirm the changes — the bet is updated with the new selections and odds.',
+          'Edit window is available until 5 minutes before the first event starts.',
+          'Pre-match selections only — live selections cannot be edited.',
+          'The bet amount (stake) cannot be changed during an edit.',
+          'Free bets cannot be edited.',
+          'Some markets or selections may not support editing.',
+          'Standard betting rules and terms of service apply to edited bets.',
+          'The company reserves the right to modify or suspend the Edit Bet feature at any time.',
+        ],
+      },
+
+      sys_fanbonus: {
+        icon: '⭐', tag: 'Sports · Winning Boost', title: 'Fan Bonus on Favorite Team',
+        accent: '#e74c3c',
+        hideMaxWithdrawal: true,
+        params: [
+          { label: 'Bonus Type',       value: '+10% on Winning Bets', highlight: true },
+          { label: 'Sports',           value: 'Football and Basketball', highlight: true },
+          { label: 'Market',           value: '1X2 or Match Winner' },
+          { label: 'Bet Type',         value: 'Pre-match only' },
+          { label: 'Min Stake',        value: '20 ₺' },
+          { label: 'Min Odds',         value: '1.50' },
+          { label: 'Max Bonus/Bet',    value: '200 ₺' },
+          { label: 'Wagering',         value: 'None — paid as real balance' },
+          { label: 'Team Change',      value: 'Once every 30 days' },
+        ],
+        rules: [
+          'Set your favorite team in your account settings (1 team per account).',
+          'Place a pre-match bet on the 1X2 or Match Winner market for your favorite team\'s match.',
+          'Minimum stake: 20 ₺. Minimum odds: 1.50.',
+          'If your bet wins, a 10% extra bonus (up to 200 ₺) is automatically added to your real balance.',
+          'The 10% is calculated on net winnings (payout minus stake).',
+          'No wagering required — the bonus is paid as real balance immediately.',
+          'You may change your favorite team once every 30 days.',
+          'Available on Football and Basketball only.',
+          'The company reserves the right to modify or cancel the promotion at any time.',
+        ],
+      },
+
+      sys_social: {
+        icon: '📱', tag: 'Social · Free Bet', title: 'Screen Sharing on Social Media',
+        accent: '#1abc9c',
+        params: [
+          { label: 'Bonus Type',       value: '15 ₺ Free Bet per Share', highlight: true },
+          { label: 'Max per Week',     value: '3 shares = 45 ₺/week', highlight: true },
+          { label: 'Requirement',      value: 'Tag @NexBet + campaign hashtag' },
+          { label: 'Content',          value: 'Live betting screenshot (public)' },
+          { label: 'Wagering',         value: 'x5 on free bet winnings' },
+          { label: 'Validity',         value: '3 days per free bet' },
+        ],
+        rules: [
+          'Take a screenshot of your live betting screen on NexBet.',
+          'Share it on your public social media account, tag @NexBet and include the required campaign hashtag.',
+          'Submit proof of the share through your NexBet account.',
+          'A 15 ₺ free bet is credited after verification.',
+          'Maximum 3 qualifying shares per week (45 ₺ total per week).',
+          'Your social media account must be set to public.',
+          'Only the winnings from the free bet are withdrawable, not the stake.',
+          'Wagering requirement: x5 on winnings, to be completed within 3 days.',
+          'Posts with offensive or inappropriate content will be disqualified and may result in account review.',
+          'The company reserves the right to verify all social media shares.',
+        ],
+        maxWithdrawal: 'Winnings only (stake not withdrawable)',
+      },
+
+      sys_enhanced: {
+        icon: '📈', tag: 'Sports · Daily Boost', title: 'Enhanced Odds on Selected Games',
+        accent: '#d4af37',
+        params: [
+          { label: 'Bonus Type',       value: 'Enhanced Odds (Boosted)', highlight: true },
+          { label: 'Selections',       value: 'Daily picks by trading team', highlight: true },
+          { label: 'Max Stake',        value: '200 ₺ per enhanced bet' },
+          { label: 'Limit',            value: '1 enhanced odds bet per event/player' },
+          { label: 'Bet Type',         value: 'Pre-match only' },
+          { label: 'Standard Portion', value: 'Paid as cash' },
+          { label: 'Enhanced Portion', value: 'Paid as bonus funds' },
+          { label: 'Wagering',         value: 'x1 on enhanced portion only' },
+          { label: 'Validity',         value: '3 days for enhanced bonus portion' },
+        ],
+        rules: [
+          'Check the promotions page or homepage for daily enhanced odds selections.',
+          'Place a pre-match bet on the enhanced odds event. Maximum stake: 200 ₺.',
+          'If your bet wins, the standard winnings portion is paid as cash and the enhanced portion as bonus funds.',
+          'Only the enhanced portion requires wagering (x1), to be completed within 3 days.',
+          'Maximum 1 enhanced odds bet per event per customer.',
+          'Cash-out is not available on enhanced odds bets.',
+          'Enhanced odds availability changes daily — check the promotions page regularly.',
+          'If wagering on the enhanced portion is not completed in time, the bonus is forfeited.',
+          'The company reserves the right to modify or cancel enhanced odds at any time.',
+        ],
+        maxWithdrawal: '3 days to complete x1 wagering on enhanced portion',
+      },
+
+      sys_vip: {
+        icon: '👑', tag: 'VIP · Loyalty Program', title: 'VIP Program & Points',
+        accent: '#d4af37',
+        params: [
+          { label: 'Program',          value: 'Loyalty Points + Tier Cashback', highlight: true },
+          { label: 'Earning (Sports)', value: '1 pt per 50 ₺ wagered', highlight: true },
+          { label: 'Earning (Slots)',  value: '1 pt per 25 ₺ wagered' },
+          { label: 'Earning (Live)',   value: '1 pt per 100 ₺ wagered' },
+          { label: 'Redemption Rate',  value: '100 pts = 10 ₺ bonus' },
+          { label: 'Min Redemption',   value: '500 pts (= 50 ₺)' },
+          { label: 'Wagering',         value: 'x3 on redeemed bonus' },
+          { label: 'Points Reset',     value: 'Annually on January 1st' },
+          { label: 'Enrollment',       value: 'Automatic for all members' },
+        ],
+        rules: [
+          'All members are automatically enrolled — earn points on every bet.',
+          'VIP Tiers: Bronze (0–999 pts, 5% cashback) · Silver (1,000–4,999 pts, 10%) · Gold (5,000–19,999 pts, 15% + account manager) · Platinum (20,000+ pts, 25% + manager + priority withdrawals + exclusive events).',
+          'As you accumulate points, you automatically climb VIP tiers.',
+          'Redeem points for bonus funds: minimum 500 points per redemption (100 pts = 10 ₺).',
+          'Redeemed bonus funds are subject to x3 wagering before withdrawal.',
+          'Cashback rewards (from tier status) have no wagering requirement and are paid as real balance.',
+          'Points reset annually on January 1st.',
+          'Tier status is downgraded after 2 consecutive months of not maintaining the required points threshold.',
+          'The company reserves the right to modify the VIP Program structure, tiers, and benefits at any time.',
+        ],
+        hideMaxWithdrawal: true,
+      },
+
+      // ── END SYSTEM PROMOTIONS ──────────────────────────────────
+
+      liveCashback50: {
+        icon: '🎲', tag: 'One-Time · First Bet', title: 'LiveCasino %50 Cashback',
+        accent: '#e74c3c',
+        params: [
+          { label: 'Bonus Type',   value: 'First Bet Cashback', highlight: true },
+          { label: 'Rate',         value: '50% of First Bet Loss', highlight: true },
+          { label: 'Platform',     value: 'Live Casino only' },
+          { label: 'Min Bet',      value: '50 ₺' },
+          { label: 'Max Cashback', value: '1,000 ₺' },
+          { label: 'Wagering',     value: 'x5 (cashback amount)' },
+          { label: 'Validity',     value: '3 days after credit' },
+          { label: 'Eligibility',  value: 'One-time, first live casino bet only' },
+        ],
+        platforms: ['Live Casino only'],
+        rules: [
+          'Cashback applies only to the player\'s first qualifying Live Casino bet — one per account, lifetime.',
+          'If the first live casino bet loses, 50% of the stake is refunded as bonus funds.',
+          'If the first bet wins, no cashback is issued.',
+          'Minimum qualifying bet: 50 ₺. Maximum cashback: 1,000 ₺.',
+          'Cashback is credited within 24 hours of the first bet settlement (loss result).',
+          'Wagering: x5 on the cashback amount before withdrawal.',
+          'Cashback bonus is valid for Live Casino play only.',
+          'Bonus expires after 3 days from credit; unmet wagering forfeits the balance.',
+          'Bets placed using existing bonus funds do not qualify as the "first bet".',
+          'Player must have completed KYC verification before the bet is placed.',
+          'Only one first-bet insurance/cashback (Sports Insurance OR LiveCasino Cashback) can be claimed per player.',
+        ],
+        note: 'Digitain Config: Bonus Type → "Cashback" or "Insurance". Trigger: 1st real-money settled bet (loss only). Platform: Live Casino. Rate: 50%. Cap: 1,000 ₺. Rollover: x5.',
+      },
+    };
+
+    function showTab(id) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('tab-' + id).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+
+    function openModal(id) {
+      const b = BONUSES[id];
+      if (!b) return;
+      document.getElementById('mIcon').textContent = b.icon;
+      document.getElementById('mTag').textContent  = b.tag;
+      document.getElementById('mTitle').textContent = b.title;
+      const box = document.getElementById('modalBox');
+      box.style.setProperty('--modal-accent', b.accent);
+      document.getElementById('mTag').style.color   = b.accent;
+      document.getElementById('mTitle').style.color = b.accent;
+      let html = '';
+      if (b.params) {
+        html += '<div class="param-grid">';
+        b.params.forEach(p => {
+          html += `<div class="param-item"><div class="param-label">${p.label}</div><div class="param-value${p.highlight?' highlight':''}">${p.value}</div></div>`;
+        });
+        if (!b.hideMaxWithdrawal) {
+          html += `<div class="param-item" style="border-color:rgba(212,175,55,0.3);background:rgba(212,175,55,0.06)"><div class="param-label">Max Withdrawal</div><div class="param-value highlight">${b.maxWithdrawal||'20x bonus amount'}</div></div>`;
+        }
+        html += '</div>';
+      }
+      if (b.platforms) {
+        html += '<div class="modal-section-title">Platforms</div><ul class="rule-list">';
+        b.platforms.forEach(p => { html += `<li>${p}</li>`; });
+        html += '</ul>';
+      }
+      if (b.stages) {
+        html += '<div class="modal-section-title">Bonus Stages</div>';
+        b.stages.forEach(s => {
+          html += `<div class="stage-block"><div class="stage-block-header"><span class="stage-num">${s.num}</span>${s.label}</div><div class="stage-block-body">`;
+          s.params.forEach(p => {
+            html += `<div class="stage-param param-item"><div class="param-label">${p.label}</div><div class="param-value">${p.value}</div></div>`;
+          });
+          html += '</div></div>';
+        });
+      }
+      if (b.rules) {
+        html += '<div class="modal-section-title">Promotion Rules</div><ul class="rule-list">';
+        b.rules.forEach(r => { html += `<li>${r}</li>`; });
+        html += '</ul>';
+      }
+      if (b.warning) html += `<div class="modal-warning">⚠️ ${b.warning}</div>`;
+      if (b.note)    html += `<div class="modal-note">💡 <strong>Digitain Panel:</strong> ${b.note}</div>`;
+      document.getElementById('mBody').innerHTML = html;
+      document.getElementById('modalOverlay').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      document.getElementById('modalOverlay').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOutside(e) {
+      if (e.target === document.getElementById('modalOverlay')) closeModal();
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    </script>
+</body>
+</html>
