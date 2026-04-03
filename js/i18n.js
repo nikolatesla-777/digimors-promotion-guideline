@@ -28,7 +28,8 @@ const translations = {
     badgeNew: "NEW",
     badgeVip: "VIP",
     badgeHot: "HOT",
-    badgePopular: "POPULAR"
+    badgePopular: "POPULAR",
+    claimBonus: "Claim Bonus"
   },
   he: {
     siteTitle: "NexBet",
@@ -59,7 +60,8 @@ const translations = {
     badgeNew: "חדש",
     badgeVip: "VIP",
     badgeHot: "חם",
-    badgePopular: "פופולרי"
+    badgePopular: "פופולרי",
+    claimBonus: "תבע בונוס"
   }
 };
 

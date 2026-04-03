@@ -374,7 +374,7 @@ body {
 }
 
 .bonus-card.open .bonus-card-body {
-    max-height: 2000px;
+    max-height: 5000px;
 }
 
 .bonus-detail {
@@ -482,6 +482,298 @@ body {
 [dir="rtl"] .bonus-rules li::before {
     left: auto;
     right: 0;
+}
+
+/* ========== MULTI-STAGE BONUS (Welcome Package) ========== */
+.stages-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 25px;
+}
+
+.stage-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.stage-card:hover {
+    border-color: rgba(212, 175, 55, 0.4);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.stage-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.stage-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 14px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--bg-primary);
+    border-radius: 20px;
+    font-weight: 900;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.stage-card[data-stage="2"] .stage-badge {
+    background: linear-gradient(135deg, #3498db, #5dade2);
+    color: #fff;
+}
+
+.stage-card[data-stage="3"] .stage-badge {
+    background: linear-gradient(135deg, #9b59b6, #bb8fce);
+    color: #fff;
+}
+
+.stage-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stage-description {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.stage-card .bonus-info-grid {
+    margin-bottom: 15px;
+}
+
+.stage-claim-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 28px;
+    background: linear-gradient(135deg, var(--accent), var(--accent-light));
+    color: var(--bg-primary);
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.stage-claim-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+.stage-card[data-stage="2"] .stage-claim-btn {
+    background: linear-gradient(135deg, #3498db, #5dade2);
+    color: #fff;
+}
+
+.stage-card[data-stage="3"] .stage-claim-btn {
+    background: linear-gradient(135deg, #9b59b6, #bb8fce);
+    color: #fff;
+}
+
+.stage-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+    opacity: 0.6;
+}
+
+.connector-line {
+    display: block;
+    width: 2px;
+    height: 12px;
+    background: var(--accent);
+    opacity: 0.4;
+}
+
+.connector-arrow {
+    font-size: 0.9rem;
+    line-height: 1;
+}
+
+/* ========== BONUS SECTIONS (Detailed Content) ========== */
+.bonus-section {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.bonus-section + .bonus-section {
+    margin-top: 15px;
+}
+
+.section-title-inner {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Section: Warning style (invalid bets) */
+.bonus-section.section-warning {
+    background: rgba(231, 76, 60, 0.06);
+    border-color: rgba(231, 76, 60, 0.2);
+}
+
+.bonus-section.section-warning .section-title-inner {
+    color: #e74c3c;
+    border-bottom-color: rgba(231, 76, 60, 0.2);
+}
+
+.bonus-section.section-warning .section-list li::before {
+    background: #e74c3c;
+}
+
+/* Section: Important style */
+.bonus-section.section-important {
+    background: rgba(243, 156, 18, 0.06);
+    border-color: rgba(243, 156, 18, 0.2);
+}
+
+.bonus-section.section-important .section-title-inner {
+    color: #f39c12;
+    border-bottom-color: rgba(243, 156, 18, 0.2);
+}
+
+.bonus-section.section-important .section-list li::before {
+    background: #f39c12;
+}
+
+/* Steps (How It Works) */
+.bonus-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: none;
+}
+
+.bonus-steps li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.bonus-steps li:last-child {
+    border-bottom: none;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
+    height: 30px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border-radius: 50%;
+    font-weight: 900;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.step-text {
+    padding-top: 4px;
+}
+
+/* Section List (General Terms, Wagering, Betting Rules, etc.) */
+.section-list {
+    list-style: none;
+    padding: 0;
+}
+
+.section-list li {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+[dir="rtl"] .section-list li {
+    padding: 6px 22px 6px 0;
+}
+
+.section-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+[dir="rtl"] .section-list li::before {
+    left: auto;
+    right: 0;
+}
+
+/* Section Text (single paragraph) */
+.section-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Sub-section */
+.sub-section {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.sub-section h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+}
+
+/* Tags (Allowed Sports, etc.) */
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 16px;
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
 }
 
 /* ========== HAPPY HOUR SPECIAL ========== */

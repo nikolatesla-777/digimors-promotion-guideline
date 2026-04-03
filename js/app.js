@@ -7,6 +7,46 @@ async function loadBonusData() {
   return bonusData;
 }
 
+function renderSection(section) {
+  const title = getLocalizedField(section.title);
+  let iconClass = "";
+  if (section.icon === "warning") iconClass = " section-warning";
+  if (section.icon === "important") iconClass = " section-important";
+
+  let contentHTML = "";
+
+  if (section.type === "steps") {
+    const items = getLocalizedField(section.items);
+    contentHTML = `<ol class="bonus-steps">` +
+      items.map((item, i) => `<li><span class="step-number">${i + 1}</span><span class="step-text">${item}</span></li>`).join("") +
+      `</ol>`;
+  } else if (section.type === "text") {
+    contentHTML = `<p class="section-text">${getLocalizedField(section.content)}</p>`;
+  } else if (section.type === "list") {
+    const items = getLocalizedField(section.items);
+    contentHTML = `<ul class="section-list">` +
+      items.map(item => `<li>${item}</li>`).join("") +
+      `</ul>`;
+  }
+
+  if (section.subSection) {
+    const sub = section.subSection;
+    const subTitle = getLocalizedField(sub.title);
+    const subItems = getLocalizedField(sub.items);
+    if (sub.type === "tags") {
+      contentHTML += `<div class="sub-section"><h5>${subTitle}</h5><div class="tag-list">` +
+        subItems.map(item => `<span class="tag">${item}</span>`).join("") +
+        `</div></div>`;
+    } else {
+      contentHTML += `<div class="sub-section"><h5>${subTitle}</h5><ul class="section-list">` +
+        subItems.map(item => `<li>${item}</li>`).join("") +
+        `</ul></div>`;
+    }
+  }
+
+  return `<div class="bonus-section${iconClass}"><h4 class="section-title-inner">${title}</h4>${contentHTML}</div>`;
+}
+
 function renderBonusCards(categoryId, containerId) {
   const container = document.getElementById(containerId);
   if (!container || !bonusData || !bonusData[categoryId]) return;
@@ -21,8 +61,83 @@ function renderBonusCards(categoryId, containerId) {
 
     const badgeHTML = bonus.badge ? `<span class="bonus-card-badge badge-${bonus.badge}">${t("badge" + bonus.badge.charAt(0).toUpperCase() + bonus.badge.slice(1))}</span>` : "";
 
-    const rulesArray = getLocalizedField(bonus.rules);
-    const rulesHTML = rulesArray.length ? rulesArray.map(r => `<li>${r}</li>`).join("") : "";
+    // Multi-stage bonus (e.g. Welcome Package with 1st/2nd/3rd deposit)
+    let stagesHTML = "";
+    if (bonus.type === "multi-stage" && bonus.stages) {
+      stagesHTML = `<div class="stages-container">` +
+        bonus.stages.map((stage, si) => {
+          const stageDetails = stage.details ? `
+            <div class="bonus-info-grid">
+              <div class="bonus-info-item"><div class="bonus-info-label">${t("rate")}</div><div class="bonus-info-value">${getLocalizedField(stage.details.rate)}</div></div>
+              <div class="bonus-info-item"><div class="bonus-info-label">${t("minDeposit")}</div><div class="bonus-info-value">${getLocalizedField(stage.details.minDeposit)}</div></div>
+              <div class="bonus-info-item"><div class="bonus-info-label">${t("maxBonus")}</div><div class="bonus-info-value">${getLocalizedField(stage.details.maxBonus)}</div></div>
+              <div class="bonus-info-item"><div class="bonus-info-label">${t("wagering")}</div><div class="bonus-info-value">${getLocalizedField(stage.details.wagering)}</div></div>
+              <div class="bonus-info-item"><div class="bonus-info-label">${t("validity")}</div><div class="bonus-info-value">${getLocalizedField(stage.details.validity)}</div></div>
+              <div class="bonus-info-item"><div class="bonus-info-label">${t("eligibility")}</div><div class="bonus-info-value">${getLocalizedField(stage.details.eligibility)}</div></div>
+            </div>` : "";
+          const connector = si < bonus.stages.length - 1 ? `<div class="stage-connector"><span class="connector-line"></span><span class="connector-arrow">&#9660;</span><span class="connector-line"></span></div>` : "";
+          return `
+            <div class="stage-card" data-stage="${si + 1}">
+              <div class="stage-header">
+                <span class="stage-badge">${getLocalizedField(stage.stageLabel)}</span>
+                <h4 class="stage-title">${getLocalizedField(stage.name)}</h4>
+              </div>
+              <p class="stage-description">${getLocalizedField(stage.description)}</p>
+              ${stageDetails}
+              <button class="stage-claim-btn" onclick="event.stopPropagation()">${t("claimBonus")}</button>
+            </div>${connector}`;
+        }).join("") +
+        `</div>`;
+    }
+
+    // Quick info grid (for non-multi-stage bonuses)
+    const infoGridHTML = (!bonus.type || bonus.type !== "multi-stage") && bonus.details ? `
+      <div class="bonus-info-grid">
+        <div class="bonus-info-item">
+          <div class="bonus-info-label">${t("rate")}</div>
+          <div class="bonus-info-value">${getLocalizedField(bonus.details.rate)}</div>
+        </div>
+        <div class="bonus-info-item">
+          <div class="bonus-info-label">${t("minDeposit")}</div>
+          <div class="bonus-info-value">${getLocalizedField(bonus.details.minDeposit)}</div>
+        </div>
+        <div class="bonus-info-item">
+          <div class="bonus-info-label">${t("maxBonus")}</div>
+          <div class="bonus-info-value">${getLocalizedField(bonus.details.maxBonus)}</div>
+        </div>
+        <div class="bonus-info-item">
+          <div class="bonus-info-label">${t("wagering")}</div>
+          <div class="bonus-info-value">${getLocalizedField(bonus.details.wagering)}</div>
+        </div>
+        <div class="bonus-info-item">
+          <div class="bonus-info-label">${t("validity")}</div>
+          <div class="bonus-info-value">${getLocalizedField(bonus.details.validity)}</div>
+        </div>
+        <div class="bonus-info-item">
+          <div class="bonus-info-label">${t("eligibility")}</div>
+          <div class="bonus-info-value">${getLocalizedField(bonus.details.eligibility)}</div>
+        </div>
+      </div>` : "";
+
+    // New sections (detailed content)
+    let sectionsHTML = "";
+    if (bonus.sections && bonus.sections.length > 0) {
+      sectionsHTML = bonus.sections.map(renderSection).join("");
+    }
+
+    // Legacy: example + rules (for bonuses not yet converted to sections)
+    let legacyHTML = "";
+    if (!bonus.sections) {
+      if (bonus.example) {
+        legacyHTML += `<div class="bonus-example"><h4>${t("exampleCalc")}</h4><p>${getLocalizedField(bonus.example)}</p></div>`;
+      }
+      if (bonus.rules) {
+        const rulesArray = getLocalizedField(bonus.rules);
+        if (rulesArray.length) {
+          legacyHTML += `<div class="bonus-rules"><h4>${t("importantRules")}</h4><ul>${rulesArray.map(r => `<li>${r}</li>`).join("")}</ul></div>`;
+        }
+      }
+    }
 
     card.innerHTML = `
       <div class="bonus-card-header" onclick="toggleCard('${bonus.id}')">
@@ -36,40 +151,10 @@ function renderBonusCards(categoryId, containerId) {
       <div class="bonus-card-body">
         <div class="bonus-detail">
           <p class="bonus-description">${getLocalizedField(bonus.description)}</p>
-          <div class="bonus-info-grid">
-            <div class="bonus-info-item">
-              <div class="bonus-info-label">${t("rate")}</div>
-              <div class="bonus-info-value">${getLocalizedField(bonus.details.rate)}</div>
-            </div>
-            <div class="bonus-info-item">
-              <div class="bonus-info-label">${t("minDeposit")}</div>
-              <div class="bonus-info-value">${getLocalizedField(bonus.details.minDeposit)}</div>
-            </div>
-            <div class="bonus-info-item">
-              <div class="bonus-info-label">${t("maxBonus")}</div>
-              <div class="bonus-info-value">${getLocalizedField(bonus.details.maxBonus)}</div>
-            </div>
-            <div class="bonus-info-item">
-              <div class="bonus-info-label">${t("wagering")}</div>
-              <div class="bonus-info-value">${getLocalizedField(bonus.details.wagering)}</div>
-            </div>
-            <div class="bonus-info-item">
-              <div class="bonus-info-label">${t("validity")}</div>
-              <div class="bonus-info-value">${getLocalizedField(bonus.details.validity)}</div>
-            </div>
-            <div class="bonus-info-item">
-              <div class="bonus-info-label">${t("eligibility")}</div>
-              <div class="bonus-info-value">${getLocalizedField(bonus.details.eligibility)}</div>
-            </div>
-          </div>
-          <div class="bonus-example">
-            <h4>${t("exampleCalc")}</h4>
-            <p>${getLocalizedField(bonus.example)}</p>
-          </div>
-          <div class="bonus-rules">
-            <h4>${t("importantRules")}</h4>
-            <ul>${rulesHTML}</ul>
-          </div>
+          ${stagesHTML}
+          ${infoGridHTML}
+          ${sectionsHTML}
+          ${legacyHTML}
         </div>
       </div>
     `;
