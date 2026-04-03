@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexBet - Main Bonuses</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .main-bonuses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .mb-card {
+            background: rgba(255,255,255,0.04);
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.07);
+            padding: 22px 22px 18px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mb-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--card-accent, #d4af37);
+            border-radius: 14px 14px 0 0;
+        }
+
+        .mb-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+            border-color: rgba(212,175,55,0.25);
+        }
+
+        .mb-card-icon {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .mb-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 900;
+            color: var(--card-accent, #d4af37);
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .mb-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mb-card ul li {
+            font-size: 0.875rem;
+            color: #e0e0e0;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mb-card ul li:last-child { border-bottom: none; }
+
+        .mb-card ul li::before {
+            content: '•';
+            color: var(--card-accent, #d4af37);
+            font-weight: 900;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .mb-card ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            counter-reset: step-counter;
+        }
+
+        .mb-card ol li {
+            font-size: 0.875rem;
+            color: #e0e0e0;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            counter-increment: step-counter;
+        }
+
+        .mb-card ol li:last-child { border-bottom: none; }
+
+        .mb-card ol li::before {
+            content: counter(step-counter);
+            background: var(--card-accent, #d4af37);
+            color: #1a1a2e;
+            font-weight: 900;
+            font-size: 0.75rem;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .mb-card-tag {
+            display: inline-block;
+            background: rgba(212,175,55,0.12);
+            color: var(--card-accent, #d4af37);
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Color palette per bonus type */
+        .mb-discount  { --card-accent: #e74c3c; }
+        .mb-cashback  { --card-accent: #2ecc71; }
+        .mb-deposit   { --card-accent: #4a9eff; }
+        .mb-crypto    { --card-accent: #f39c12; }
+        .mb-welcome   { --card-accent: #d4af37; }
+        .mb-special   { --card-accent: #9b59b6; }
+        .mb-midnight  { --card-accent: #667eea; }
+        .mb-crash     { --card-accent: #e67e22; }
+        .mb-insurance { --card-accent: #1abc9c; }
+        .mb-freespin  { --card-accent: #ff6b6b; }
+        .mb-live      { --card-accent: #e74c3c; }
+
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 40px 0 6px;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            margin-bottom: 4px;
+        }
+
+        .page-intro {
+            text-align: center;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body data-page="main-bonuses">
+    <div class="header">
+        <div class="header-inner">
+            <div>
+                <a href="../index.html" class="logo">NexBet</a>
+                <div class="header-subtitle">Comprehensive Bonuses &amp; Promotions Guide</div>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLanguage('en')">EN</button>
+                <button class="lang-btn" data-lang="he" onclick="setLanguage('he')">HE</button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navigation">
+        <ul class="nav-links">
+            <li><a href="main-bonuses.html" class="active">Main Bonuses</a></li>
+            <li><a href="sports.html" data-i18n="sportsBonuses">Sports Bonuses</a></li>
+            <li><a href="slots.html" data-i18n="slotBonuses">Slot Bonuses</a></li>
+            <li><a href="casino.html" data-i18n="casinoBonuses">Live Casino Bonuses</a></li>
+            <li><a href="happy-hour.html" data-i18n="happyHour">Happy Hour</a></li>
+            <li><a href="promotions.html" data-i18n="generalPromotions">General Promotions</a></li>
+            <li><a href="system.html" data-i18n="systemPromotions">System Promotions</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <a href="../index.html" class="back-btn">&larr; Back to All Categories</a>
+        <div class="page-header">
+            <h1>Main Bonuses</h1>
+            <p class="page-intro">15 core bonuses available across all platforms</p>
+        </div>
+
+        <!-- ── LOSS / CASHBACK ── -->
+        <p class="section-label">Loss &amp; Cashback</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-discount">
+                <span class="mb-card-icon">🔻</span>
+                <div class="mb-card-tag">Every Loss</div>
+                <div class="mb-card-title">%20 Discount</div>
+                <ul>
+                    <li>Spor Discount</li>
+                    <li>Slot Discount</li>
+                    <li>Live Casino Discount</li>
+                </ul>
+            </div>
+
+            <div class="mb-card mb-cashback">
+                <span class="mb-card-icon">💰</span>
+                <div class="mb-card-tag">Weekly</div>
+                <div class="mb-card-title">%10 Cashback</div>
+                <ul>
+                    <li>Spor Cashback</li>
+                    <li>Slot Cashback</li>
+                    <li>Live Casino Cashback</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ── DEPOSIT BONUSES ── -->
+        <p class="section-label">Deposit Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-deposit">
+                <span class="mb-card-icon">🏦</span>
+                <div class="mb-card-tag">Bank Transfer</div>
+                <div class="mb-card-title">%10 Bank Deposit Bonus</div>
+                <ul>
+                    <li>%10 Spor</li>
+                    <li>%10 Slot</li>
+                    <li>%10 Live Casino</li>
+                </ul>
+            </div>
+
+            <div class="mb-card mb-deposit">
+                <span class="mb-card-icon">💳</span>
+                <div class="mb-card-tag">Credit Card</div>
+                <div class="mb-card-title">%10 Credit Card Deposit Bonus</div>
+                <ul>
+                    <li>%15 Spor</li>
+                    <li>%15 Slot</li>
+                    <li>%15 Live Casino</li>
+                </ul>
+            </div>
+
+            <div class="mb-card mb-crypto">
+                <span class="mb-card-icon">₿</span>
+                <div class="mb-card-tag">Crypto</div>
+                <div class="mb-card-title">%20 Crypto Deposit Bonus</div>
+                <ul>
+                    <li>%20 Spor</li>
+                    <li>%20 Slot + 20 Freespin (Gift)</li>
+                    <li>%20 Live Casino</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ── WELCOME BONUSES ── -->
+        <p class="section-label">Welcome Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-welcome">
+                <span class="mb-card-icon">⚽</span>
+                <div class="mb-card-tag">New Members</div>
+                <div class="mb-card-title">Welcome Sports Bonus</div>
+                <ol>
+                    <li>Stage %30</li>
+                    <li>Stage %20</li>
+                    <li>Stage %10</li>
+                </ol>
+            </div>
+
+            <div class="mb-card mb-welcome">
+                <span class="mb-card-icon">🎰</span>
+                <div class="mb-card-tag">New Members</div>
+                <div class="mb-card-title">Welcome Slot Bonus</div>
+                <ol>
+                    <li>Stage %20</li>
+                    <li>Stage %15</li>
+                </ol>
+            </div>
+
+            <div class="mb-card mb-welcome">
+                <span class="mb-card-icon">🃏</span>
+                <div class="mb-card-tag">New Members</div>
+                <div class="mb-card-title">Welcome LiveCasino Bonus</div>
+                <ol>
+                    <li>Stage %20</li>
+                    <li>Stage %15</li>
+                </ol>
+            </div>
+
+        </div>
+
+        <!-- ── SPECIAL BONUSES ── -->
+        <p class="section-label">Special Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-special">
+                <span class="mb-card-icon">🎁</span>
+                <div class="mb-card-tag">Loyalty</div>
+                <div class="mb-card-title">5. Deposit is From Us</div>
+                <ul>
+                    <li>Spor</li>
+                    <li>Slot</li>
+                    <li>Live Casino</li>
+                </ul>
+            </div>
+
+            <div class="mb-card mb-special">
+                <span class="mb-card-icon">2️⃣</span>
+                <div class="mb-card-tag">Slots</div>
+                <div class="mb-card-title">Double Slot Bonus</div>
+                <ul>
+                    <li>%20 Deposit</li>
+                    <li>%10 Discount</li>
+                </ul>
+            </div>
+
+            <div class="mb-card mb-midnight">
+                <span class="mb-card-icon">🌙</span>
+                <div class="mb-card-tag">After Midnight</div>
+                <div class="mb-card-title">Midnight Slot Bonus</div>
+                <ul>
+                    <li>%30 Discount</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- ── ONE-TIME BONUSES ── -->
+        <p class="section-label">One-Time Bonuses</p>
+        <hr class="section-divider">
+        <div class="main-bonuses-grid">
+
+            <div class="mb-card mb-crash">
+                <span class="mb-card-icon">🚀</span>
+                <div class="mb-card-tag">Crash Games</div>
+                <div class="mb-card-title">%50 Bonus (Crash)</div>
+                <ol>
+                    <li>First Deposit Bonus</li>
+                </ol>
+            </div>
+
+            <div class="mb-card mb-insurance">
+                <span class="mb-card-icon">🛡️</span>
+                <div class="mb-card-tag">Sports</div>
+                <div class="mb-card-title">Sports %100 Insurance</div>
+                <ol>
+                    <li>Only First Bet for Loss</li>
+                </ol>
+            </div>
+
+            <div class="mb-card mb-freespin">
+                <span class="mb-card-icon">🎡</span>
+                <div class="mb-card-tag">Slots</div>
+                <div class="mb-card-title">Freespin Slot Bonus</div>
+                <ol>
+                    <li>Only First Deposit</li>
+                </ol>
+            </div>
+
+            <div class="mb-card mb-live">
+                <span class="mb-card-icon">🎲</span>
+                <div class="mb-card-tag">Live Casino</div>
+                <div class="mb-card-title">LiveCasino %50 Cashback</div>
+                <ol>
+                    <li>Only First Bet for Loss</li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2026 NexBet - All Rights Reserved</p>
+    </div>
+
+    <script src="../js/i18n.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
