@@ -933,7 +933,7 @@
       doubleSlot: {
         icon: '2️⃣', tag: 'Slots · Combined Bonus', title: 'Double Slot Bonus',
         accent: '#9b59b6',
-        maxWithdrawal: 'No limit (deposit bonus) · 10x bonus amount (discount)',
+        hideMaxWithdrawal: true,
         params: [
           { label: 'Bonus Type',       value: 'Deposit + Discount Combo', highlight: true },
           { label: 'Deposit Bonus',    value: '%20 on deposit', highlight: true },
@@ -1141,10 +1141,12 @@
             <div class="param-value${p.highlight ? ' highlight' : ''}">${p.value}</div>
           </div>`;
         });
-        html += `<div class="param-item" style="border-color:rgba(212,175,55,0.3);background:rgba(212,175,55,0.06)">
+        if (!b.hideMaxWithdrawal) {
+          html += `<div class="param-item" style="border-color:rgba(212,175,55,0.3);background:rgba(212,175,55,0.06)">
             <div class="param-label">Max Withdrawal</div>
             <div class="param-value highlight">${b.maxWithdrawal || '20x bonus amount'}</div>
           </div>`;
+        }
         html += '</div>';
       }
 
