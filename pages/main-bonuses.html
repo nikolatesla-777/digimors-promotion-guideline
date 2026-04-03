@@ -824,13 +824,14 @@
             ]
           },
           {
-            num: 2, label: '2nd Deposit — %50',
+            num: 2, label: '2nd Chance — %50 (Loss Required)',
             params: [
               { label: 'Rate', value: '50%' },
               { label: 'Min Deposit', value: '100 ₺' },
               { label: 'Max Bonus', value: '1,000 ₺' },
               { label: 'Wagering', value: 'x7 (bonus amount)' },
               { label: 'Platform', value: 'Slots only' },
+              { label: 'Eligibility', value: 'Stage 1 participant + net loss' },
               { label: 'Validity', value: '7 days' },
             ]
           },
@@ -838,8 +839,10 @@
         rules: [
           'Available only to newly registered and fully verified players.',
           'Stage 1: 100% bonus on first slots deposit, max bonus 1,000 ₺, wagering x10.',
-          'Stage 2: 50% bonus on second slots deposit, max bonus 1,000 ₺, wagering x7.',
-          'Stage 2 is unlocked only after Stage 1 wagering (x10) is fully completed.',
+          'Stage 2 is a second chance bonus — it is NOT unlocked by completing Stage 1.',
+          'Stage 2 eligibility: player must have participated in Stage 1 AND experienced a net loss.',
+          'Net loss condition: Total Deposits − Total Withdrawals must be negative at the end of Stage 1.',
+          'Stage 2 is offered as a consolation bonus to players who lost during their Stage 1 experience.',
           'Bonus funds can only be used on Slot games — Live Casino and Sports are excluded.',
           'Minimum qualifying deposit: 100 ₺ per stage.',
           'Maximum withdrawal from this bonus: 20x the deposit amount made at each stage.',
@@ -847,7 +850,7 @@
           'One-time offer per player — cannot be re-claimed.',
           'Players with an active deposit or welcome bonus are prohibited from purchasing Free Spins until the wagering requirement is fully completed.',
         ],
-        note: 'Digitain Config: Bonus Type → "Deposit Bonus". Platform filter: Slots only. Stage 1: x10 rollover. Stage 2: x7 rollover. Max withdrawal: 20x deposit amount. Eligibility: new accounts.',
+        note: 'Digitain Config: Stage 1 → Deposit Bonus x10, Slots only. Stage 2 → triggered for Stage 1 participants with net loss (second chance). Rollover: x7. Max withdrawal: 20x deposit. Eligibility: new accounts.',
       },
 
       welcomeLiveCasino: {
